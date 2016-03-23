@@ -2,3 +2,5 @@
 **/**.js.map
 node_modules
 **.log
+*.map
+example/**/**.js
