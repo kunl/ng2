@@ -2,32 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>ng2 </title>
 
-    <!--<script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>-->
-    <!--<script src="node_modules/systemjs/dist/system.src.js"></script>-->
-    <!--<script src="node_modules/rxjs/bundles/Rx.js"></script>-->
-    <!--<script src="node_modules/angular2/bundles/angular2.dev.js"></script>-->
-
-    <script src="https://cdn.bootcss.com/angular.js/2.0.0-beta.0/angular2-polyfills.js"></script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.18.4/system.src.js"></script>
-    
-    <script src="https://cdn.bootcss.com/angular.js/2.0.0-beta.0/Rx.js"></script>
-    <script src="https://cdn.bootcss.com/angular.js/2.0.0-beta.0/angular2.dev.js"></script>
-
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+   
 
     <script>
         System.config({
-            packages: {
-                app: {
-                    format: 'register',
-                    defaultExtension: 'js'
-                }
+            defaultJSExtensions: true,
+            map: {
+                angular2: 'node_modules/angular2',
+                rxjs: 'node_modules/rxjs'
             }
         });
-        System.import('app/boot')
-                .then(null, console.error.bind(console));
+
+        System.import('app/boot').then(null, console.error.bind(console));
     </script>
 </head>
 <body>
