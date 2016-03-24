@@ -1,7 +1,4 @@
-/**
- *
- * Created by kunl on 2016/1/5-0005.
- */
+
 import {Component} from 'angular2/core';
 
 import {Header} from './component/header.component';
@@ -12,9 +9,11 @@ import {Footer} from './component/footer.component';
     directives: [Header, Footer],
     template: `
         <header></header>
-        <h1>Angular2...</h1>
+        <p>Angular2...</p>
         <footer></footer>
     `
 })
 
-export class AppComponent{}
+export class AppComponent{
+
+}
