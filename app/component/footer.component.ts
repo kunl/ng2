@@ -4,7 +4,9 @@ import {Component} from 'angular2/core';
 @Component({
     selector: 'footer',
     template: `
-        <p>footer... </p>
+        <div class="card">
+            <p class="card-content">footer... </p>
+        </div>
     `
 })
 

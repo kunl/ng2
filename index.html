@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>ng2 </title>
-
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
     <script src="node_modules/systemjs/dist/system.src.js"></script>
-   
-
+  
     <script>
         System.config({
             defaultJSExtensions: true,
@@ -20,11 +19,12 @@
         System.import('app/boot').then(null, console.error.bind(console));
     </script>
 </head>
+
 <body>
-
-
-<my-app>
+    
+<example-app>
     loading
-</my-app>
+</example-app>
+
 </body>
 </html>
