@@ -1,4 +1,6 @@
-System.register(['angular2/core', './component/header.component.js', './component/footer.component.js'], function(exports_1) {
+System.register(['angular2/core', '../../component/colors/color'], function(exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,35 +10,33 @@ System.register(['angular2/core', './component/header.component.js', './componen
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, header_component_1, footer_component_1;
-    var AppComponent;
+    var core_1, color_1;
+    var ColorDemo;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             },
-            function (header_component_1_1) {
-                header_component_1 = header_component_1_1;
-            },
-            function (footer_component_1_1) {
-                footer_component_1 = footer_component_1_1;
+            function (color_1_1) {
+                color_1 = color_1_1;
             }],
         execute: function() {
-            AppComponent = (function () {
-                function AppComponent() {
+            ColorDemo = (function () {
+                function ColorDemo() {
+                    this.configColor = '#333';
                 }
-                AppComponent = __decorate([
+                ColorDemo = __decorate([
                     core_1.Component({
-                        selector: 'my-app',
-                        directives: [header_component_1.Header, footer_component_1.Footer],
-                        template: "\n        <header></header>\n        <h1>Angular2...</h1>\n        <footer></footer>\n    "
+                        selector: 'colors',
+                        template: "\n        <p color='red'>\u7EA2\u8272\u6587\u5B57</p>\n        <p color='blue'>\u84DD\u8272\u6587\u5B57</p>\n        <p color='#f00'>\u84DD\u8272\u6587\u5B57</p>\n        \n        <p [color]='myColor'>\u9ED1\u8272\u6587\u5B57</p>\n    ",
+                        directives: [color_1.ColorDirective]
                     }), 
                     __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
-            })();
-            exports_1("AppComponent", AppComponent);
+                ], ColorDemo);
+                return ColorDemo;
+            }());
+            exports_1("ColorDemo", ColorDemo);
         }
     }
 });
-//# sourceMappingURL=app.component.js.map
+//# sourceMappingURL=color.demo.js.map

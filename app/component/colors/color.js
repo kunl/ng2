@@ -11,27 +11,35 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var Footer;
+    var ColorDirective;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            Footer = (function () {
-                function Footer() {
+            ColorDirective = (function () {
+                function ColorDirective(_ele, _render) {
+                    this._ele = _ele;
+                    this._render = _render;
                 }
-                Footer = __decorate([
-                    core_1.Component({
-                        selector: 'footer',
-                        template: "\n        <div class=\"card\">\n            <p class=\"card-content\">footer... </p>\n        </div>\n    "
+                ColorDirective.prototype.ngOnInit = function () {
+                    this._render.setElementStyle(this._ele.nativeElement, 'color', this.color);
+                };
+                __decorate([
+                    core_1.Input(), 
+                    __metadata('design:type', String)
+                ], ColorDirective.prototype, "color", void 0);
+                ColorDirective = __decorate([
+                    core_1.Directive({
+                        selector: '[color]'
                     }), 
-                    __metadata('design:paramtypes', [])
-                ], Footer);
-                return Footer;
+                    __metadata('design:paramtypes', [core_1.ElementRef, core_1.Renderer])
+                ], ColorDirective);
+                return ColorDirective;
             }());
-            exports_1("Footer", Footer);
+            exports_1("ColorDirective", ColorDirective);
         }
     }
 });
-//# sourceMappingURL=footer.component.js.map
+//# sourceMappingURL=color.js.map

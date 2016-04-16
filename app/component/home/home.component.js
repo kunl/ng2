@@ -1,9 +1,6 @@
-/**
- *
- *
- * Created by kunl on 2016/1/5-0005.
- */
-System.register(['angular2/core'], function(exports_1) {
+System.register(['angular2/core'], function(exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -14,27 +11,28 @@ System.register(['angular2/core'], function(exports_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var Header;
+    var HomeComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            Header = (function () {
-                function Header() {
+            HomeComponent = (function () {
+                function HomeComponent() {
                 }
-                Header = __decorate([
+                HomeComponent.prototype.ngOnInit = function () { };
+                HomeComponent = __decorate([
                     core_1.Component({
-                        selector: 'header',
-                        template: "\n        <p>header</p>\n    "
+                        selector: 'home',
+                        template: '<h1>kunl 的 Angular2 demo </h1>'
                     }), 
                     __metadata('design:paramtypes', [])
-                ], Header);
-                return Header;
-            })();
-            exports_1("Header", Header);
+                ], HomeComponent);
+                return HomeComponent;
+            }());
+            exports_1("HomeComponent", HomeComponent);
         }
     }
 });
-//# sourceMappingURL=header.component.js.map
+//# sourceMappingURL=home.component.js.map
