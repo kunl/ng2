@@ -9,17 +9,21 @@
     <script src="https://npmcdn.com/systemjs@0.19.26/dist/system.src.js"></script>
     
     <script src="https://npmcdn.com/angular2/bundles/angular2.dev.js"></script>
+    <script src="https://npmcdn.com/angular2/bundles/router.dev.js"></script>
     <script src="https://npmcdn.com/rxjs@5.0.0-beta.6/bundles/Rx.js"></script>
   
     <script>
-        System.config({
-            defaultJSExtensions: true,
-            package: {
-                main: './app'
-            }
-        });
-
-        System.import('app/boot').then(null, console.error.bind(console));
+          
+     System.config({
+        packages: {        
+          app: {
+            format: 'register',
+            defaultExtension: 'js'
+          }
+        }
+      });
+      System.import('app/boot')
+            .then(null, console.error.bind(console));
     </script>
 </head>
 
