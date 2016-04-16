@@ -13,7 +13,10 @@
   
     <script>
         System.config({
-            defaultJSExtensions: true
+            defaultJSExtensions: true,
+            package: {
+                main: './app'
+            }
         });
 
         System.import('app/boot').then(null, console.error.bind(console));
