@@ -45,13 +45,13 @@ System.register(['angular2/core', 'angular2/router', '../component/home/home.com
                         styles: [
                             "\n        .header-title {padding: 20px}\n        .router-link-active{border-right: 4px solid #00dcc1}\n        .content {padding: 20px; min-height: 70vh}\n        "
                         ],
-                        template: "\n        <div class=\"container-fluid\">\n            <div class=\"row\"><p class=\"header-title\">Angular2 demo of kunl</p></div>\n            <div class=\"row\">\n                <div class=\"col-sm-2\">\n                    <nav class=\"list-group\">\n                        <li class=\"list-group-item\" [routerLink]='[\"Home\"]'>Home</li>\n                        <li class=\"list-group-item\" [routerLink]='[\"TabsDemo\"]'>Tabs demo</li>\n                        <li class=\"list-group-item\" [routerLink]='[\"ColorDemo\"]'>Colors demo</li>\n                    </nav>\n                </div>\n                <div class=\"col-sm-10\">\n                \n                    <div class=\"card content\">\n                        <router-outlet></router-outlet>\n                    </div>\n                    \n                </div>\n            </div>\n            <footer></footer>\n        </div>\n    "
+                        template: "\n        <div class=\"container-fluid\">\n            <div class=\"row\"><p class=\"header-title\">Angular2 demo of kunl</p></div>\n            <div class=\"row\">\n                <div class=\"col-sm-2\">\n                    <nav class=\"list-group\">\n                        <li class=\"list-group-item\" [routerLink]='[\"Home\"]'>Home</li>\n                        <li class=\"list-group-item\" [routerLink]='[\"TabsDemo\"]'>Tabs demo</li>\n                        <li class=\"list-group-item\" [routerLink]='[\"ColorDemo\"]'>Colors demo</li>\n                        <li class=\"list-group-item\" [routerLink]='[\"AttrsDemoComponent\"]'>Attrs demo</li>\n                    </nav>\n                </div>\n                <div class=\"col-sm-10\">\n                \n                    <div class=\"card content\">\n                        <router-outlet></router-outlet>\n                    </div>\n                    \n                </div>\n            </div>\n            <footer></footer>\n        </div>\n    "
                     }),
                     router_1.RouteConfig([
                         { path: '/home', name: 'Home', component: home_component_1.HomeComponent, useAsDefault: true },
                         { path: '/tabs', name: 'TabsDemo', component: tabs_demo_1.TabsDemo },
-                        { path: '/colors', name: 'ColorDemo', component: color_demo_1.ColorDemo },
-                        { path: '/attrs', name: 'Attrs', component: attrs_demo_1.AttrsDemoCOmponent }
+                        { path: '/attrs', name: 'AttrsDemoComponent', component: attrs_demo_1.AttrsDemoComponent },
+                        { path: '/color', name: 'ColorDemo', component: color_demo_1.ColorDemo }
                     ]), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);

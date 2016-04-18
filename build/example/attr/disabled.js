@@ -10,26 +10,101 @@ System.register(['angular2/core'], function(exports_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var DisabledComponent;
+    var CusonmComponent, DisabledComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
+            CusonmComponent = (function () {
+                function CusonmComponent() {
+                    this._isDisabled = false;
+                    this._isHidden = false;
+                    this._value = '1111';
+                }
+                Object.defineProperty(CusonmComponent.prototype, "isHidden", {
+                    get: function () {
+                        return this._isHidden;
+                    },
+                    enumerable: true,
+                    configurable: true
+                });
+                Object.defineProperty(CusonmComponent.prototype, "isDisabled", {
+                    get: function () {
+                        return this._isDisabled;
+                    },
+                    enumerable: true,
+                    configurable: true
+                });
+                Object.defineProperty(CusonmComponent.prototype, "value", {
+                    get: function () {
+                        return this._value;
+                    },
+                    enumerable: true,
+                    configurable: true
+                });
+                CusonmComponent.prototype.ngOnChanges = function (change) {
+                    console.log(change.custom);
+                    this._isDisabled = this.custom.isDisabled;
+                    this._isHidden = this.custom.isHidden;
+                    this._value = this.custom.val;
+                };
+                CusonmComponent.prototype.ngAfterContentInit = function () {
+                    // this._isDisabled = this.custom.isDisabled
+                    // this._isDisabled = this.custom.isHidden
+                    console.log(this.custom);
+                };
+                __decorate([
+                    core_1.HostBinding('hidden'), 
+                    __metadata('design:type', Object)
+                ], CusonmComponent.prototype, "isHidden", null);
+                __decorate([
+                    core_1.HostBinding('disabled'), 
+                    __metadata('design:type', Object)
+                ], CusonmComponent.prototype, "isDisabled", null);
+                __decorate([
+                    core_1.HostBinding('value'), 
+                    __metadata('design:type', Object)
+                ], CusonmComponent.prototype, "value", null);
+                CusonmComponent = __decorate([
+                    core_1.Directive({
+                        selector: '[custom]',
+                        inputs: ['custom']
+                    }), 
+                    __metadata('design:paramtypes', [])
+                ], CusonmComponent);
+                return CusonmComponent;
+            }());
+            exports_1("CusonmComponent", CusonmComponent);
             DisabledComponent = (function () {
                 function DisabledComponent() {
                     this.isDisabled = true;
+                    this.const = 0;
+                    this.myCustom = {
+                        isDisabled: true,
+                        isHidden: false,
+                        val: '改变值了'
+                    };
                 }
                 DisabledComponent.prototype.changeAttrs = function () {
                     this.isDisabled = this.isDisabled ? false : true;
+                    // this.myCustom.isDisabled = !this.myCustom.isDisabled
+                    // this.myCustom.isHidden = !this.myCustom.isHidden
+                    this.myCustom = {
+                        isDisabled: !this.myCustom.isDisabled,
+                        isHidden: !this.myCustom.isHidden,
+                        val: '-----------改变值了' + this.const
+                    };
+                    this.const++;
+                    // console.log(this.myCustom)
                 };
                 DisabledComponent.prototype.ngOnInit = function () { };
                 DisabledComponent = __decorate([
                     core_1.Component({
                         selector: 'disabled',
-                        template: "\n        <input type=\"text\" [attr.disabled]='isDisabled'>\n        <button class=\"btn btn-sm\" (click)=\"changeAttrs()\">\u5207\u6362<button>\n    ",
-                        directives: []
+                        template: "\n        <div class=\"form-group\">disabled \u5C5E\u6027\n            <input type=\"text\" [disabled]='isDisabled' class=\"form-control\" value=\"\u9ED8\u8BA4\u7684value\">\n            <input type=\"checkbox\" [disabled]='isDisabled' class=\"form-control\" checked>\n        </div>\n        \n        <div>readonly \u5C5E\u6027\n            <input type=\"text\" [readonly]='isDisabled' class=\"form-control\" value=\"\u9ED8\u8BA4\u7684value\">\n        </div>\n        \n        <hr>\n         <p>\u901A\u8FC7\u4E00\u4E2A\u5BF9\u8C61\u63A7\u5236 \u6307\u4EE4\u7684 \u591A\u4E2A\u5C5E\u6027</p>\n        <input type='text' [custom]='myCustom' value=\"11123\">\n        \n        <br>\n        <button class=\"btn btn-sm\" (click)=\"changeAttrs()\">\u5207\u6362</button>\n    ",
+                        directives: [CusonmComponent]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], DisabledComponent);

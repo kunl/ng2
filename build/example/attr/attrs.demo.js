@@ -1,4 +1,4 @@
-System.register(['angular2/core'], function(exports_1) {
+System.register(['angular2/core', './disabled'], function(exports_1) {
     "use strict";
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -9,27 +9,31 @@ System.register(['angular2/core'], function(exports_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1;
-    var AttrsDemoCOmponent;
+    var core_1, disabled_1;
+    var AttrsDemoComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (disabled_1_1) {
+                disabled_1 = disabled_1_1;
             }],
         execute: function() {
-            AttrsDemoCOmponent = (function () {
-                function AttrsDemoCOmponent() {
+            AttrsDemoComponent = (function () {
+                function AttrsDemoComponent() {
                 }
-                AttrsDemoCOmponent = __decorate([
+                AttrsDemoComponent = __decorate([
                     core_1.Component({
                         selector: 'attrs',
-                        template: "\n     <disabled><?disabled>\n    "
+                        template: "\n     <disabled></disabled>\n    ",
+                        directives: [disabled_1.DisabledComponent]
                     }), 
                     __metadata('design:paramtypes', [])
-                ], AttrsDemoCOmponent);
-                return AttrsDemoCOmponent;
+                ], AttrsDemoComponent);
+                return AttrsDemoComponent;
             }());
-            exports_1("AttrsDemoCOmponent", AttrsDemoCOmponent);
+            exports_1("AttrsDemoComponent", AttrsDemoComponent);
         }
     }
 });

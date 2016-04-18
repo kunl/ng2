@@ -7,6 +7,7 @@ import {Footer} from '../component/footer.component';
 
 import {TabsDemo} from './tabs/tabs.demo';
 import {ColorDemo} from './colors/color.demo';
+import {AttrsDemoComponent} from './attr/attrs.demo';
 
 @Component({
     selector: 'example-app',
@@ -27,6 +28,7 @@ import {ColorDemo} from './colors/color.demo';
                         <li class="list-group-item" [routerLink]='["Home"]'>Home</li>
                         <li class="list-group-item" [routerLink]='["TabsDemo"]'>Tabs demo</li>
                         <li class="list-group-item" [routerLink]='["ColorDemo"]'>Colors demo</li>
+                        <li class="list-group-item" [routerLink]='["AttrsDemoComponent"]'>Attrs demo</li>
                     </nav>
                 </div>
                 <div class="col-sm-10">
@@ -45,7 +47,8 @@ import {ColorDemo} from './colors/color.demo';
 @RouteConfig([
     { path: '/home', name: 'Home', component: HomeComponent, useAsDefault: true },
     { path: '/tabs', name: 'TabsDemo', component: TabsDemo },
-    { path: '/colors', name: 'ColorDemo', component: ColorDemo }
+    { path: '/attrs', name: 'AttrsDemoComponent', component: AttrsDemoComponent },
+    { path: '/color', name: 'ColorDemo', component: ColorDemo }
 ])
 
 export class AppComponent{
