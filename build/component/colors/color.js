@@ -22,13 +22,20 @@ System.register(['angular2/core'], function(exports_1) {
                     this._ele = _ele;
                     this._render = _render;
                 }
-                ColorDirective.prototype.ngOnInit = function () {
-                    this._render.setElementStyle(this._ele.nativeElement, 'color', this.color);
-                };
+                Object.defineProperty(ColorDirective.prototype, "c", {
+                    get: function () { return this.color; },
+                    enumerable: true,
+                    configurable: true
+                });
+                ;
                 __decorate([
                     core_1.Input(), 
                     __metadata('design:type', String)
                 ], ColorDirective.prototype, "color", void 0);
+                __decorate([
+                    core_1.HostBinding('style.color'), 
+                    __metadata('design:type', Object)
+                ], ColorDirective.prototype, "c", null);
                 ColorDirective = __decorate([
                     core_1.Directive({
                         selector: '[color]'
