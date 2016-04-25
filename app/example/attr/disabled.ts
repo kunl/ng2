@@ -19,31 +19,23 @@ export class CusonmComponent {
     private custom : Custom;
     
     @HostBinding('hidden') get isHidden(){
-        return this._isHidden;
+        return this.custom.isHidden;
     }
     
     @HostBinding('disabled') get isDisabled(){
-        return this._isDisabled;
+        return this.custom.isDisabled;
     }
+    
     @HostBinding('value') get value(){
-        return this._value;
+        return this.custom.val;
     }
    
     
     ngOnChanges(change){
         console.log(change.custom)
-        
-        this._isDisabled = this.custom.isDisabled
-        this._isHidden = this.custom.isHidden
-        this._value = this.custom.val
-        
     }
     
     ngAfterContentInit(){
-        
-        // this._isDisabled = this.custom.isDisabled
-        // this._isDisabled = this.custom.isHidden
-        
         console.log(this.custom)
     }
 }
@@ -65,6 +57,7 @@ export class CusonmComponent {
          <p>通过一个对象控制 指令的 多个属性</p>
         <input type='text' [custom]='myCustom' value="11123">
         
+        <input type='text' [custom]='getCustom()' value="11123">
         <br>
         <button class="btn btn-sm" (click)="changeAttrs()">切换</button>
     `,
@@ -102,5 +95,12 @@ export class DisabledComponent implements OnInit {
     
     ngOnInit() { }
 
+    getCustom(){
+        return {
+            isDisabled : true,
+            isHidden : false,
+            val: '方法返回 对象 改变值了' + this.const
+        }
+    }
 
 }

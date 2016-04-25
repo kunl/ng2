@@ -4,3 +4,4 @@ node_modules/
 typings/
 index2.html
 build/**.js.map
+build/
