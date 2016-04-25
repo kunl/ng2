@@ -3,4 +3,3 @@ node_modules/
 **.log
 typings/
 index2.html
-build/**.js.map
