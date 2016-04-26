@@ -26,6 +26,13 @@ import { Component, Input, Output, EventEmitter, ComponentRef, ViewRef } from 'a
                 </div>
                 <div class="modal-body">
                     <p>One fine body&hellip;</p>
+                    <div class="form-group">
+                        <input type="text" class="form-control" [(ngModel)]="data.username" placeholder="用户名">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" [(ngModel)]="data.password"  placeholder="密码">
+                    </div>
+                    <div>{{data | json}}</div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="cancel()">Close</button>
@@ -38,6 +45,10 @@ import { Component, Input, Output, EventEmitter, ComponentRef, ViewRef } from 'a
     `
 })
 export class ChildComponent {
+    private data: {username: string, password: string} = {
+        username: '用户名',
+        password: 'mima'
+    }
     @Input() name: string;
     @Input() ref: ComponentRef;
     
@@ -51,12 +62,12 @@ export class ChildComponent {
     }
     
     cancel(){
-        this.ref.dispose();
+        this.ref.destroy();
         console.log(`cancel`)
     }
 
     destory(){
-        this.finally.emit(true);
+        this.finally.emit(this.data);
     }
 
 }
