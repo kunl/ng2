@@ -1,5 +1,6 @@
-System.register(['angular2/core', 'angular2/platform/browser', './child'], function(exports_1) {
+System.register(['angular2/core', 'angular2/platform/browser', './child'], function(exports_1, context_1) {
     "use strict";
+    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -24,25 +25,22 @@ System.register(['angular2/core', 'angular2/platform/browser', './child'], funct
             }],
         execute: function() {
             DynamicComponentDemo = (function () {
-                function DynamicComponentDemo(loader, ref, vm, title, hv) {
+                function DynamicComponentDemo(loader, vcRef, title) {
                     this.loader = loader;
-                    this.ref = ref;
-                    this.vm = vm;
-                    this.hv = hv;
+                    this.vcRef = vcRef;
                     title.setTitle('自定义 title');
                 }
-                DynamicComponentDemo.prototype.detach = function () {
-                    this.vm.destroyRootHostView(this.hv);
-                };
                 DynamicComponentDemo.prototype.ngOnInit = function () { };
                 DynamicComponentDemo.prototype.loaderAction = function () {
-                    var child = this.loader.loadNextToLocation(child_1.ChildComponent, this.ref)
+                    var _this = this;
+                    var child = this.loader.loadNextToLocation(child_1.ChildComponent, this.vcRef)
                         .then(function (chidRef) {
                         var instance = chidRef.instance;
                         instance.ref = chidRef;
                         instance.name = '动态';
-                        instance.finally.subscribe(function () {
-                            chidRef.dispose();
+                        instance.finally.subscribe(function (user) {
+                            chidRef.destroy();
+                            _this.user = user;
                             console.log('done');
                         });
                     });
@@ -50,10 +48,10 @@ System.register(['angular2/core', 'angular2/platform/browser', './child'], funct
                 DynamicComponentDemo = __decorate([
                     core_1.Component({
                         selector: 'dynamic-demo',
-                        template: "\n    <button class=\"btn\" (click)=\"loaderAction()\">\u52A0\u8F7D\u7EC4\u4EF6</button>\n    <button class=\"btn\" (click)=\"detach()\">detach</button>\n    ",
-                        providers: [browser_1.Title, core_1.HostViewRef]
+                        template: "\n    <p> \n      <button class=\"btn\" (click)=\"loaderAction()\">\u5F39\u51FA\u7EC4\u4EF6</button>\n    </p>\n    <section *ngIf=\"user\">\n    \n        <div class=\"card\">\n        <div class=\"card-block\">\n            <h3 class=\"card-title\">\u7528\u6237\u8F93\u5165\u7ED3\u679C\uFF1A</h3>\n        </div>\n            <div class=\"card-block\">\n                <blockquote>\n                    <pre>\n                    \u7528\u6237\u540D\uFF1A{{user.username}}\n                    \u5BC6\u7801\uFF1A{{user.password}}\n                    </pre>\n                </blockquote>\n            </div>\n        </div>\n  \n    </section>\n    \n    ",
+                        providers: [browser_1.Title]
                     }), 
-                    __metadata('design:paramtypes', [core_1.DynamicComponentLoader, core_1.ElementRef, core_1.AppViewManager, browser_1.Title, core_1.HostViewRef])
+                    __metadata('design:paramtypes', [core_1.DynamicComponentLoader, core_1.ViewContainerRef, browser_1.Title])
                 ], DynamicComponentDemo);
                 return DynamicComponentDemo;
             }());
