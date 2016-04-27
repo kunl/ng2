@@ -1,18 +1,8 @@
-import { Component, Input, Output, EventEmitter, ComponentRef, ViewRef } from 'angular2/core';
+import { Component, Input, Output, EventEmitter, ComponentRef } from 'angular2/core';
+import {User} from './user';
 
 @Component({
     selector: 'child',
-    providers: [ViewRef],
-    styles: [`
-        .mask{
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background-color: rgba(10, 10, 10, .4)
-        }
-    `],
     template: `
         <div class="modal-backdrop in"></div>
         <div class="modal fade in" style="display: block">
@@ -25,12 +15,12 @@ import { Component, Input, Output, EventEmitter, ComponentRef, ViewRef } from 'a
                     <h4 class="modal-title">Modal title</h4>
                 </div>
                 <div class="modal-body">
-                    <p>One fine body&hellip;</p>
+                    <p>One fine body {{name}};</p>
                     <div class="form-group">
                         <input type="text" class="form-control" [(ngModel)]="data.username" placeholder="用户名">
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" [(ngModel)]="data.password"  placeholder="密码">
+                        <input type="telphone" class="form-control" [(ngModel)]="data.telphone"  placeholder="手机号">
                     </div>
                     <div>{{data | json}}</div>
                 </div>
@@ -45,25 +35,22 @@ import { Component, Input, Output, EventEmitter, ComponentRef, ViewRef } from 'a
     `
 })
 export class ChildComponent {
-    private data: {username: string, password: string} = {
+    private data: User = {
         username: '用户名',
-        password: 'mima'
+        telphone: 13999999999
     }
     @Input() name: string;
     @Input() ref: ComponentRef;
     
     @Output() finally = new EventEmitter();
     
-    constructor(
-        private hv : ViewRef
-    ) { 
+    constructor() { 
         
-        console.log(this.hv)
     }
     
     cancel(){
         this.ref.destroy();
-        console.log(`cancel`)
+        console.log(`cancelaaa`)
     }
 
     destory(){

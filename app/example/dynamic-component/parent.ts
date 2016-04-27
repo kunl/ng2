@@ -1,7 +1,7 @@
 import { Component, OnInit, DynamicComponentLoader, ViewContainerRef, ComponentRef  } from 'angular2/core';
 import {Title} from 'angular2/platform/browser';
 import {ChildComponent} from './child';
-
+import {User} from './user';
 @Component({
     selector: 'dynamic-demo',
     template: `
@@ -12,13 +12,13 @@ import {ChildComponent} from './child';
     
         <div class="card">
         <div class="card-block">
-            <h3 class="card-title">用户输入结果：</h3>
+            <h5 class="card-title">用户输入结果：</h5>
         </div>
             <div class="card-block">
                 <blockquote>
                     <pre>
                     用户名：{{user.username}}
-                    密码：{{user.password}}
+                    手机号：{{user.telphone}}
                     </pre>
                 </blockquote>
             </div>
@@ -30,6 +30,7 @@ import {ChildComponent} from './child';
     providers: [Title]
 })
 export class DynamicComponentDemo implements OnInit {
+    user: User;
     constructor(
         private loader: DynamicComponentLoader,
         private vcRef: ViewContainerRef,
@@ -51,7 +52,7 @@ export class DynamicComponentDemo implements OnInit {
             instance.ref = chidRef
             instance.name = '动态';
             
-            instance.finally.subscribe((user)=>{
+            instance.finally.subscribe((user: User)=>{
                 chidRef.destroy();
                 this.user = user;
                 console.log('done');
