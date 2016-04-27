@@ -1,4 +1,4 @@
-import { Component, OnInit, Injectable, ViewContainerRef, HostViewFactoryRef, Renderer } from 'angular2/core';
+import { Component, OnInit, Injectable, ViewContainerRef, Renderer } from 'angular2/core';
 
 @Injectable()
 export class HostService{
