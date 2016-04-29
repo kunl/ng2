@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES5",
+    "target": "eS5",
     "module": "system",
     "moduleResolution": "node",
     "sourceMap": true,
@@ -11,6 +11,8 @@
     "outDir": "./build"
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "typings/main",
+    "typings/main.d.ts"
   ]
 }

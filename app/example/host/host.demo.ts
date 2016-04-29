@@ -16,16 +16,14 @@ export class HostService{
 
 @Component({
     selector: 'com1',
-    template: '{{number}}'
+    template: `{{number}}
+  
+    `
 })
 
 export class com1 {
 
-    
-    constructor(private hs: HostService , viwRef: ViewContainerRef, render: Renderer){
-         
-        console.log(this.hs)
-        console.log(viwRef.element)
+    constructor(private hs: HostService ){
     }
     
     get number(){
@@ -41,7 +39,11 @@ export class com1 {
     template: `
         <com1></com1> <br>
         当前数字{{number}}
-        <button (click)='changeNum()'>变一下</button>
+        <button class="btn btn-sm" (click)='changeNum()'>变一下</button>
+        <br>
+        <p>不同组件之间通过 service 进行数据交互</p>
+        <a href="https://github.com/kunl/ng2/blob/gh-pages/app/example/host/host.demo.ts" target="_blank">https://github.com/kunl/ng2/blob/gh-pages/app/example/host/host.demo.ts</a>
+  
     `
 })
 export class HostDemo implements OnInit {
@@ -53,10 +55,12 @@ export class HostDemo implements OnInit {
     ngOnInit() { }
     
     get number(){
+        // getter 从 service 获取 num
         return this.data.getNum();
     }
 
     changeNum(){
+        // 调用 service 设置num
         this.data.setNum(1);
     }
 }

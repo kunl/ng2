@@ -1,5 +1,6 @@
-System.register(['angular2/core'], function(exports_1) {
+System.register(['angular2/core'], function(exports_1, context_1) {
     "use strict";
+    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -36,10 +37,8 @@ System.register(['angular2/core'], function(exports_1) {
             }());
             exports_1("HostService", HostService);
             com1 = (function () {
-                function com1(hs, viwRef, render) {
+                function com1(hs) {
                     this.hs = hs;
-                    console.log(this.hs);
-                    console.log(viwRef.element);
                 }
                 Object.defineProperty(com1.prototype, "number", {
                     get: function () {
@@ -51,9 +50,9 @@ System.register(['angular2/core'], function(exports_1) {
                 com1 = __decorate([
                     core_1.Component({
                         selector: 'com1',
-                        template: '{{number}}'
+                        template: "{{number}}\n  \n    "
                     }), 
-                    __metadata('design:paramtypes', [HostService, core_1.ViewContainerRef, core_1.Renderer])
+                    __metadata('design:paramtypes', [HostService])
                 ], com1);
                 return com1;
             }());
@@ -65,12 +64,14 @@ System.register(['angular2/core'], function(exports_1) {
                 HostDemo.prototype.ngOnInit = function () { };
                 Object.defineProperty(HostDemo.prototype, "number", {
                     get: function () {
+                        // getter 从 service 获取 num
                         return this.data.getNum();
                     },
                     enumerable: true,
                     configurable: true
                 });
                 HostDemo.prototype.changeNum = function () {
+                    // 调用 service 设置num
                     this.data.setNum(1);
                 };
                 HostDemo = __decorate([
@@ -78,7 +79,7 @@ System.register(['angular2/core'], function(exports_1) {
                         selector: 'host',
                         directives: [com1],
                         providers: [HostService],
-                        template: "\n        <com1></com1> <br>\n        \u5F53\u524D\u6570\u5B57{{number}}\n        <button (click)='changeNum()'>\u53D8\u4E00\u4E0B</button>\n    "
+                        template: "\n        <com1></com1> <br>\n        \u5F53\u524D\u6570\u5B57{{number}}\n        <button class=\"btn btn-sm\" (click)='changeNum()'>\u53D8\u4E00\u4E0B</button>\n        <br>\n        <p>\u4E0D\u540C\u7EC4\u4EF6\u4E4B\u95F4\u901A\u8FC7 service \u8FDB\u884C\u6570\u636E\u4EA4\u4E92</p>\n        <a href=\"https://github.com/kunl/ng2/blob/gh-pages/app/example/host/host.demo.ts\" target=\"_blank\">https://github.com/kunl/ng2/blob/gh-pages/app/example/host/host.demo.ts</a>\n  \n    "
                     }), 
                     __metadata('design:paramtypes', [HostService])
                 ], HostDemo);
