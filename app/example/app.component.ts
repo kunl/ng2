@@ -19,6 +19,7 @@ import {DynamicComponentDemo} from './dynamic-component/parent';
         .header-title {padding: 20px}
         .router-link-active{border-right: 4px solid #00dcc1}
         .content {padding: 20px; min-height: 70vh}
+        nav li {cursor: pointer}
         `
     ],
     template: `
@@ -27,7 +28,7 @@ import {DynamicComponentDemo} from './dynamic-component/parent';
             <div class="row">
                 <div class="col-sm-2">
                     <nav class="list-group">
-                        <li class="list-group-item" [routerLink]='["Home"]'>Home</li>
+                      <li class="list-group-item" [routerLink]='["Home"]'>Home</li>
                         <li class="list-group-item" [routerLink]='["TabsDemo"]'>Tabs demo</li>
                         <li class="list-group-item" [routerLink]='["ColorDemo"]'>Colors demo</li>
                         <li class="list-group-item" [routerLink]='["AttrsDemoComponent"]'>Attrs demo</li>
