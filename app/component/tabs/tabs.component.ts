@@ -19,12 +19,16 @@ export class TabComponent {
 @Component({
     selector: 'tabs',
     template: `
-       <ul>
-        <li *ngFor='#tab of tabs' (click)="selectTab(tab)" [class.active]="tab.active">
-            <a href="javascript:;">{{tab.title}}</a>
-        </li>
-       </ul>
-       <ng-content></ng-content>
+       <div class="btn-group btn-group-sm">
+        <button class="btn btn-secondary" *ngFor='let tab of tabs' (click)="selectTab(tab)" [class.active]="tab.active">
+            {{tab.title}}
+        </button>
+       </div>
+       <div class="card">
+            <div  class="card-block">
+                <ng-content></ng-content>
+            </div>
+       </div>
     `
 })
 
