@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, ComponentRef } from 'angular2/core';
+import { Component, Input, Output, EventEmitter, ComponentRef } from '@angular/core';
 import {User} from './user';
 
 @Component({
@@ -40,7 +40,7 @@ export class ChildComponent {
         telphone: 13999999999
     }
     @Input() name: string;
-    @Input() ref: ComponentRef;
+    @Input() ref;
     
     @Output() finally = new EventEmitter();
     

@@ -1,4 +1,4 @@
-import {Directive, Input, ElementRef, Renderer , HostBinding} from 'angular2/core';
+import {Directive, Input, ElementRef, Renderer , HostBinding} from '@angular/core';
 
 @Directive({
     selector: '[color]'

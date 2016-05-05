@@ -1,4 +1,5 @@
-import {Directive, Component, OnInit, AfterContentInit, HostBinding, OnChanges, ChangeDetectionStrategy } from 'angular2/core';
+import {Directive, Component, OnInit, 
+    AfterContentInit, HostBinding, OnChanges, ChangeDetectionStrategy } from '@angular/core';
 
 interface Custom {
     isDisabled: boolean,

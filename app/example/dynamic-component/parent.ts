@@ -1,5 +1,5 @@
-import { Component, OnInit, DynamicComponentLoader, ViewContainerRef, ComponentRef  } from 'angular2/core';
-import {Title} from 'angular2/platform/browser';
+import { Component, OnInit, DynamicComponentLoader, ViewContainerRef, ComponentRef  } from '@angular/core';
+import {Title} from '@angular/platform-browser';
 import {ChildComponent} from './child';
 import {User} from './user';
 @Component({
@@ -46,7 +46,7 @@ export class DynamicComponentDemo implements OnInit {
     
     loaderAction(){
         var child = this.loader.loadNextToLocation(ChildComponent, this.vcRef)
-        .then((chidRef: ComponentRef) => {
+        .then((chidRef) => {
             let instance = chidRef.instance;
             
             instance.ref = chidRef

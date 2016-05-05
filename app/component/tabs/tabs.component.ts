@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, AfterContentInit, ContentChildren, QueryList, Query } from 'angular2/core';
+import { Component, OnInit, Input, AfterContentInit, ContentChildren, QueryList, Query } from '@angular/core';
 
 
 @Component({

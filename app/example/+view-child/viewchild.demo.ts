@@ -1,6 +1,6 @@
 import { Directive, Component, ViewChild, AfterViewInit, 
     AfterContentInit, ElementRef, Renderer, 
-    OnInit } from 'angular2/core';
+    OnInit } from '@angular/core';
 
 @Directive({selector: 'label'})
 export class LabelItem{}
@@ -31,7 +31,7 @@ export class LabelItem{}
 })
 export class ViewChildComponentDemo implements OnInit, AfterViewInit {
     
-    private @ViewChild('myemail') emailRef: ElementRef;
+    @ViewChild('myemail') emailRef: ElementRef
     private username: any;
 
     constructor(private _el: ElementRef, private _render: Renderer) {

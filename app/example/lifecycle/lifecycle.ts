@@ -1,4 +1,6 @@
-import { Component, OnInit, AfterContentInit, AfterViewInit, AfterContentChecked, AfterViewChecked, OnChanges, OnDestroy, DoCheck, ChangeDetectionStrategy } from 'angular2/core';
+import { Component, OnInit, AfterContentInit,
+     AfterViewInit, AfterContentChecked, AfterViewChecked,
+      OnChanges, OnDestroy, DoCheck, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
     selector: 'lifecycle',

@@ -1,5 +1,6 @@
-System.register(['angular2/core', 'angular2/router', '../component/home/home.component', '../component/footer.component', './tabs/tabs.demo', './lifecycle/lifecycle', './colors/color.demo', './attr/attrs.demo', './host/host.demo', './dynamic-component/parent', './view-child/viewchild.demo'], function(exports_1) {
+System.register(['@angular/core', '@angular/router', '../component/home/home.component', '../component/footer.component', './+tabs/tabs.demo', './lifecycle/lifecycle', './+colors/color.demo', './+attr/attrs.demo', './+host/host.demo', './dynamic-component/parent', './+view-child/viewchild.demo'], function(exports_1, context_1) {
     "use strict";
+    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -48,28 +49,33 @@ System.register(['angular2/core', 'angular2/router', '../component/home/home.com
             }],
         execute: function() {
             AppComponent = (function () {
-                function AppComponent() {
+                function AppComponent(router) {
+                    this.router = router;
                 }
+                AppComponent.prototype.ngOnInit = function () {
+                    this.router.navigate(['/home']);
+                };
                 AppComponent = __decorate([
                     core_1.Component({
+                        // moduleId: module.id,
                         selector: 'example-app',
                         directives: [router_1.ROUTER_DIRECTIVES, footer_component_1.Footer],
                         styles: [
                             "\n        .header-title {padding: 20px}\n        .router-link-active{border-right: 4px solid #00dcc1}\n        .content {padding: 20px; min-height: 70vh}\n        nav li {cursor: pointer}\n        "
                         ],
-                        template: "\n        <div class=\"container-fluid\">\n            <div class=\"row\"><p class=\"header-title\">Angular2 demo of kunl</p></div>\n            <div class=\"row\">\n                <div class=\"col-sm-2\">\n                    <nav class=\"list-group\">\n                      <li class=\"list-group-item\" [routerLink]='[\"Home\"]'>Home</li>\n                      <!-- <li class=\"list-group-item\" [routerLink]='[\"LifecycleComponent\"]'>Lifecycle </li> -->\n                        <li class=\"list-group-item\" [routerLink]='[\"TabsDemo\"]'>Tabs demo</li>\n                        <li class=\"list-group-item\" [routerLink]='[\"ColorDemo\"]'>Colors demo</li>\n                        <li class=\"list-group-item\" [routerLink]='[\"AttrsDemoComponent\"]'>Attrs demo</li>\n                        <li class=\"list-group-item\" [routerLink]='[\"HostDemo\"]'>Host demo</li>\n                        <li class=\"list-group-item\" [routerLink]='[\"DynamicComponentDemo\"]'>Dynamic Component demo</li>\n                        <li class=\"list-group-item\" [routerLink]='[\"ViewChildComponentDemo\"]'>ViewChild demo</li>\n                    </nav>\n                </div>\n                <div class=\"col-sm-10\">\n                \n                    <div class=\"card content\">\n                        <router-outlet></router-outlet>\n                    </div>\n                    \n                </div>\n            </div>\n            <footer></footer>\n        </div>\n    "
+                        templateUrl: 'app/example/app.component.html'
                     }),
-                    router_1.RouteConfig([
-                        { path: '/home', name: 'Home', component: home_component_1.HomeComponent, useAsDefault: true },
-                        { path: '/lifecycle', name: 'LifecycleComponent', component: lifecycle_1.LifecycleComponent },
-                        { path: '/tabs', name: 'TabsDemo', component: tabs_demo_1.TabsDemo },
-                        { path: '/attrs', name: 'AttrsDemoComponent', component: attrs_demo_1.AttrsDemoComponent },
-                        { path: '/host', name: 'HostDemo', component: host_demo_1.HostDemo },
-                        { path: '/color', name: 'ColorDemo', component: color_demo_1.ColorDemo },
-                        { path: '/dynamic', name: 'DynamicComponentDemo', component: parent_1.DynamicComponentDemo },
-                        { path: '/viewchild', name: 'ViewChildComponentDemo', component: viewchild_demo_1.ViewChildComponentDemo },
+                    router_1.Routes([
+                        { path: '/home', component: home_component_1.HomeComponent },
+                        { path: '/lifecycle', component: lifecycle_1.LifecycleComponent },
+                        { path: '/tabs', component: tabs_demo_1.TabsDemo },
+                        { path: '/attrs', component: attrs_demo_1.AttrsDemoComponent },
+                        { path: '/host', component: host_demo_1.HostDemo },
+                        { path: '/color', component: color_demo_1.ColorDemo },
+                        { path: '/dynamic', component: parent_1.DynamicComponentDemo },
+                        { path: '/viewchild', component: viewchild_demo_1.ViewChildComponentDemo },
                     ]), 
-                    __metadata('design:paramtypes', [])
+                    __metadata('design:paramtypes', [router_1.Router])
                 ], AppComponent);
                 return AppComponent;
             }());

@@ -3,51 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <title>ng2 </title>
-    <!--<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    
-    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
-    <script src="node_modules/systemjs/dist/system.src.js"></script>
-    
-    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
-    <script src="node_modules/angular2/bundles/router.dev.js"></script>
-    <script src="node_modules/rxjs/bundles/Rx.js"></script>
-  -->
+
   
     <link rel="stylesheet" href="https://npmcdn.com/bootstrap@4.0.0-alpha.2/dist/css/bootstrap.min.css">
-    <script src="https://npmcdn.com/angular2/bundles/angular2-polyfills.js"></script>
-    <script src="https://npmcdn.com/systemjs@0.19.26/dist/system.src.js"></script>
-
-    <script src="https://npmcdn.com/angular2/bundles/angular2.dev.js"></script>
-    <script src="https://npmcdn.com/angular2/bundles/router.dev.js"></script>
-    <script src="https://npmcdn.com/rxjs@5.0.0-beta.6/bundles/Rx.js"></script>
-
-  
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.0/es6-shim.min.js"></script>
+    <script src="https://npmcdn.com/zone.js@0.6.12?main=browser"></script>
+    <script src="https://npmcdn.com/reflect-metadata@0.1.3"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.27/system.js"></script>
   
     <script>
-          
-     System.config({
-     
-        packages: {        
-          app: {
-            format: 'register',
-            defaultExtension: 'js'
-          },
-          build: {
-            format: 'register',
-            defaultExtension: 'js'
-          }
-        }
-      });
-      System.import('build/boot')
-            .then(null, console.error.bind(console));
-    </script>
-</head>
+      
+      /**
+       * PLUNKER VERSION (based on systemjs.config.js in angular.io)
+       * System configuration for Angular 2 samples
+       * Adjust as necessary for your application needs.
+       * Override at the last minute with global.filterSystemConfig (as plunkers do)
+       */
+      (function(global) {
 
+        var ngVer = ''; // lock in the angular package version; do not let it float to current!
+
+        //map tells the System loader where to look for things
+        var  map = {
+          'build':                        'build', // 'dist',
+          'rxjs':                       'https://npmcdn.com/rxjs@5.0.0-beta.6'
+        };
+
+        //packages tells the System loader how to load when no filename and/or no extension
+        var packages = {
+          'build':                        { main: 'boot.js',  defaultExtension: 'js' },
+          'rxjs':                       { defaultExtension: 'js' }
+        };
+
+        var packageNames = [
+            '@angular/common',
+            '@angular/compiler',
+            '@angular/core',
+            '@angular/http',
+            '@angular/platform-browser',
+            '@angular/platform-browser-dynamic',
+            '@angular/router'
+        ];
+
+        // add map entries for angular packages in the form '@angular/common': 'https://npmcdn.com/@angular/common@0.0.0-3?main=browser'
+        packageNames.forEach(function(pkgName) {
+          map[pkgName] = 'https://npmcdn.com/' + pkgName + ngVer;
+        });
+        console.dir(map)
+        // add package entries for angular packages in the form '@angular/common': { main: 'index.js', defaultExtension: 'js' }
+        packageNames.forEach(function(pkgName) {
+          packages[pkgName] = { main: 'index.js', defaultExtension: 'js' };
+        });
+
+        var config = {
+          transpiler: 'typescript',
+          typescriptOptions: {
+            emitDecoratorMetadata: true
+          },
+          map: map,
+          packages: packages
+        }
+
+        // filterSystemConfig - index.html's chance to modify config before we register it.
+        if (global.filterSystemConfig) { global.filterSystemConfig(config); }
+
+        System.config(config);
+
+      })(this);
+
+
+      /*
+      Copyright 2016 Google Inc. All Rights Reserved.
+      Use of this source code is governed by an MIT-style license that
+      can be found in the LICENSE file at http://angular.io/license
+      */
+    </script>
+    <script>
+      System.import('build').catch(function(err){ console.error(err);  });
+    </script>
+    
+</head>
 <body>
     
-<example-app>
-    loading
-</example-app>
+  <example-app>
+      loading
+  </example-app>
 
 </body>
 </html>
