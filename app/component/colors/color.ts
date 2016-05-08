@@ -1,4 +1,4 @@
-import {Directive, Input, ElementRef, Renderer , HostBinding} from '@angular/core';
+import {Directive, Input, ElementRef, Renderer , HostBinding, HostListener} from '@angular/core';
 
 @Directive({
     selector: '[color]'
@@ -6,15 +6,22 @@ import {Directive, Input, ElementRef, Renderer , HostBinding} from '@angular/cor
 })
 
 export class ColorDirective {
-
+    private _element: HTMLElement;
+    private _defaultColor:string = 'yellow';
     @Input() color: string;
 
-    constructor(private _ele: ElementRef, private _render: Renderer){
-
+    constructor(elRef: ElementRef, private _render: Renderer){
+        this._element = elRef.nativeElement;
     }
     
-    @HostBinding('style.color' ) get c() { return this.color};
+    @HostBinding('style.color' ) get c() { return this.color || this._defaultColor};
     
+    @HostListener('mouseenter') onMouseEnter(){
+        this._render.setElementStyle(this._element, 'color', 'green');
+    }
+    @HostListener('mouseleave') onMouseLeave(){
+        this._render.setElementStyle(this._element, 'color', this.color);
+    }
 
     // ngOnInit(){
     //     this._render.setElementStyle(this._ele.nativeElement, 'color', this.color);

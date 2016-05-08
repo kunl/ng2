@@ -9,4 +9,7 @@ import {DisabledComponent} from './disabled';
     directives: [DisabledComponent]
 })
 export class AttrsDemoComponent {
+    constructor(){
+        console.log(this.host)
+    }
 }

@@ -31,7 +31,6 @@ import {User} from './user';
                 </div>
             </div>
         </div>
-     
     `
 })
 export class ChildComponent {

@@ -32,7 +32,7 @@ System.register(['@angular/core', '../../component/colors/color'], function(expo
                 ColorDemo = __decorate([
                     core_1.Component({
                         selector: 'colors',
-                        template: "\n        <p color='red'>\u7EA2\u8272\u6587\u5B57</p>\n        <p color='blue'>\u84DD\u8272\u6587\u5B57</p>\n        <p color='#f00'>\u84DD\u8272\u6587\u5B57</p>\n        \n        <p><span [color]='myColor'>\u9ED1\u8272\u6587\u5B57</span> \u70B9\u51FB\u66F4\u6362\u6587\u5B57\u989C\u8272 {{myColor}}</p>\n        <button class=\"btn btn-sma btn-success-outline\" (click)=\"setColor()\">\u6362\u8272</button>\n    ",
+                        template: "\n        <p color>\u7EA2\u8272\u6587\u5B57</p>\n        <p color='blue'>\u84DD\u8272\u6587\u5B57</p>\n        <p color='#f00'>\u84DD\u8272\u6587\u5B57</p>\n        \n        <p><span [color]='myColor'>\u9ED1\u8272\u6587\u5B57</span> \u70B9\u51FB\u66F4\u6362\u6587\u5B57\u989C\u8272 {{myColor}}</p>\n        <button class=\"btn btn-sma btn-success-outline\" (click)=\"setColor()\">\u6362\u8272</button>\n        \n\n\n    ",
                         directives: [color_1.ColorDirective]
                     }), 
                     __metadata('design:paramtypes', [])

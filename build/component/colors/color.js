@@ -19,16 +19,23 @@ System.register(['@angular/core'], function(exports_1, context_1) {
             }],
         execute: function() {
             ColorDirective = (function () {
-                function ColorDirective(_ele, _render) {
-                    this._ele = _ele;
+                function ColorDirective(elRef, _render) {
                     this._render = _render;
+                    this._defaultColor = 'yellow';
+                    this._element = elRef.nativeElement;
                 }
                 Object.defineProperty(ColorDirective.prototype, "c", {
-                    get: function () { return this.color; },
+                    get: function () { return this.color || this._defaultColor; },
                     enumerable: true,
                     configurable: true
                 });
                 ;
+                ColorDirective.prototype.onMouseEnter = function () {
+                    this._render.setElementStyle(this._element, 'color', 'green');
+                };
+                ColorDirective.prototype.onMouseLeave = function () {
+                    this._render.setElementStyle(this._element, 'color', this.color);
+                };
                 __decorate([
                     core_1.Input(), 
                     __metadata('design:type', String)
@@ -37,6 +44,18 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                     core_1.HostBinding('style.color'), 
                     __metadata('design:type', Object)
                 ], ColorDirective.prototype, "c", null);
+                __decorate([
+                    core_1.HostListener('mouseenter'), 
+                    __metadata('design:type', Function), 
+                    __metadata('design:paramtypes', []), 
+                    __metadata('design:returntype', void 0)
+                ], ColorDirective.prototype, "onMouseEnter", null);
+                __decorate([
+                    core_1.HostListener('mouseleave'), 
+                    __metadata('design:type', Function), 
+                    __metadata('design:paramtypes', []), 
+                    __metadata('design:returntype', void 0)
+                ], ColorDirective.prototype, "onMouseLeave", null);
                 ColorDirective = __decorate([
                     core_1.Directive({
                         selector: '[color]'
