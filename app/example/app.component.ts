@@ -14,6 +14,8 @@ import {HostDemo} from './+host/host.demo';
 import {DynamicComponentDemo} from './dynamic-component/parent';
 import {ViewChildComponentDemo} from './+view-child/viewchild.demo';
 
+import {HttpDemo} from './+http/http.demo';
+
 @Component({
     // moduleId: module.id,
     selector: 'example-app',
@@ -38,6 +40,7 @@ import {ViewChildComponentDemo} from './+view-child/viewchild.demo';
     { path: '/color',  component: ColorDemo },
     { path: '/dynamic', component: DynamicComponentDemo },
     { path: '/viewchild', component: ViewChildComponentDemo },
+    { path: '/http', component: HttpDemo },
 ])
 
 

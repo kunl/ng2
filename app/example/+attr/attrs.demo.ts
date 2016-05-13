@@ -10,6 +10,6 @@ import {DisabledComponent} from './disabled';
 })
 export class AttrsDemoComponent {
     constructor(){
-        console.log(this.host)
+        console.log('attrs')
     }
 }

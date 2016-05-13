@@ -31,10 +31,7 @@ export class CusonmComponent {
         return this.custom.val;
     }
    
-    
-    ngOnChanges(change){
-        console.log(change.custom)
-    }
+  
     
     ngAfterContentInit(){
         console.log(this.custom)

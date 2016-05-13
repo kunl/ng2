@@ -39,7 +39,7 @@ export class ChildComponent {
         telphone: 13999999999
     }
     @Input() name: string;
-    @Input() ref;
+    @Input() ref: ComponentRef;
     
     @Output() finally = new EventEmitter();
     
