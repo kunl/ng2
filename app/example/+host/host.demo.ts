@@ -8,7 +8,7 @@ export class HostService{
         return this.num;
     }
     
-    setNum(n){
+    setNum(n: number){
         console.log(n)
         this.num += n;
     }

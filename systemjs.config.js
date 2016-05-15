@@ -7,14 +7,15 @@
 
   // map tells the System loader where to look for things
   var map = {
-    'build':                        'build', // 'dist',
-    'rxjs':                       'node_modules/rxjs',
-    '@angular':                   'node_modules/@angular'
+    'app':      'app', // 'dist',
+    'rxjs':       'node_modules/rxjs',
+    '@angular':   'node_modules/@angular',
+    'build/**/*.html': 'app'
   };
 
   // packages tells the System loader how to load when no filename and/or no extension
   var packages = {
-    'build':                        { main: 'boot.js',  defaultExtension: 'js' },
+    'app':                        { main: 'boot.js',  defaultExtension: 'js' },
     'rxjs':                       { defaultExtension: 'js' }
   };
 

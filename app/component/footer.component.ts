@@ -15,11 +15,9 @@ import {Component} from '@angular/core';
         `
     ],
     template: `
-        <div class="card footer">
-            <div class="card-blcok">
-                <a href="https://github.com/kunl/ng2">github 上有源码，或者 F12 sources 面板也可以看到</a>
-            </div>
-        </div>
+        <nav class="navbar navbar-fixed-bottom navbar-dark bg-primary">
+            <a href="https://github.com/kunl/ng2">github 上有源码，或者 F12 sources 面板也可以看到</a>
+        </nav>
     `
 })
 

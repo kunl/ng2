@@ -39,7 +39,7 @@ export class ChildComponent {
         telphone: 13999999999
     }
     @Input() name: string;
-    @Input() ref: ComponentRef;
+    // @Input() ref: ComponentRef;
     
     @Output() finally = new EventEmitter();
     
@@ -48,7 +48,7 @@ export class ChildComponent {
     }
     
     cancel(){
-        this.ref.destroy();
+        // this.ref.destroy();
         console.log(`cancelaaa`)
     }
 

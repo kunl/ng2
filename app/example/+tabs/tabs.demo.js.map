@@ -1,0 +1,1 @@
+{"version":3,"file":"tabs.demo.js","sourceRoot":"","sources":["tabs.demo.ts"],"names":[],"mappings":";;;;;;;;;;AAAA,qBAAwB,eAAe,CAAC,CAAA;AACxC,+BAA8B,qCAAqC,CAAC,CAAA;AA+BpE;IAAA;IAAsB,CAAC;IA7BvB;QAAC,gBAAS,CAAC;YACP,QAAQ,EAAE,WAAW;YACrB,QAAQ,EAAE,+gDAuBT;YACD,UAAU,EAAE,CAAC,gCAAe,CAAC;SAChC,CAAC;;gBAAA;IAEoB,eAAC;AAAD,CAAC,AAAvB,IAAuB;AAAV,gBAAQ,WAAE,CAAA"}

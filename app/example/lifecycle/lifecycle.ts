@@ -48,7 +48,7 @@ export class LifecycleComponent implements OnInit {
         this._log('destory')
     }
 
-    _log(msg){
+    _log(msg: string){
         console.log(`${this.num++} -- ${msg}`)
     }
 }
