@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 import { HTTP_PROVIDERS } from '@angular/http';
-import { Routes, ROUTER_DIRECTIVES } from '@angular/router';
+import { Routes, ROUTER_DIRECTIVES, UrlTree } from '@angular/router';
 
 import { HttpService } from './http.service';
 import { UserComponent } from './user.component';
+
+import { User } from '../../service/model';
 
 @Component({
     moduleId: module.id,
@@ -17,22 +19,28 @@ import { UserComponent } from './user.component';
 
 
 @Routes([
-    { path: '/user', component: UserComponent }
+    { path: '/user/:id', component: UserComponent }
 ])
 
 export class HttpDemo implements OnInit {
-    private users: any;
+    private users: User[] = [];
     
-    link = './user(abc:user\//def:user)';
     
     constructor(private http_service: HttpService) { 
-        console.log(444)
+        this.http_service.getUsers().subscribe(data => this.users = data);
     }
 
     ngOnInit() { 
-        this.http_service.getUsers().subscribe(data => {
-            this.users = data.json();
-        })
+        
+    }
+    
+    del(it:User){
+            
+        this.http_service.del(it.id).subscribe(
+            data => {this.users = this.users.filter(item => item!=it)},
+        
+            err => alert(err)        
+        );
     }
     
 

@@ -6,16 +6,14 @@ import {Component} from '@angular/core';
     styles: [
         `
         .footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
+            background: #fff;
+            border-top: 1px solid #ddd;
             text-align: center
         }
         `
     ],
     template: `
-        <nav class="navbar navbar-fixed-bottom navbar-dark bg-primary">
+        <nav class="navbar navbar-fixed-bottom navbar-dark footer">
             <a href="https://github.com/kunl/ng2">github 上有源码，或者 F12 sources 面板也可以看到</a>
         </nav>
     `

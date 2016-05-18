@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var http_1 = require('@angular/http');
+require('rxjs/add/operator/map');
 var HttpService = (function () {
     function HttpService(http) {
         this.http = http;
@@ -17,10 +18,13 @@ var HttpService = (function () {
         this.users = this.url + 'users';
     }
     HttpService.prototype.getUsers = function () {
-        return this.http.get(this.users);
+        return this.http.get(this.users).map(function (res) { return res.json(); });
     };
     HttpService.prototype.getUser = function (id) {
-        return this.http.get(this.users + ("/" + id));
+        return this.http.get(this.users + ("/" + id)).map(function (res) { return res.json(); });
+    };
+    HttpService.prototype.del = function (id) {
+        return this.http.delete(this.users + ("/" + id)).map(function (res) { return res.json(); });
     };
     HttpService = __decorate([
         core_1.Injectable(), 

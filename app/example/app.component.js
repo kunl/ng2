@@ -21,21 +21,23 @@ var parent_1 = require('./dynamic-component/parent');
 var viewchild_demo_1 = require('./+view-child/viewchild.demo');
 var http_demo_1 = require('./+http/http.demo');
 var AppComponent = (function () {
-    function AppComponent(router) {
+    function AppComponent(router, injector) {
         this.router = router;
+        var user = injector.get('User');
+        console.log(user);
     }
     AppComponent.prototype.ngOnInit = function () {
-        this.router.navigate(['/home']);
+        // this.router.navigate(['/home']);
     };
     AppComponent = __decorate([
         core_1.Component({
-            // moduleId: module.id,
+            moduleId: module.id,
             selector: 'example-app',
             directives: [router_1.ROUTER_DIRECTIVES, footer_component_1.Footer],
             styles: [
                 "\n        .header-title {padding: 20px}\n        .router-link-active{border-right: 4px solid #00dcc1}\n        .content {padding: 20px; min-height: 70vh}\n        nav li {cursor: pointer}\n        "
             ],
-            templateUrl: 'app/example/app.component.html'
+            templateUrl: 'app.component.html'
         }),
         router_1.Routes([
             { path: '/home', component: home_component_1.HomeComponent },
@@ -48,9 +50,29 @@ var AppComponent = (function () {
             { path: '/viewchild', component: viewchild_demo_1.ViewChildComponentDemo },
             { path: '/http', component: http_demo_1.HttpDemo },
         ]), 
-        __metadata('design:paramtypes', [router_1.Router])
+        __metadata('design:paramtypes', [router_1.Router, core_1.Injector])
     ], AppComponent);
     return AppComponent;
 }());
 exports.AppComponent = AppComponent;
+var trains = [
+    {
+        from: 101,
+        num: 1,
+        process: 2,
+        to: 103
+    },
+    {
+        from: 101,
+        num: 1,
+        process: 2,
+        to: 103
+    },
+    {
+        from: 101,
+        num: 1,
+        process: 2,
+        to: 103
+    }
+];
 //# sourceMappingURL=app.component.js.map

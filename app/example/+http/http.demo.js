@@ -15,15 +15,16 @@ var http_service_1 = require('./http.service');
 var user_component_1 = require('./user.component');
 var HttpDemo = (function () {
     function HttpDemo(http_service) {
+        var _this = this;
         this.http_service = http_service;
-        this.link = './user(abc:user\//def:user)';
-        console.log(444);
+        this.users = [];
+        this.http_service.getUsers().subscribe(function (data) { return _this.users = data; });
     }
     HttpDemo.prototype.ngOnInit = function () {
+    };
+    HttpDemo.prototype.del = function (it) {
         var _this = this;
-        this.http_service.getUsers().subscribe(function (data) {
-            _this.users = data.json();
-        });
+        this.http_service.del(it.id).subscribe(function (data) { _this.users = _this.users.filter(function (item) { return item != it; }); }, function (err) { return alert(err); });
     };
     HttpDemo = __decorate([
         core_1.Component({
@@ -35,7 +36,7 @@ var HttpDemo = (function () {
             directives: [router_1.ROUTER_DIRECTIVES]
         }),
         router_1.Routes([
-            { path: '/user', component: user_component_1.UserComponent }
+            { path: '/user/:id', component: user_component_1.UserComponent }
         ]), 
         __metadata('design:paramtypes', [http_service_1.HttpService])
     ], HttpDemo);
