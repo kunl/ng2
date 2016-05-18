@@ -10,6 +10,7 @@
     "lite": "lite-server",
     "start": "tsc && concurrently \"tsc -w\" \"hs\" "
   },
+  "main":"main.js",
   "license": "ISC",
   "dependencies": {
     "@angular/common": "2.0.0-rc.1",
