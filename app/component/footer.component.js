@@ -16,9 +16,9 @@ var Footer = (function () {
         core_1.Component({
             selector: 'footer',
             styles: [
-                "\n        .footer {\n            position: fixed;\n            bottom: 0;\n            left: 0;\n            width: 100%;\n            text-align: center\n        }\n        "
+                "\n        .footer {\n            background: #fff;\n            border-top: 1px solid #ddd;\n            text-align: center\n        }\n        "
             ],
-            template: "\n        <nav class=\"navbar navbar-fixed-bottom navbar-dark bg-primary\">\n            <a href=\"https://github.com/kunl/ng2\">github \u4E0A\u6709\u6E90\u7801\uFF0C\u6216\u8005 F12 sources \u9762\u677F\u4E5F\u53EF\u4EE5\u770B\u5230</a>\n        </nav>\n    "
+            template: "\n        <nav class=\"navbar navbar-fixed-bottom navbar-dark footer\">\n            <a href=\"https://github.com/kunl/ng2\">github \u4E0A\u6709\u6E90\u7801\uFF0C\u6216\u8005 F12 sources \u9762\u677F\u4E5F\u53EF\u4EE5\u770B\u5230</a>\n        </nav>\n    "
         }), 
         __metadata('design:paramtypes', [])
     ], Footer);

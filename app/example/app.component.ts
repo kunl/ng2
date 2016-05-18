@@ -1,5 +1,5 @@
 
-import {Component} from '@angular/core';
+import {Component, Injector} from '@angular/core';
 import {Routes, Router, ROUTER_DIRECTIVES} from '@angular/router';
 
 import {HomeComponent} from '../component/home/home.component';
@@ -16,8 +16,9 @@ import {ViewChildComponentDemo} from './+view-child/viewchild.demo';
 
 import {HttpDemo} from './+http/http.demo';
 
+
 @Component({
-    // moduleId: module.id,
+    moduleId: module.id,
     selector: 'example-app',
     directives: [ROUTER_DIRECTIVES, Footer],
     styles: [
@@ -28,7 +29,7 @@ import {HttpDemo} from './+http/http.demo';
         nav li {cursor: pointer}
         `
     ],
-    templateUrl: 'app/example/app.component.html' 
+    templateUrl: 'app.component.html' 
 })
 
 @Routes([
@@ -46,11 +47,39 @@ import {HttpDemo} from './+http/http.demo';
 
 
 export class AppComponent{
-    constructor(private router: Router){
+    constructor(private router: Router, injector: Injector){
         
+        let user = injector.get('User');
+        
+        console.log(user)
     }
     
     ngOnInit(){
         this.router.navigate(['/home']);
     }
 }
+
+
+let trains = [
+    {
+        from: 101,
+        num: 1,
+        process: 2,
+        to: 103
+    },
+    
+    {
+        from: 101,
+        num: 1,
+        process: 2,
+        to: 103
+    },
+    
+    {
+        from: 101,
+        num: 1,
+        process: 2,
+        to: 103
+    }
+    
+]

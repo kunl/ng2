@@ -2,6 +2,9 @@ import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 
 import { Observable } from 'rxjs/Rx';
+import 'rxjs/add/operator/map';
+
+import { User } from '../../service/model';
 
 
 @Injectable()
@@ -16,11 +19,15 @@ export class HttpService {
     }
     
 
-    getUsers(): Observable<any>{
-        return this.http.get( this.users)
+    getUsers(): Observable<User[]>{
+        return this.http.get( this.users).map(res => res.json());
     }
     
-    getUser(id:string){
-        return this.http.get(this.users +`/${id}`);
+    getUser(id:string): Observable<User>{
+        return this.http.get(this.users +`/${id}`).map(res => res.json());
+    }
+    
+    del(id:string){
+        return this.http.delete(this.users + `/${id}`).map(res => res.json());
     }
 }

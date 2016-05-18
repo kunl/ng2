@@ -1,37 +1,39 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { RouteSegment } from '@angular/router';
+
+import { HttpService } from './http.service';
+import { User } from '../../service/model';
+
 
 @Component({
     moduleId: module.id,
     selector: 'user',
-    template: `
-        <div class="col-md-6">
-            <div class="form">
-                <div class="input-group input-group-sm">
-                    <span class="input-group-addon">name</span>
-                    <input type="text" class="form-control" placeholder="name">
-                </div>
-                
-                <div class="input-group input-group-sm">
-                    <span class="input-group-addon">age</span>
-                    <input type="number" class="form-control" placeholder="age">
-                </div>
-                
-                <div class="input-group input-group-sm">
-                    <span class="input-group-addon">image</span>
-                    <input type="text" class="form-control" placeholder="image_url">
-                </div>
-                
-            </div>
-        </div>
-    
-    `
+    templateUrl: 'user.component.html'
 })
 export class UserComponent implements OnInit {
-    constructor() { 
-        console.log(333)
+    private id:string;
+    private user: User = {
+        name: '',
+        age: 0,
+        imageUrl: '',
+        createdAt: 0,
+        id: ''
+    };
+    
+    constructor(private service: HttpService, segment: RouteSegment) { 
+        console.log(segment)
+        console.log('当前的 id:',segment.getParam('id'))
+        this.id = segment.getParam('id');
     }
 
-    ngOnInit() { }
+        
+    
+    ngOnInit(){
+        this.service.getUser(this.id).subscribe(user => {
+            this.user = user
+            console.log(user)
+        });
+    }
 
 
 }

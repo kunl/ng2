@@ -2,15 +2,8 @@
     <div class="row">
         <router-outlet></router-outlet>
         
-        <div class="col-md-12">aaaa</div>
-        
-        <router-outlet name="abc"></router-outlet>
-        
-        <div class="col-md-12">aaaa</div>
-        
-        
-        <router-outlet name="def"></router-outlet>
-
+    </div>
+    <div class="row">
         <div class="col-md-4" *ngFor="let it of users">
             <div class="card">
                 <img class="card-img-top" [src]="it.imageUrl" alt="{{it.name}}">
@@ -18,11 +11,12 @@
                     <h4 class="card-title">{{it.createdAt | date}}</h4>
                     <h4>{{it.name}}/{{it.age}}</h4>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a [routerLink]='["./user","(abc:user)","(def:user)"]' class="btn btn-primary btn-sm">编辑</a>
+                    
+                    <a [routerLink]="['./user', it.id]" class="btn btn-primary btn-sm">编辑</a>
+                    <button class="btn btn-warning btn-sm" (click)="del(it)">删除</button>
                 </div>
             </div>
         </div>
-        
         
     </div>
 </div>

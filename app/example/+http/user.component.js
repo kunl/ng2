@@ -9,18 +9,36 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
+var http_service_1 = require('./http.service');
 var UserComponent = (function () {
-    function UserComponent() {
-        console.log(333);
+    function UserComponent(service, segment) {
+        this.service = service;
+        this.user = {
+            name: '',
+            age: 0,
+            imageUrl: '',
+            createdAt: 0,
+            id: ''
+        };
+        console.log(segment);
+        console.log('当前的 id:', segment.getParam('id'));
+        this.id = segment.getParam('id');
     }
-    UserComponent.prototype.ngOnInit = function () { };
+    UserComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.service.getUser(this.id).subscribe(function (user) {
+            _this.user = user;
+            console.log(user);
+        });
+    };
     UserComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'user',
-            template: "\n        <div class=\"col-md-6\">\n            <div class=\"form\">\n                <div class=\"input-group input-group-sm\">\n                    <span class=\"input-group-addon\">name</span>\n                    <input type=\"text\" class=\"form-control\" placeholder=\"name\">\n                </div>\n                \n                <div class=\"input-group input-group-sm\">\n                    <span class=\"input-group-addon\">age</span>\n                    <input type=\"number\" class=\"form-control\" placeholder=\"age\">\n                </div>\n                \n                <div class=\"input-group input-group-sm\">\n                    <span class=\"input-group-addon\">image</span>\n                    <input type=\"text\" class=\"form-control\" placeholder=\"image_url\">\n                </div>\n                \n            </div>\n        </div>\n    \n    "
+            templateUrl: 'user.component.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [http_service_1.HttpService, router_1.RouteSegment])
     ], UserComponent);
     return UserComponent;
 }());
