@@ -1,0 +1,15 @@
+<div class="pagination">
+    <div class="page-list">
+        <button (click)="go(_current -1)" [disabled]="!hasPrev" class="page prev">prev</button>
+        <button class="page" *ngFor="let page of pages" (click)="go(page)" [class.current-page]="isCurrent(page)">{{page}}</button>
+        <button (click)="go(_current +1)" [disabled]="!hasNext" class="page next">next</button>
+    </div>
+    <div class="rows">
+        <select  [(ngModel)]="rows">
+            <option value="10" >10</option>
+            <option value="25" >25</option>
+            <option value="50" >50</option>
+        </select>
+        总数{{total}}
+    </div>
+</div>

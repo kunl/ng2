@@ -3,15 +3,8 @@
     <div class="row">
         <div class="col-sm-2">
             <nav class="list-group">
-                <a class="list-group-item" [routerLink]='["/home"]'>Home</a>
-                <!-- <a class="list-group-item" [routerLink]='["/lifecycle"]'>Lifecycle </a> -->
-                <a class="list-group-item" [routerLink]='["/tabs"]'>Tabs demo</a>
-                <a class="list-group-item" [routerLink]='["/color"]'>Colors demo</a>
-                <a class="list-group-item" [routerLink]='["/attrs"]'>Attrs demo</a>
-                <a class="list-group-item" [routerLink]='["/host"]'>Host demo</a>
-                <a class="list-group-item" [routerLink]='["/dynamic"]'>Dynamic Component demo</a>
-                <a class="list-group-item" [routerLink]='["/viewchild"]'>ViewChild demo</a>
-                <a class="list-group-item" [routerLink]='["/http"]'>Http demo</a>
+ 
+                <a class="list-group-item" [routerLink]='[it.path]' *ngFor="let it of routers">{{it.nick}}</a>
             </nav>
         </div>
         <div class="col-sm-10">
