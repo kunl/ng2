@@ -3,7 +3,8 @@ import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 @Component({
     moduleId: module.id,
     styles: [`
-        .current-page {color: #00dcc1}
+        // .current-page {color: #00dcc1}
+        .current-page {color: red}
         .pagination .page{
             display: inline-block;
             padding: 2px 12px;
@@ -20,49 +21,126 @@ import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
     templateUrl: 'pagination.html'
 })
 export class PaginationDirective implements OnInit {
-    
+
     /**  _current 当前页码 */
-    @Input('page') _current: number | string;
+    @Input('page') current: number | string;
     
     /** 总数 */
     @Input() total: number | string;
     
     /** 每页 显示条数*/
-    @Input() rows: number | string;
+    @Input() pagesize: number | string;
+   
     
     @Output() pageChange = new EventEmitter();
     
-    private pages: [number];
+    /**页码长度 */
+    private pagesLength: number = 7;
+  
     
-    constructor() { }
+    private pagesizeArray = [10, 50, 100];
+    
+    /**页码 list */
+    private pages: any[];
+    
+    constructor() { 
+        
+    }
 
     ngOnInit() { 
-        this.pages = [1, 2, 3]
+        this.getPagesArray();
+        
     }
     
-    
+    /** 页码数量 */
+    get pageCount(){
+        return Math.ceil(+this.total/+this.pagesize);
+    }
+   
     
     go(page: number){
-        this._current = page;
+        console.log('点击了 ',page)
+        if(isNaN(page)) {
+            return
+        };
+        this.current = page;
         this.pageChange.next(page);
         
-        console.log(this.hasNext)
-        console.log(this._current)
+        this.getPagesArray();
     }
     
     
     /** 当前页 添加 class */
     isCurrent(page: number){
-        
-        return page == this._current;
+        return page == this.current;
     }
+    
+    
+    
+    /**获取页码列表 */
+    getPagesArray(){
+        this.pages = [];
+        
+        const {start, end} = this.start_end();
+        
+        let num = +end - start + 1;
+        // if(start != 1){
+        //     this.pages.unshift(1);
+        // }
+        
+        console.log('end', end, 'start', start)
+        
+        
+        if(end < this.total){
+            if(end <= +this.total -1){
+                this.pages.push(...['...', this.total]);
+                num -= 2;
+            }else{
+                this.pages.push(this.total);
+                num--;
+            }
+        }
+        
+        
+        while(num--){
+            this.pages.unshift(start + num);
+        }
+    }
+    
+    /**页码 开始，结束 */
+    start_end(){
+        let start = 1;
+        let end = this.total;
+        
+        start = Math.max(+this.current - Math.floor(this.pagesLength / 2), 1);
+        // if(this.current > Math.floor( this.pagesLength /2 )){
+        //     start = 1
+        // }else{
+        //     start = +this.current;
+        // }
+        
+        end = start + this.pagesLength - 1;
+        
+        /**
+         * 如果 total=30， current=29，pagesLength=7
+         * 根据 end = start + this.pagesLength - 1;
+         * 则end=[29 - (7+1)/2 ] + 7 -1 = 31,大于total
+         */
+        if(end > this.total){
+            end = this.total;
+            start = Math.max(+this.total - this.pagesLength + 1, 1);
+        }
+        
+        return {start, end};
+    }
+    
     
     /**是否有上一页， 下一页 */
     get hasPrev(){
-        return this._current > 1;
+        return this.current > 1;
     }
     get hasNext(){
-        return this._current < this.total;
+        return this.current < this.total;
     }
     
 }

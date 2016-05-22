@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output, OnChanges } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, OnChanges, SimpleChange } from '@angular/core';
 
 import { PaginationDirective } from './pagination';
 
@@ -6,21 +6,21 @@ import { PaginationDirective } from './pagination';
     moduleId: module.id,
     selector: 'pagination-demo',
     template: `
-        <pagination [(page)]="mypage" [total]="mytotal" [rows]="myrows"></pagination>
+        <pagination [(page)]="mypage" [total]="mytotal" [pagesize]="mysize"></pagination>
     `,
     directives: [PaginationDirective]
 })
 export class PaginationDemo implements OnInit, OnChanges {
     
     mypage = 3;
-    mytotal = 5;
-    myrows = 20;
+    mytotal = 35;
+    mysize = 10;
     
     ngOnInit(){
         
     }
     
-    ngOnChanges(changes){
+    ngOnChanges(changes: {[key:string]: SimpleChange}){
         console.log(changes)
     }
     

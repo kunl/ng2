@@ -20,6 +20,7 @@ var parent_1 = require('./dynamic-component/parent');
 var viewchild_demo_1 = require('./+view-child/viewchild.demo');
 var http_demo_1 = require('./+http/http.demo');
 var pagination_demo_1 = require('./pagination/pagination.demo');
+var dialog_demo_1 = require('./+dialog/dialog.demo');
 var routers = [
     { path: '/home', component: home_component_1.HomeComponent, nick: '首页' },
     // { path: '/lifecycle', component: LifecycleComponent, nick: '声明周期' },
@@ -31,6 +32,7 @@ var routers = [
     { path: '/viewchild', component: viewchild_demo_1.ViewChildComponentDemo, nick: 'viewchild' },
     { path: '/http', component: http_demo_1.HttpDemo, nick: 'http' },
     { path: '/pagination', component: pagination_demo_1.PaginationDemo, nick: '分页' },
+    { path: '/dialog', component: dialog_demo_1.DialogDemo, nick: '模态框' },
 ];
 var AppComponent = (function () {
     function AppComponent(router, injector) {
@@ -47,7 +49,7 @@ var AppComponent = (function () {
             selector: 'example-app',
             directives: [router_1.ROUTER_DIRECTIVES, footer_component_1.Footer],
             styles: [
-                "\n        .header-title {padding: 0 20px}\n        .router-link-active{border-right: 4px solid #00dcc1}\n        .content {padding: 20px; min-height: 70vh}\n        nav li {cursor: pointer}\n        "
+                "\n        .header-title {padding: 0 20px}\n        .router-link-active{border-right: 4px solid #00dcc1}\n        .content {padding: 0 20px; min-height: 70vh}\n        nav li {cursor: pointer}\n        "
             ],
             templateUrl: 'app.component.html'
         }),

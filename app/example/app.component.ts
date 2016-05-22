@@ -16,9 +16,8 @@ import {ViewChildComponentDemo} from './+view-child/viewchild.demo';
 
 import {HttpDemo} from './+http/http.demo';
 import {PaginationDemo} from './pagination/pagination.demo';
+import {DialogDemo} from './+dialog/dialog.demo'
 
-
-import {isPresent} from '@angular/compiler/src/facade/lang'
 
 let routers  = [
     { path: '/home',  component: HomeComponent, nick: '首页' },
@@ -31,6 +30,7 @@ let routers  = [
     { path: '/viewchild', component: ViewChildComponentDemo, nick: 'viewchild' },
     { path: '/http', component: HttpDemo, nick: 'http' },
     { path: '/pagination', component: PaginationDemo, nick: '分页' },
+    { path: '/dialog', component: DialogDemo, nick: '模态框' },
 ];
 
 @Component({
@@ -41,7 +41,7 @@ let routers  = [
         `
         .header-title {padding: 0 20px}
         .router-link-active{border-right: 4px solid #00dcc1}
-        .content {padding: 20px; min-height: 70vh}
+        .content {padding: 0 20px; min-height: 70vh}
         nav li {cursor: pointer}
         `
     ],

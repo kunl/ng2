@@ -1,19 +1,18 @@
-<div class="container-fluid">
-    <div class="row"><p class="header-title">Angular2 demo of kunl</p></div>
+<style>
+    .sidebar{
+        width: 120px;
+        float: left;
+    }
+</style>
+<div class="row"><p class="header-title">Angular2 demo of kunl</p></div>
+<nav class="list-group sidebar">
+    <a class="list-group-item" [routerLink]='[it.path]' *ngFor="let it of routers">{{it.nick}}</a>
+</nav>    
+<div class="container-fluid" style="margin-left: 119px">
     <div class="row">
-        <div class="col-sm-2">
-            <nav class="list-group">
- 
-                <a class="list-group-item" [routerLink]='[it.path]' *ngFor="let it of routers">{{it.nick}}</a>
-            </nav>
-        </div>
-        <div class="col-sm-10">
-        
-            <div class="card content">
-                <router-outlet></router-outlet>
-            </div>
-            
+        <div class="content">
+            <router-outlet></router-outlet>
         </div>
     </div>
-    <footer></footer>
 </div>
+<footer></footer>

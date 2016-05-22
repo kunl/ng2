@@ -9,28 +9,32 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var pagination_1 = require('./pagination');
-var PaginationDemo = (function () {
-    function PaginationDemo() {
-        this.mypage = 3;
-        this.mytotal = 35;
-        this.mysize = 10;
+var dialog_1 = require('./dialog');
+var DialogDemo = (function () {
+    function DialogDemo() {
+        this.open = false;
     }
-    PaginationDemo.prototype.ngOnInit = function () {
+    DialogDemo.prototype.ngOnInit = function () { };
+    DialogDemo.prototype.show = function () {
+        console.log(this.open);
+        this.open = true;
     };
-    PaginationDemo.prototype.ngOnChanges = function (changes) {
-        console.log(changes);
+    DialogDemo.prototype.close = function () {
+        this.open = false;
     };
-    PaginationDemo = __decorate([
+    DialogDemo.prototype.change = function (e) {
+        console.log('change', e);
+    };
+    DialogDemo = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'pagination-demo',
-            template: "\n        <pagination [(page)]=\"mypage\" [total]=\"mytotal\" [pagesize]=\"mysize\"></pagination>\n    ",
-            directives: [pagination_1.PaginationDirective]
+            selector: 'dialog-demo',
+            templateUrl: 'dialog.demo.html',
+            directives: [dialog_1.DialogDirective]
         }), 
         __metadata('design:paramtypes', [])
-    ], PaginationDemo);
-    return PaginationDemo;
+    ], DialogDemo);
+    return DialogDemo;
 }());
-exports.PaginationDemo = PaginationDemo;
-//# sourceMappingURL=pagination.demo.js.map
+exports.DialogDemo = DialogDemo;
+//# sourceMappingURL=dialog.demo.js.map
