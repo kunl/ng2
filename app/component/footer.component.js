@@ -25,4 +25,12 @@ var Footer = (function () {
     return Footer;
 }());
 exports.Footer = Footer;
+var a = '\
+aa\
+bb\
+cc\
+dd\
+ee\
+ff\
+';
 //# sourceMappingURL=footer.component.js.map

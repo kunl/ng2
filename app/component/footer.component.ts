@@ -20,3 +20,12 @@ import {Component} from '@angular/core';
 })
 
 export class Footer{}
+
+var a = '\
+aa\
+bb\
+cc\
+dd\
+ee\
+ff\
+'
