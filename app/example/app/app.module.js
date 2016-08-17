@@ -8,13 +8,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var UserDefault = (function () {
+    function UserDefault() {
+        this.name = 'xxx';
+        this.age = 111;
+        this.url = 'http://127.0.0.1';
+    }
+    return UserDefault;
+}());
 var core_1 = require('@angular/core');
+var platform_browser_1 = require('@angular/platform-browser');
+var http_1 = require('@angular/http');
+var forms_1 = require('@angular/forms');
+var app_component_1 = require('./app.component');
+var module_1 = require('../+tabs/module');
+var home_module_1 = require('../../component/home/home.module');
+var app_routes_1 = require('./app.routes');
+var footer_component_1 = require('../../component/footer.component');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: []
+            imports: [platform_browser_1.BrowserModule, app_routes_1.routing, http_1.HttpModule, forms_1.FormsModule, home_module_1.HomeModule, module_1.TabDemoModule],
+            declarations: [footer_component_1.Footer],
+            bootstrap: [app_component_1.AppComponent],
+            providers: [
+                { provide: 'User', useClass: UserDefault }
+            ].concat(app_routes_1.APP_ROUTER_PROVIDERS)
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);

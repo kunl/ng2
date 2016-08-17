@@ -1,7 +1,3 @@
-/**
- * Created by kunl on 2016/1/5-0005.
- */
-
 class UserDefault{
     name =  'xxx';
     age = 111;
@@ -9,30 +5,36 @@ class UserDefault{
 }
 
 
-import {AppComponent} from './example/app.component';
-import {HomeComponent} from './component/home/home.component';
-import {APP_ROUTER_PROVIDERS, routing} from './example/app.routes';
-
-
 import { NgModule } from '@angular/core';
+
 import { APP_BASE_HREF, LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router'
 import { HttpModule } from '@angular/http'
 import { FormsModule } from '@angular/forms'
 
+
+import { AppComponent } from './app.component';
+import {TabDemoModule} from '../+tabs/module';
+
+
+
+import {HomeModule} from '../../component/home/home.module';
+import {APP_ROUTER_PROVIDERS, routing} from './app.routes';
+import {Footer} from '../../component/footer.component';
+
+
+
 @NgModule({
-    imports: [BrowserModule, routing, HttpModule, FormsModule],
-    declarations: [AppComponent, HomeComponent],
+    imports: [BrowserModule, routing, HttpModule, FormsModule, HomeModule, TabDemoModule],
+    declarations: [Footer],
     bootstrap: [AppComponent],
     providers: [
-        // { provide: APP_BASE_HREF, useValue: './'},
         { provide: 'User', useClass: UserDefault },
-        { provide: LocationStrategy, useClass: HashLocationStrategy },
         ...APP_ROUTER_PROVIDERS
     ]
 })
 
-export class BootModule {
+export class AppModule {
 
 }

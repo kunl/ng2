@@ -30,4 +30,4 @@ import {TABS_DIRECTIVES} from '../../component/tabs/tabs.component';
     directives: [TABS_DIRECTIVES]
 })
 
-export class TabsDemo{}
+export class TabsDemoComponent{}

@@ -27,13 +27,6 @@
         'router'
     ];
 
-    function packIndex(pkgName) {
-        packages['@angular/' + pkgName] = {
-            main: 'index.js',
-            defaultExtension: 'js'
-        };
-    }
-
     function packUmd(pkgName) {
         packages['@angular/' + pkgName] = {
             main: 'bundles/' + pkgName + '.umd.js',
@@ -41,15 +34,12 @@
         };
     };
 
-    var setPackageConfig = System.packageWithIndex ? packIndex : packUmd;
-
-    ngPackageNames.forEach(setPackageConfig);
+    ngPackageNames.forEach(packUmd);
 
     packages['@angular/router'] = {
         main: 'index.js',
         defaultExtension: 'js'
     };
-
 
     var config = {
         map: map,
