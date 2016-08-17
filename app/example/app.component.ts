@@ -1,6 +1,6 @@
 
 import {Component, Injector} from '@angular/core';
-import {Routes, Router, ROUTER_DIRECTIVES} from '@angular/router';
+import {ROUTER_DIRECTIVES} from '@angular/router';
 
 import {HomeComponent} from '../component/home/home.component';
 import {Footer} from '../component/footer.component';
@@ -48,13 +48,13 @@ let routers  = [
     templateUrl: 'app.component.html' 
 })
 
-@Routes(routers.map(_ => { return {path: _.path, component: _.component}}))
+
 
 export class AppComponent{
     
     routers = routers;
     
-    constructor(private router: Router, injector: Injector){
+    constructor(injector: Injector){
         
         let user = injector.get('User');
         

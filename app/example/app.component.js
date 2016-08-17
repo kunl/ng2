@@ -35,8 +35,7 @@ var routers = [
     { path: '/dialog', component: dialog_demo_1.DialogDemo, nick: '模态框' },
 ];
 var AppComponent = (function () {
-    function AppComponent(router, injector) {
-        this.router = router;
+    function AppComponent(injector) {
         this.routers = routers;
         var user = injector.get('User');
         console.log(user);
@@ -52,9 +51,8 @@ var AppComponent = (function () {
                 "\n        .header-title {padding: 0 20px}\n        .router-link-active{border-right: 4px solid #00dcc1}\n        .content {padding: 0 20px; min-height: 70vh}\n        nav li {cursor: pointer}\n        "
             ],
             templateUrl: 'app.component.html'
-        }),
-        router_1.Routes(routers.map(function (_) { return { path: _.path, component: _.component }; })), 
-        __metadata('design:paramtypes', [router_1.Router, core_1.Injector])
+        }), 
+        __metadata('design:paramtypes', [core_1.Injector])
     ], AppComponent);
     return AppComponent;
 }());

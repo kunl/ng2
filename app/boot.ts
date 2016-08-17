@@ -9,14 +9,30 @@ class UserDefault{
 }
 
 
-import {bootstrap} from '@angular/platform-browser-dynamic';
-import {provide} from '@angular/core';
-import {ROUTER_PROVIDERS} from '@angular/router'
-import {LocationStrategy, HashLocationStrategy} from '@angular/common';
-
 import {AppComponent} from './example/app.component';
-bootstrap(AppComponent, [
-    ROUTER_PROVIDERS, 
-    provide(LocationStrategy, {useClass: HashLocationStrategy}),
-    provide('User', {useClass: UserDefault})
-]);
+import {HomeComponent} from './component/home/home.component';
+import {APP_ROUTER_PROVIDERS, routing} from './example/app.routes';
+
+
+import { NgModule } from '@angular/core';
+import { APP_BASE_HREF, LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router'
+import { HttpModule } from '@angular/http'
+import { FormsModule } from '@angular/forms'
+
+@NgModule({
+    imports: [BrowserModule, routing, HttpModule, FormsModule],
+    declarations: [AppComponent, HomeComponent],
+    bootstrap: [AppComponent],
+    providers: [
+        // { provide: APP_BASE_HREF, useValue: './'},
+        { provide: 'User', useClass: UserDefault },
+        { provide: LocationStrategy, useClass: HashLocationStrategy },
+        ...APP_ROUTER_PROVIDERS
+    ]
+})
+
+export class BootModule {
+
+}

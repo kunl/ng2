@@ -12,7 +12,6 @@ var core_1 = require('@angular/core');
 var http_1 = require('@angular/http');
 var router_1 = require('@angular/router');
 var http_service_1 = require('./http.service');
-var user_component_1 = require('./user.component');
 var HttpDemo = (function () {
     function HttpDemo(http_service) {
         var _this = this;
@@ -34,10 +33,7 @@ var HttpDemo = (function () {
             templateUrl: 'http.demo.html',
             styleUrls: ['http.demo.css'],
             directives: [router_1.ROUTER_DIRECTIVES]
-        }),
-        router_1.Routes([
-            { path: '/user/:id', component: user_component_1.UserComponent }
-        ]), 
+        }), 
         __metadata('design:paramtypes', [http_service_1.HttpService])
     ], HttpDemo);
     return HttpDemo;

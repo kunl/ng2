@@ -44,7 +44,7 @@ var LifecycleComponent = (function () {
     LifecycleComponent = __decorate([
         core_1.Component({
             selector: 'lifecycle',
-            changeDetection: core_1.ChangeDetectionStrategy.CheckOnce,
+            changeDetection: core_1.ChangeDetectionStrategy.OnPush,
             template: "\n        <input type=\"text\" [(ngModel)]=\"text\">\n    \n    "
         }), 
         __metadata('design:paramtypes', [])

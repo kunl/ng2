@@ -4,7 +4,7 @@ import { Component, OnInit, AfterContentInit,
 
 @Component({
     selector: 'lifecycle',
-    changeDetection: ChangeDetectionStrategy.CheckOnce,
+    changeDetection: ChangeDetectionStrategy.OnPush,
     template: `
         <input type="text" [(ngModel)]="text">
     

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { HTTP_PROVIDERS } from '@angular/http';
-import { Routes, ROUTER_DIRECTIVES, UrlTree } from '@angular/router';
+import { ROUTER_DIRECTIVES, UrlTree } from '@angular/router';
 
 import { HttpService } from './http.service';
 import { UserComponent } from './user.component';
@@ -18,9 +18,9 @@ import { User } from '../../service/model';
 })
 
 
-@Routes([
-    { path: '/user/:id', component: UserComponent }
-])
+// @Routes([
+//     { path: '/user/:id', component: UserComponent }
+// ])
 
 export class HttpDemo implements OnInit {
     private users: User[] = [];

@@ -12,8 +12,9 @@ var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var http_service_1 = require('./http.service');
 var UserComponent = (function () {
-    function UserComponent(service, segment) {
+    function UserComponent(service, route) {
         this.service = service;
+        this.id = '10';
         this.user = {
             name: '',
             age: 0,
@@ -21,9 +22,9 @@ var UserComponent = (function () {
             createdAt: 0,
             id: ''
         };
-        console.log(segment);
-        console.log('当前的 id:', segment.getParam('id'));
-        this.id = segment.getParam('id');
+        console.log(route);
+        // console.log('当前的 id:',.getParam('id'))
+        // this.id = params.getParam('id');
     }
     UserComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -38,7 +39,7 @@ var UserComponent = (function () {
             selector: 'user',
             templateUrl: 'user.component.html'
         }), 
-        __metadata('design:paramtypes', [http_service_1.HttpService, router_1.RouteSegment])
+        __metadata('design:paramtypes', [http_service_1.HttpService, router_1.ActivatedRoute])
     ], UserComponent);
     return UserComponent;
 }());
