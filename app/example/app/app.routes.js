@@ -7,7 +7,8 @@ var attrs_demo_1 = require('../+attr/attrs.demo');
 var host_demo_1 = require('../+host/host.demo');
 var parent_1 = require('../dynamic-component/parent');
 var viewchild_demo_1 = require('../+view-child/viewchild.demo');
-var http_routes_1 = require('../+http/http.routes');
+// import {HttpRouters} from '../+http/http.routes';
+// import { HttpDemoModule } from '../+http/http.module';
 var pagination_demo_1 = require('../pagination/pagination.demo');
 var dialog_demo_1 = require('../+dialog/dialog.demo');
 var appRoutes = [
@@ -18,11 +19,12 @@ var appRoutes = [
     { path: 'host', component: host_demo_1.HostDemo },
     { path: 'color', component: color_demo_1.ColorDemo },
     { path: 'dynamic', component: parent_1.DynamicComponentDemo },
-    { path: 'viewchild', component: viewchild_demo_1.ViewChildComponentDemo }
-].concat(http_routes_1.HttpRouters, [
+    { path: 'viewchild', component: viewchild_demo_1.ViewChildComponentDemo },
+    { path: 'http', loadChildren: '/app/example/+http/http.module' },
+    // ...HttpRouters,
     { path: 'pagination', component: pagination_demo_1.PaginationDemo },
     { path: 'dialog', component: dialog_demo_1.DialogDemo },
-]);
+];
 exports.APP_ROUTER_PROVIDERS = [
     router_1.provideRouter(appRoutes)
 ];

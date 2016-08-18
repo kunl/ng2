@@ -21,7 +21,6 @@ var platform_browser_1 = require('@angular/platform-browser');
 var http_1 = require('@angular/http');
 var forms_1 = require('@angular/forms');
 var module_1 = require('../+tabs/module');
-var http_module_1 = require('../+http/http.module');
 var app_routes_1 = require('./app.routes');
 var app_component_1 = require('./app.component');
 var home_component_1 = require('../../component/home/home.component');
@@ -38,7 +37,7 @@ var AppModule = (function () {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, app_routes_1.routing, http_1.HttpModule, forms_1.FormsModule, module_1.TabDemoModule, http_module_1.HttpDemoModule],
+            imports: [platform_browser_1.BrowserModule, app_routes_1.routing, http_1.HttpModule, forms_1.FormsModule, module_1.TabDemoModule],
             declarations: [
                 app_component_1.AppComponent,
                 footer_component_1.Footer,

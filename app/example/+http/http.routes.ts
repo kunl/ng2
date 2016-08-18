@@ -1,11 +1,12 @@
-import {RouterConfig} from '@angular/router';
-
+import {Routes} from '@angular/router';
+import { RouterModule } from '@angular/router'
 import {HttpDemo} from './http.demo';
 import {UserComponent} from './user.component';
 
-export const HttpRouters: RouterConfig = [
+export const HttpRouters: Routes = [
     { 
-        path: 'http',
+        path: '',
+        
         component: HttpDemo, 
         children: [
             { path: '', component: HttpDemo},
@@ -14,3 +15,5 @@ export const HttpRouters: RouterConfig = [
     },
     
 ];
+
+export const routing = RouterModule.forChild(HttpRouters)

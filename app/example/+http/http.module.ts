@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+
+import { routing } from './http.routes';
 
 
 import { HttpDemo } from './http.demo';
 import { UserComponent } from './user.component';
 @NgModule({
-    imports: [RouterModule, CommonModule, FormsModule],
+    imports: [routing, CommonModule, FormsModule],
     exports: [HttpDemo, UserComponent],
     declarations: [HttpDemo, UserComponent]
 })
 
-export class HttpDemoModule {
+export default class HttpDemoModule {
 
 }

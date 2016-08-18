@@ -9,15 +9,14 @@ import { NgModule } from '@angular/core';
 
 import { APP_BASE_HREF, LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router'
-import { HttpModule } from '@angular/http'
-import { FormsModule } from '@angular/forms'
+import { RouterModule } from '@angular/router';
+import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 
 
 
 import {TabDemoModule} from '../+tabs/module';
 import {HomeModule} from '../../component/home/home.module';
-import {HttpDemoModule} from '../+http/http.module';
 
 
 import {APP_ROUTER_PROVIDERS, routing} from './app.routes';
@@ -40,7 +39,7 @@ import {DialogDemo} from '../+dialog/dialog.demo'
 
 
 @NgModule({
-    imports: [BrowserModule, routing, HttpModule, FormsModule, TabDemoModule, HttpDemoModule],
+    imports: [BrowserModule, routing, HttpModule, FormsModule, TabDemoModule],
     declarations: [
         AppComponent,
         Footer, 

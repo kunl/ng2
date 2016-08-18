@@ -9,9 +9,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
 var common_1 = require('@angular/common');
 var forms_1 = require('@angular/forms');
+var http_routes_1 = require('./http.routes');
 var http_demo_1 = require('./http.demo');
 var user_component_1 = require('./user.component');
 var HttpDemoModule = (function () {
@@ -19,7 +19,7 @@ var HttpDemoModule = (function () {
     }
     HttpDemoModule = __decorate([
         core_1.NgModule({
-            imports: [router_1.RouterModule, common_1.CommonModule, forms_1.FormsModule],
+            imports: [http_routes_1.routing, common_1.CommonModule, forms_1.FormsModule],
             exports: [http_demo_1.HttpDemo, user_component_1.UserComponent],
             declarations: [http_demo_1.HttpDemo, user_component_1.UserComponent]
         }), 
@@ -27,5 +27,6 @@ var HttpDemoModule = (function () {
     ], HttpDemoModule);
     return HttpDemoModule;
 }());
-exports.HttpDemoModule = HttpDemoModule;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = HttpDemoModule;
 //# sourceMappingURL=http.module.js.map

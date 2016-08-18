@@ -14,7 +14,8 @@ import {DynamicComponentDemo} from '../dynamic-component/parent';
 import {ViewChildComponentDemo} from '../+view-child/viewchild.demo';
 
 
-import {HttpRouters} from '../+http/http.routes';
+// import {HttpRouters} from '../+http/http.routes';
+// import { HttpDemoModule } from '../+http/http.module';
 
 import {PaginationDemo} from '../pagination/pagination.demo';
 import {DialogDemo} from '../+dialog/dialog.demo'
@@ -28,7 +29,10 @@ const appRoutes: Routes = [
     { path: 'color',  component: ColorDemo },
     { path: 'dynamic', component: DynamicComponentDemo },
     { path: 'viewchild', component: ViewChildComponentDemo },
-    ...HttpRouters,
+
+    { path: 'http', loadChildren: '/app/example/+http/http.module'},
+    // ...HttpRouters,
+    
     { path: 'pagination', component: PaginationDemo },
     { path: 'dialog', component: DialogDemo },
 ];
