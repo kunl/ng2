@@ -18,7 +18,9 @@
             console.error(err);
         });
     </script>
-    <base href="/dev.html">
+    <script>
+        document.write(`<base href='${location.pathname}'>`)
+    </script>
 </head>
 
 <body>

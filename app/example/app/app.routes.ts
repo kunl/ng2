@@ -30,7 +30,7 @@ const appRoutes: Routes = [
     { path: 'dynamic', component: DynamicComponentDemo },
     { path: 'viewchild', component: ViewChildComponentDemo },
 
-    { path: 'http', loadChildren: '/app/example/+http/http.module'},
+    { path: 'http', loadChildren: 'app/example/+http/http.module'},
     // ...HttpRouters,
     
     { path: 'pagination', component: PaginationDemo },
