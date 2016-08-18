@@ -56,7 +56,6 @@ import {DialogDemo} from '../+dialog/dialog.demo'
     bootstrap: [AppComponent],
     providers: [
         { provide: 'User', useClass: UserDefault },
-        ...APP_ROUTER_PROVIDERS
     ]
 })
 

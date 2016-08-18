@@ -53,8 +53,8 @@ var AppModule = (function () {
             ],
             bootstrap: [app_component_1.AppComponent],
             providers: [
-                { provide: 'User', useClass: UserDefault }
-            ].concat(app_routes_1.APP_ROUTER_PROVIDERS)
+                { provide: 'User', useClass: UserDefault },
+            ]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);
