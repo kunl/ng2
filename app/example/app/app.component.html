@@ -8,7 +8,7 @@
     <p class="header-title">Angular2 demo of kunl</p>
 </div>
 <nav class="list-group sidebar">
-    <a class="list-group-item" [routerLink]='[it.path]' *ngFor="let it of routers">{{it.nick}}</a>
+    <a class="list-group-item" [routerLink]='[it.path]' *ngFor="let it of routers"  routerLinkActive="active">{{it.nick}}</a>
 </nav>
 <div class="container-fluid" style="margin-left: 119px">
     <div class="row">

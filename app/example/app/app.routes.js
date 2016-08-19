@@ -11,6 +11,7 @@ var viewchild_demo_1 = require('../+view-child/viewchild.demo');
 // import { HttpDemoModule } from '../+http/http.module';
 var pagination_demo_1 = require('../pagination/pagination.demo');
 var dialog_demo_1 = require('../+dialog/dialog.demo');
+var d3_demo_1 = require('../d3/d3.demo');
 var appRoutes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home', component: home_component_1.HomeComponent },
@@ -24,6 +25,7 @@ var appRoutes = [
     // ...HttpRouters,
     { path: 'pagination', component: pagination_demo_1.PaginationDemo },
     { path: 'dialog', component: dialog_demo_1.DialogDemo },
+    { path: 'd3', component: d3_demo_1.D3DemoComponent },
 ];
 exports.APP_ROUTER_PROVIDERS = [
     router_1.provideRouter(appRoutes)

@@ -3,7 +3,8 @@
     var map = {
         'app': 'app',
         '@angular': 'node_modules/@angular',
-        'rxjs': 'node_modules/rxjs'
+        'rxjs': 'node_modules/rxjs',
+        'd3': 'node_modules/d3',
     };
 
     var packages = {
@@ -12,6 +13,10 @@
             defaultExtension: 'js'
         },
         'rxjs': {
+            defaultExtension: 'js'
+        },
+        'd3': {
+            main: 'build/d3.js',
             defaultExtension: 'js'
         }
     };

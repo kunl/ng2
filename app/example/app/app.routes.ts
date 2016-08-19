@@ -18,7 +18,8 @@ import {ViewChildComponentDemo} from '../+view-child/viewchild.demo';
 // import { HttpDemoModule } from '../+http/http.module';
 
 import {PaginationDemo} from '../pagination/pagination.demo';
-import {DialogDemo} from '../+dialog/dialog.demo'
+import {DialogDemo} from '../+dialog/dialog.demo';
+import {D3DemoComponent} from '../d3/d3.demo';
 
 const appRoutes: Routes = [
     { path: '',  redirectTo: '/home', pathMatch: 'full' },
@@ -35,6 +36,7 @@ const appRoutes: Routes = [
     
     { path: 'pagination', component: PaginationDemo },
     { path: 'dialog', component: DialogDemo },
+    { path: 'd3', component: D3DemoComponent },
 ];
 
 export const APP_ROUTER_PROVIDERS = [

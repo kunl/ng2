@@ -35,7 +35,8 @@ import {DynamicComponentDemo} from '../dynamic-component/parent';
 import {ViewChildComponentDemo} from '../+view-child/viewchild.demo';
 
 import {PaginationDemo} from '../pagination/pagination.demo';
-import {DialogDemo} from '../+dialog/dialog.demo'
+import {DialogDemo} from '../+dialog/dialog.demo';
+import {D3DemoComponent} from '../d3/d3.demo';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import {DialogDemo} from '../+dialog/dialog.demo'
         DynamicComponentDemo,
         ViewChildComponentDemo,
         PaginationDemo,
-        DialogDemo
+        DialogDemo,
+        D3DemoComponent
     ],
     bootstrap: [AppComponent],
     providers: [

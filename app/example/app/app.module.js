@@ -32,6 +32,7 @@ var parent_1 = require('../dynamic-component/parent');
 var viewchild_demo_1 = require('../+view-child/viewchild.demo');
 var pagination_demo_1 = require('../pagination/pagination.demo');
 var dialog_demo_1 = require('../+dialog/dialog.demo');
+var d3_demo_1 = require('../d3/d3.demo');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -48,7 +49,8 @@ var AppModule = (function () {
                 parent_1.DynamicComponentDemo,
                 viewchild_demo_1.ViewChildComponentDemo,
                 pagination_demo_1.PaginationDemo,
-                dialog_demo_1.DialogDemo
+                dialog_demo_1.DialogDemo,
+                d3_demo_1.D3DemoComponent
             ],
             bootstrap: [app_component_1.AppComponent],
             providers: [
