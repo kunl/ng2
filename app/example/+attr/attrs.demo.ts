@@ -5,8 +5,7 @@ import {DisabledComponent} from './disabled';
     selector: 'attrs',
     template: `
      <disabled></disabled>
-    `,
-    directives: [DisabledComponent]
+    `
 })
 export class AttrsDemoComponent {
     constructor(){

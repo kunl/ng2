@@ -1,14 +1,11 @@
 import { Component, OnInit, EventEmitter, Output, OnChanges, SimpleChange } from '@angular/core';
 
-import { PaginationDirective } from './pagination';
-
 @Component({
     moduleId: module.id,
     selector: 'pagination-demo',
     template: `
         <pagination [(page)]="mypage" [total]="mytotal" [pagesize]="mysize"></pagination>
-    `,
-    directives: [PaginationDirective]
+    `
 })
 export class PaginationDemo implements OnInit, OnChanges {
     

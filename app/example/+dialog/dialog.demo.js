@@ -9,7 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var dialog_1 = require('./dialog');
 var DialogDemo = (function () {
     function DialogDemo() {
         this.open = false;
@@ -29,8 +28,7 @@ var DialogDemo = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'dialog-demo',
-            templateUrl: 'dialog.demo.html',
-            directives: [dialog_1.DialogDirective]
+            templateUrl: 'dialog.demo.html'
         }), 
         __metadata('design:paramtypes', [])
     ], DialogDemo);

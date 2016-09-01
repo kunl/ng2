@@ -16,8 +16,8 @@ export class HostService{
 
 @Component({
     selector: 'com1',
-    template: `{{number}}
-  
+    template: `
+        {{number}}
     `
 })
 
@@ -34,8 +34,6 @@ export class com1 {
 
 @Component({
     selector: 'host',
-    directives: [com1],
-    providers: [HostService],
     template: `
         <com1></com1> <br>
         当前数字{{number}}

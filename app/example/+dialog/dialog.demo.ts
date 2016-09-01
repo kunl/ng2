@@ -1,12 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
-import {DialogDirective} from './dialog'
 
 @Component({
     moduleId: module.id,
     selector: 'dialog-demo',
-    templateUrl: 'dialog.demo.html',
-    directives: [DialogDirective]
+    templateUrl: 'dialog.demo.html'
 })
 export class DialogDemo implements OnInit {
     private open: boolean = false;

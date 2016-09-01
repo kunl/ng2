@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {TABS_DIRECTIVES} from '../../component/tabs/tabs.component';
+
 
 @Component({
     selector: 'tabs-demo',
@@ -26,8 +26,7 @@ import {TABS_DIRECTIVES} from '../../component/tabs/tabs.component';
         </tabs>
         <a href="https://github.com/kunl/ng2/blob/gh-pages/app/example/tabs/tabs.demo.ts" target="_blank">https://github.com/kunl/ng2/blob/gh-pages/app/example/tabs/tabs.demo.ts</a>
         <a href="https://github.com/kunl/ng2/blob/gh-pages/app/component/tabs/tabs.component.ts" target="_blank">https://github.com/kunl/ng2/blob/gh-pages/app/component/tabs/tabs.component.ts</a>
-    `,
-    directives: [TABS_DIRECTIVES]
+    `
 })
 
 export class TabsDemoComponent{}

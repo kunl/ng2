@@ -27,9 +27,6 @@ var appRoutes = [
     { path: 'dialog', component: dialog_demo_1.DialogDemo },
     { path: 'd3', component: d3_demo_1.D3DemoComponent },
 ];
-exports.APP_ROUTER_PROVIDERS = [
-    router_1.provideRouter(appRoutes)
-];
 var routing = router_1.RouterModule.forRoot(appRoutes, { useHash: true });
 exports.routing = routing;
 //# sourceMappingURL=app.routes.js.map

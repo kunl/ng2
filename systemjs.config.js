@@ -1,10 +1,10 @@
 (function(global) {
-
+  
     var map = {
         'app': 'app',
         '@angular': 'node_modules/@angular',
         'rxjs': 'node_modules/rxjs',
-        'd3': 'node_modules/d3',
+        'd3': 'node_modules/d3'
     };
 
     var packages = {
@@ -40,11 +40,6 @@
     };
 
     ngPackageNames.forEach(packUmd);
-
-    packages['@angular/router'] = {
-        main: 'index.js',
-        defaultExtension: 'js'
-    };
 
     var config = {
         map: map,
