@@ -9,21 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var platform_browser_1 = require('@angular/platform-browser');
+var forms_1 = require('@angular/forms');
 var pagination_1 = require('./pagination');
 var pagination_demo_1 = require('./pagination.demo');
-var NameModule = (function () {
-    function NameModule() {
+var PaginationModule = (function () {
+    function PaginationModule() {
     }
-    NameModule = __decorate([
+    PaginationModule = __decorate([
         core_1.NgModule({
-            imports: [],
+            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
             exports: [],
             declarations: [pagination_demo_1.PaginationDemo, pagination_1.PaginationDirective],
             providers: [],
         }), 
         __metadata('design:paramtypes', [])
-    ], NameModule);
-    return NameModule;
+    ], PaginationModule);
+    return PaginationModule;
 }());
-exports.NameModule = NameModule;
+exports.PaginationModule = PaginationModule;
 //# sourceMappingURL=pagination.module.js.map

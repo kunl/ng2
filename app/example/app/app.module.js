@@ -27,10 +27,10 @@ var home_component_1 = require('../../component/home/home.component');
 var footer_component_1 = require('../../component/footer.component');
 var color_module_1 = require('../+colors/color.module');
 var attrs_module_1 = require('../+attr/attrs.module');
-var host_demo_1 = require('../+host/host.demo');
+var host_module_1 = require('../+host/host.module');
 var parent_1 = require('../dynamic-component/parent');
 var viewchild_demo_1 = require('../+view-child/viewchild.demo');
-var pagination_demo_1 = require('../pagination/pagination.demo');
+var pagination_module_1 = require('../pagination/pagination.module');
 var dialog_module_1 = require('../+dialog/dialog.module');
 var d3_demo_1 = require('../d3/d3.demo');
 var AppModule = (function () {
@@ -42,17 +42,17 @@ var AppModule = (function () {
                 module_1.TabDemoModule,
                 attrs_module_1.AttrsDemoModule,
                 color_module_1.ColorModule,
-                dialog_module_1.DialogModule
+                host_module_1.HostModule,
+                pagination_module_1.PaginationModule,
+                dialog_module_1.DialogModule,
+                d3_demo_1.D3Module
             ],
             declarations: [
                 app_component_1.AppComponent,
                 footer_component_1.Footer,
                 home_component_1.HomeComponent,
-                host_demo_1.HostDemo,
                 parent_1.DynamicComponentDemo,
-                viewchild_demo_1.ViewChildComponentDemo,
-                pagination_demo_1.PaginationDemo,
-                d3_demo_1.D3DemoComponent
+                viewchild_demo_1.ViewChildComponentDemo
             ],
             bootstrap: [app_component_1.AppComponent],
             providers: [

@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, ElementRef, Renderer } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ElementRef, Renderer, NgModule } from '@angular/core';
 
 import * as d3 from 'd3';
 
@@ -24,3 +24,9 @@ export class D3DemoComponent implements OnInit {
     }
 
 }
+
+
+@NgModule({
+    declarations: [D3DemoComponent]
+})
+export class D3Module {}

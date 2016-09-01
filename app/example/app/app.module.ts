@@ -5,6 +5,7 @@ class UserDefault{
 }
 
 
+
 import { NgModule } from '@angular/core';
 
 import { APP_BASE_HREF, LocationStrategy, HashLocationStrategy } from '@angular/common';
@@ -29,33 +30,33 @@ import {TabsDemoComponent} from '../+tabs/tabs.demo';
 import {LifecycleComponent} from '../lifecycle/lifecycle';
 
 import { ColorModule } from '../+colors/color.module';
-import {AttrsDemoModule} from '../+attr/attrs.module';
-import {HostDemo} from '../+host/host.demo';
+import { AttrsDemoModule } from '../+attr/attrs.module';
+import { HostModule } from '../+host/host.module';
 import {DynamicComponentDemo} from '../dynamic-component/parent';
 import {ViewChildComponentDemo} from '../+view-child/viewchild.demo';
 
-import {PaginationDemo} from '../pagination/pagination.demo';
+import { PaginationModule } from '../pagination/pagination.module';
 import { DialogModule } from '../+dialog/dialog.module';
-import {D3DemoComponent} from '../d3/d3.demo';
+import { D3Module } from '../d3/d3.demo';
 
 
 @NgModule({
     imports: [BrowserModule, routing, HttpModule, FormsModule, 
     
-    TabDemoModule,
-    AttrsDemoModule,
-    ColorModule,
-    DialogModule
+        TabDemoModule,
+        AttrsDemoModule,
+        ColorModule,
+        HostModule,
+        PaginationModule,
+        DialogModule,
+        D3Module
     ],
     declarations: [
         AppComponent,
         Footer, 
         HomeComponent, 
-        HostDemo,
         DynamicComponentDemo,
-        ViewChildComponentDemo,
-        PaginationDemo,
-        D3DemoComponent
+        ViewChildComponentDemo
     ],
     bootstrap: [AppComponent],
     providers: [
