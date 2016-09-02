@@ -42,22 +42,3 @@ export class HttpDemo implements OnInit {
     
 
 }
-
-
-abstract class A {
-    public abstract say(name: string): string;
-}
-
-class B extends Date implements A {
-    say(name:string){
-        return 'name is '+ name;
-    }
-
-    wtf(){
-        this.say('waht the fuck...' + this.getDate())
-    }
-}
-
-var b = new B;
-
-b.wtf();

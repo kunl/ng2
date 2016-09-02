@@ -1,9 +1,4 @@
 "use strict";
-var __extends = (this && this.__extends) || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-};
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -41,24 +36,4 @@ var HttpDemo = (function () {
     return HttpDemo;
 }());
 exports.HttpDemo = HttpDemo;
-var A = (function () {
-    function A() {
-    }
-    return A;
-}());
-var B = (function (_super) {
-    __extends(B, _super);
-    function B() {
-        _super.apply(this, arguments);
-    }
-    B.prototype.say = function (name) {
-        return 'name is ' + name;
-    };
-    B.prototype.wtf = function () {
-        this.say('waht the fuck...' + this.getDate());
-    };
-    return B;
-}(Date));
-var b = new B;
-b.wtf();
 //# sourceMappingURL=http.demo.js.map
