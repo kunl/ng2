@@ -38,10 +38,14 @@ var com1 = (function () {
         enumerable: true,
         configurable: true
     });
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], com1.prototype, "name", void 0);
     com1 = __decorate([
         core_1.Component({
             selector: 'com1',
-            template: "\n        {{number}}\n    "
+            template: "\n        {{number}}, {{name}}\n    "
         }), 
         __metadata('design:paramtypes', [HostService])
     ], com1);
@@ -51,6 +55,7 @@ exports.com1 = com1;
 var HostDemo = (function () {
     function HostDemo(data) {
         this.data = data;
+        this.currname = ' host 的 name';
     }
     HostDemo.prototype.ngOnInit = function () { };
     Object.defineProperty(HostDemo.prototype, "number", {
@@ -68,7 +73,7 @@ var HostDemo = (function () {
     HostDemo = __decorate([
         core_1.Component({
             selector: 'host',
-            template: "\n        <com1></com1> <br>\n        \u5F53\u524D\u6570\u5B57{{number}}\n        <button class=\"btn btn-sm\" (click)='changeNum()'>\u53D8\u4E00\u4E0B</button>\n        <br>\n        <p>\u4E0D\u540C\u7EC4\u4EF6\u4E4B\u95F4\u901A\u8FC7 service \u8FDB\u884C\u6570\u636E\u4EA4\u4E92</p>\n        <a href=\"https://github.com/kunl/ng2/blob/gh-pages/app/example/host/host.demo.ts\" target=\"_blank\">https://github.com/kunl/ng2/blob/gh-pages/app/example/host/host.demo.ts</a>\n  \n    "
+            template: "\n        <com1 [name]='currname'></com1> <br>\n        \u5F53\u524D\u6570\u5B57{{number}}\n        <button class=\"btn btn-sm\" (click)='changeNum()'>\u53D8\u4E00\u4E0B</button>\n        <br>\n        <p>\u4E0D\u540C\u7EC4\u4EF6\u4E4B\u95F4\u901A\u8FC7 service \u8FDB\u884C\u6570\u636E\u4EA4\u4E92</p>\n        <a href=\"https://github.com/kunl/ng2/blob/gh-pages/app/example/host/host.demo.ts\" target=\"_blank\">https://github.com/kunl/ng2/blob/gh-pages/app/example/host/host.demo.ts</a>\n  \n    "
         }), 
         __metadata('design:paramtypes', [HostService])
     ], HostDemo);
