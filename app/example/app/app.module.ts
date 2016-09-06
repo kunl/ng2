@@ -5,6 +5,7 @@ class UserDefault{
 }
 
 
+
 import { NgModule } from '@angular/core';
 
 import { APP_BASE_HREF, LocationStrategy, HashLocationStrategy } from '@angular/common';
@@ -19,40 +20,43 @@ import {TabDemoModule} from '../+tabs/module';
 import {HomeModule} from '../../component/home/home.module';
 
 
-import {APP_ROUTER_PROVIDERS, routing} from './app.routes';
+import {routing} from './app.routes';
 
 import { AppComponent } from './app.component';
-import {HomeComponent} from '../../component/home/home.component';
+import  {HomeComponent } from '../../component/home/home.component';
 import {Footer} from '../../component/footer.component';
 
 import {TabsDemoComponent} from '../+tabs/tabs.demo';
 import {LifecycleComponent} from '../lifecycle/lifecycle';
 
-import {ColorDemo} from '../+colors/color.demo';
-import {AttrsDemoComponent} from '../+attr/attrs.demo';
-import {HostDemo} from '../+host/host.demo';
+import { ColorModule } from '../+colors/color.module';
+import { AttrsDemoModule } from '../+attr/attrs.module';
+import { HostModule } from '../+host/host.module';
 import {DynamicComponentDemo} from '../dynamic-component/parent';
 import {ViewChildComponentDemo} from '../+view-child/viewchild.demo';
 
-import {PaginationDemo} from '../pagination/pagination.demo';
-import {DialogDemo} from '../+dialog/dialog.demo';
-import {D3DemoComponent} from '../d3/d3.demo';
+import { PaginationModule } from '../pagination/pagination.module';
+import { DialogModule } from '../+dialog/dialog.module';
+import { D3Module } from '../d3/d3.demo';
 
 
 @NgModule({
-    imports: [BrowserModule, routing, HttpModule, FormsModule, TabDemoModule],
+    imports: [BrowserModule, routing, HttpModule, FormsModule, 
+    
+        TabDemoModule,
+        AttrsDemoModule,
+        ColorModule,
+        HostModule,
+        PaginationModule,
+        DialogModule,
+        D3Module
+    ],
     declarations: [
         AppComponent,
         Footer, 
         HomeComponent, 
-        ColorDemo,
-        AttrsDemoComponent,
-        HostDemo,
         DynamicComponentDemo,
-        ViewChildComponentDemo,
-        PaginationDemo,
-        DialogDemo,
-        D3DemoComponent
+        ViewChildComponentDemo
     ],
     bootstrap: [AppComponent],
     providers: [
@@ -60,6 +64,4 @@ import {D3DemoComponent} from '../d3/d3.demo';
     ]
 })
 
-export class AppModule {
-
-}
+export class AppModule {}

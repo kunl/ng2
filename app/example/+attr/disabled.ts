@@ -38,7 +38,6 @@ export class CusonmComponent {
     }
 }
 
-
 @Component({
     selector: 'disabled',
     template: `
@@ -58,8 +57,7 @@ export class CusonmComponent {
         <input type='text' [custom]='getCustom()' value="11123">
         <br>
         <button class="btn btn-sm" (click)="changeAttrs()">切换</button>
-    `,
-    directives: [CusonmComponent]
+    `
 })
 export class DisabledComponent implements OnInit {
     

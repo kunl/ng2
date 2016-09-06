@@ -9,8 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var http_1 = require('@angular/http');
-var router_1 = require('@angular/router');
 var http_service_1 = require('./http.service');
 var HttpDemo = (function () {
     function HttpDemo(http_service) {
@@ -29,10 +27,9 @@ var HttpDemo = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'http',
-            providers: [http_1.HTTP_PROVIDERS, http_service_1.HttpService],
+            providers: [http_service_1.HttpService],
             templateUrl: 'http.demo.html',
-            styleUrls: ['http.demo.css'],
-            directives: [router_1.ROUTER_DIRECTIVES]
+            styleUrls: ['http.demo.css']
         }), 
         __metadata('design:paramtypes', [http_service_1.HttpService])
     ], HttpDemo);

@@ -16,14 +16,3 @@ import { UserComponent } from './user.component';
 export default class HttpDemoModule {
 
 }
-
-
-interface item {
-    reasonType: number
-}
-interface  responseData {
-    result: boolean,
-    value : {
-        key<string>: item
-    }
-}

@@ -9,7 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var disabled_1 = require('./disabled');
 var AttrsDemoComponent = (function () {
     function AttrsDemoComponent() {
         console.log('attrs');
@@ -17,8 +16,7 @@ var AttrsDemoComponent = (function () {
     AttrsDemoComponent = __decorate([
         core_1.Component({
             selector: 'attrs',
-            template: "\n     <disabled></disabled>\n    ",
-            directives: [disabled_1.DisabledComponent]
+            template: "\n     <disabled></disabled>\n    "
         }), 
         __metadata('design:paramtypes', [])
     ], AttrsDemoComponent);

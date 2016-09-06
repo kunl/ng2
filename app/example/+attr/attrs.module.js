@@ -9,26 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var PaginationDemo = (function () {
-    function PaginationDemo() {
-        this.mypage = 3;
-        this.mytotal = 35;
-        this.mysize = 10;
+var attrs_demo_1 = require('./attrs.demo');
+var disabled_1 = require('./disabled');
+var AttrsDemoModule = (function () {
+    function AttrsDemoModule() {
     }
-    PaginationDemo.prototype.ngOnInit = function () {
-    };
-    PaginationDemo.prototype.ngOnChanges = function (changes) {
-        console.log(changes);
-    };
-    PaginationDemo = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'pagination-demo',
-            template: "\n        <pagination [(page)]=\"mypage\" [total]=\"mytotal\" [pagesize]=\"mysize\"></pagination>\n    "
+    AttrsDemoModule = __decorate([
+        core_1.NgModule({
+            imports: [],
+            exports: [],
+            declarations: [attrs_demo_1.AttrsDemoComponent, disabled_1.CusonmComponent, disabled_1.DisabledComponent],
+            providers: [],
         }), 
         __metadata('design:paramtypes', [])
-    ], PaginationDemo);
-    return PaginationDemo;
+    ], AttrsDemoModule);
+    return AttrsDemoModule;
 }());
-exports.PaginationDemo = PaginationDemo;
-//# sourceMappingURL=pagination.demo.js.map
+exports.AttrsDemoModule = AttrsDemoModule;
+//# sourceMappingURL=attrs.module.js.map

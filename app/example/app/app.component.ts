@@ -1,7 +1,5 @@
 
 import {Component, Injector} from '@angular/core';
-import {ROUTER_DIRECTIVES} from '@angular/router';
-
 
 let routers  = [
     { path: '/home', nick: '首页' },

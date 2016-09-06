@@ -1,4 +1,4 @@
-import { provideRouter, Routes, RouterModule} from '@angular/router';
+import { Routes, RouterModule} from '@angular/router';
 
 
 import {HomeComponent} from '../../component/home/home.component';
@@ -39,8 +39,5 @@ const appRoutes: Routes = [
     { path: 'd3', component: D3DemoComponent },
 ];
 
-export const APP_ROUTER_PROVIDERS = [
-    provideRouter(appRoutes)
-]
 let routing = RouterModule.forRoot(appRoutes, { useHash: true }) 
 export {routing} 

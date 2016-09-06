@@ -1,4 +1,4 @@
-import { Component, OnInit, DynamicComponentLoader, ViewContainerRef, ComponentRef  } from '@angular/core';
+import { Component, OnInit,  ViewContainerRef, ComponentRef  } from '@angular/core';
 import {Title} from '@angular/platform-browser';
 import {ChildComponent} from './child';
 import {User} from './user';
@@ -32,7 +32,6 @@ import {User} from './user';
 export class DynamicComponentDemo implements OnInit {
     user: User;
     constructor(
-        private loader: DynamicComponentLoader,
         private vcRef: ViewContainerRef,
         title: Title
        
@@ -45,20 +44,20 @@ export class DynamicComponentDemo implements OnInit {
     ngOnInit() { }
     
     loaderAction(){
-        var child = this.loader.loadNextToLocation(ChildComponent, this.vcRef)
-        .then((chidRef) => {
-            let instance = chidRef.instance;
+        // var child = this.loader.loadNextToLocation(ChildComponent, this.vcRef)
+        // .then((chidRef) => {
+        //     let instance = chidRef.instance;
             
-            instance.ref = chidRef
-            instance.name = '动态';
+        //     instance.ref = chidRef
+        //     instance.name = '动态';
             
-            instance.finally.subscribe((user: User)=>{
-                chidRef.destroy();
-                this.user = user;
-                console.log('done');
+        //     instance.finally.subscribe((user: User)=>{
+        //         chidRef.destroy();
+        //         this.user = user;
+        //         console.log('done');
                 
-            })
-        })
+        //     })
+        // })
     }
 
 }

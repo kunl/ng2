@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var common_1 = require('@angular/common');
+var tabs_component_1 = require('../../component/tabs/tabs.component');
 var tabs_demo_1 = require('./tabs.demo');
 var TabDemoModule = (function () {
     function TabDemoModule() {
@@ -17,7 +18,7 @@ var TabDemoModule = (function () {
     TabDemoModule = __decorate([
         core_1.NgModule({
             imports: [common_1.CommonModule],
-            declarations: [tabs_demo_1.TabsDemoComponent],
+            declarations: [tabs_demo_1.TabsDemoComponent, tabs_component_1.TABS_DIRECTIVES],
             exports: [tabs_demo_1.TabsDemoComponent]
         }), 
         __metadata('design:paramtypes', [])

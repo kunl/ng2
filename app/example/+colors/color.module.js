@@ -9,26 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var PaginationDemo = (function () {
-    function PaginationDemo() {
-        this.mypage = 3;
-        this.mytotal = 35;
-        this.mysize = 10;
+var color_demo_1 = require('./color.demo');
+var color_1 = require('../../component/colors/color');
+var ColorModule = (function () {
+    function ColorModule() {
     }
-    PaginationDemo.prototype.ngOnInit = function () {
-    };
-    PaginationDemo.prototype.ngOnChanges = function (changes) {
-        console.log(changes);
-    };
-    PaginationDemo = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'pagination-demo',
-            template: "\n        <pagination [(page)]=\"mypage\" [total]=\"mytotal\" [pagesize]=\"mysize\"></pagination>\n    "
+    ColorModule = __decorate([
+        core_1.NgModule({
+            imports: [],
+            exports: [],
+            declarations: [color_demo_1.ColorDemo, color_1.ColorDirective],
+            providers: [],
         }), 
         __metadata('design:paramtypes', [])
-    ], PaginationDemo);
-    return PaginationDemo;
+    ], ColorModule);
+    return ColorModule;
 }());
-exports.PaginationDemo = PaginationDemo;
-//# sourceMappingURL=pagination.demo.js.map
+exports.ColorModule = ColorModule;
+//# sourceMappingURL=color.module.js.map

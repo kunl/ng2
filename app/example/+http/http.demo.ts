@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { HTTP_PROVIDERS } from '@angular/http';
-import { ROUTER_DIRECTIVES, UrlTree } from '@angular/router';
 
 import { HttpService } from './http.service';
 import { UserComponent } from './user.component';
@@ -11,10 +9,9 @@ import { User } from '../../service/model';
 @Component({
     moduleId: module.id,
     selector: 'http',
-    providers: [HTTP_PROVIDERS, HttpService],
+    providers: [ HttpService],
     templateUrl: 'http.demo.html',
-    styleUrls: ['http.demo.css'],
-    directives: [ROUTER_DIRECTIVES]
+    styleUrls: ['http.demo.css']
 })
 
 

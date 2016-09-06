@@ -1,4 +1,4 @@
-import { Component, OnInit, Injectable, ViewContainerRef, Renderer } from '@angular/core';
+import { Component, OnInit, Injectable, ViewContainerRef, Renderer, Input } from '@angular/core';
 
 @Injectable()
 export class HostService{
@@ -16,12 +16,14 @@ export class HostService{
 
 @Component({
     selector: 'com1',
-    template: `{{number}}
-  
+    template: `
+        {{number}}, {{name}}
     `
 })
 
 export class com1 {
+
+    @Input() name:string;
 
     constructor(private hs: HostService ){
     }
@@ -34,10 +36,8 @@ export class com1 {
 
 @Component({
     selector: 'host',
-    directives: [com1],
-    providers: [HostService],
     template: `
-        <com1></com1> <br>
+        <com1 [name]='currname'></com1> <br>
         当前数字{{number}}
         <button class="btn btn-sm" (click)='changeNum()'>变一下</button>
         <br>
@@ -51,7 +51,7 @@ export class HostDemo implements OnInit {
     constructor( private data: HostService) {
         
     }
-
+    currname = ' host 的 name'
     ngOnInit() { }
     
     get number(){

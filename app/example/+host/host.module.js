@@ -9,26 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var PaginationDemo = (function () {
-    function PaginationDemo() {
-        this.mypage = 3;
-        this.mytotal = 35;
-        this.mysize = 10;
+var platform_browser_1 = require('@angular/platform-browser');
+var host_demo_1 = require('./host.demo');
+var HostModule = (function () {
+    function HostModule() {
     }
-    PaginationDemo.prototype.ngOnInit = function () {
-    };
-    PaginationDemo.prototype.ngOnChanges = function (changes) {
-        console.log(changes);
-    };
-    PaginationDemo = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'pagination-demo',
-            template: "\n        <pagination [(page)]=\"mypage\" [total]=\"mytotal\" [pagesize]=\"mysize\"></pagination>\n    "
+    HostModule = __decorate([
+        core_1.NgModule({
+            imports: [platform_browser_1.BrowserModule],
+            declarations: [host_demo_1.com1, host_demo_1.HostDemo],
+            providers: [host_demo_1.HostService],
         }), 
         __metadata('design:paramtypes', [])
-    ], PaginationDemo);
-    return PaginationDemo;
+    ], HostModule);
+    return HostModule;
 }());
-exports.PaginationDemo = PaginationDemo;
-//# sourceMappingURL=pagination.demo.js.map
+exports.HostModule = HostModule;
+//# sourceMappingURL=host.module.js.map
