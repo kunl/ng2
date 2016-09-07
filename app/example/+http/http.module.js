@@ -27,6 +27,5 @@ var HttpDemoModule = (function () {
     ], HttpDemoModule);
     return HttpDemoModule;
 }());
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = HttpDemoModule;
+exports.HttpDemoModule = HttpDemoModule;
 //# sourceMappingURL=http.module.js.map

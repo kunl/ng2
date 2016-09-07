@@ -21,7 +21,7 @@ var appRoutes = [
     { path: 'color', component: color_demo_1.ColorDemo },
     { path: 'dynamic', component: parent_1.DynamicComponentDemo },
     { path: 'viewchild', component: viewchild_demo_1.ViewChildComponentDemo },
-    { path: 'http', loadChildren: 'app/example/+http/http.module' },
+    { path: 'http', loadChildren: 'app/example/+http/http.module#HttpDemoModule' },
     // ...HttpRouters,
     { path: 'pagination', component: pagination_demo_1.PaginationDemo },
     { path: 'dialog', component: dialog_demo_1.DialogDemo },

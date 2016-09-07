@@ -13,6 +13,6 @@ import { UserComponent } from './user.component';
     declarations: [HttpDemo, UserComponent]
 })
 
-export default class HttpDemoModule {
+export class HttpDemoModule {
 
 }
