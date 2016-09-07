@@ -1,6 +1,7 @@
 {
     "globalDependencies": {
         "core-js": "registry:dt/core-js#0.0.0+20160602141332",
+        "echarts": "github:DefinitelyTyped/DefinitelyTyped/echarts/echarts.d.ts#3305eb6f74a2de17d208dfaaa20d69cfb912f871",
         "jasmine": "registry:dt/jasmine#2.2.0+20160621224255",
         "node": "registry:dt/node#6.0.0+20160807145350"
     },

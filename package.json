@@ -12,29 +12,23 @@
   "main": "main.js",
   "license": "ISC",
   "dependencies": {
-
-
-    "@angular/common":  "2.0.0-rc.6",
-    "@angular/compiler":  "2.0.0-rc.6",
-    "@angular/core":  "2.0.0-rc.6",
+    "@angular/common": "2.0.0-rc.6",
+    "@angular/compiler": "2.0.0-rc.6",
+    "@angular/core": "2.0.0-rc.6",
     "@angular/forms": "2.0.0-rc.6",
-    "@angular/http":  "2.0.0-rc.6",
-    "@angular/platform-browser":  "2.0.0-rc.6",
-    "@angular/platform-browser-dynamic":  "2.0.0-rc.6",
-    "@angular/router":  "3.0.0-rc.2",
-    "@angular/upgrade":  "2.0.0-rc.6",
-
-
-    "core-js": "^2.4.1",
-    "rxjs": "5.0.0-beta.11",
-    "zone.js": "^0.6.17",
-
-
-
+    "@angular/http": "2.0.0-rc.6",
+    "@angular/platform-browser": "2.0.0-rc.6",
+    "@angular/platform-browser-dynamic": "2.0.0-rc.6",
+    "@angular/router": "3.0.0-rc.2",
+    "@angular/upgrade": "2.0.0-rc.6",
     "bootstrap": "^4.0.0-alpha.2",
+    "core-js": "^2.4.1",
     "d3": "^4.2.2",
+    "echarts": "^3.2.3",
     "reflect-metadata": "^0.1.3",
-    "systemjs": "0.19.27"
+    "rxjs": "5.0.0-beta.11",
+    "systemjs": "0.19.27",
+    "zone.js": "^0.6.17"
   },
   "devDependencies": {
     "concurrently": "*"
