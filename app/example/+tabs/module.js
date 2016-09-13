@@ -8,22 +8,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var common_1 = require('@angular/common');
-var tabs_component_1 = require('../../component/tabs/tabs.component');
-var tabs_demo_1 = require('./tabs.demo');
+var core_1 = require("@angular/core");
+var common_1 = require("@angular/common");
+var tabs_component_1 = require("../../component/tabs/tabs.component");
+var tabs_demo_1 = require("./tabs.demo");
 var TabDemoModule = (function () {
     function TabDemoModule() {
     }
-    TabDemoModule = __decorate([
-        core_1.NgModule({
-            imports: [common_1.CommonModule],
-            declarations: [tabs_demo_1.TabsDemoComponent, tabs_component_1.TABS_DIRECTIVES],
-            exports: [tabs_demo_1.TabsDemoComponent]
-        }), 
-        __metadata('design:paramtypes', [])
-    ], TabDemoModule);
     return TabDemoModule;
 }());
+TabDemoModule = __decorate([
+    core_1.NgModule({
+        imports: [common_1.CommonModule],
+        declarations: [tabs_demo_1.TabsDemoComponent, tabs_component_1.TABS_DIRECTIVES],
+        exports: [tabs_demo_1.TabsDemoComponent]
+    }),
+    __metadata("design:paramtypes", [])
+], TabDemoModule);
 exports.TabDemoModule = TabDemoModule;
 //# sourceMappingURL=module.js.map

@@ -8,21 +8,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var host_demo_1 = require('./host.demo');
+var core_1 = require("@angular/core");
+var platform_browser_1 = require("@angular/platform-browser");
+var host_demo_1 = require("./host.demo");
 var HostModule = (function () {
     function HostModule() {
     }
-    HostModule = __decorate([
-        core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
-            declarations: [host_demo_1.com1, host_demo_1.HostDemo],
-            providers: [host_demo_1.HostService],
-        }), 
-        __metadata('design:paramtypes', [])
-    ], HostModule);
     return HostModule;
 }());
+HostModule = __decorate([
+    core_1.NgModule({
+        imports: [platform_browser_1.BrowserModule],
+        declarations: [host_demo_1.com1, host_demo_1.HostDemo],
+        providers: [host_demo_1.HostService],
+    }),
+    __metadata("design:paramtypes", [])
+], HostModule);
 exports.HostModule = HostModule;
 //# sourceMappingURL=host.module.js.map

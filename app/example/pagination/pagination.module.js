@@ -8,24 +8,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var forms_1 = require('@angular/forms');
-var pagination_1 = require('./pagination');
-var pagination_demo_1 = require('./pagination.demo');
+var core_1 = require("@angular/core");
+var platform_browser_1 = require("@angular/platform-browser");
+var forms_1 = require("@angular/forms");
+var pagination_1 = require("./pagination");
+var pagination_demo_1 = require("./pagination.demo");
 var PaginationModule = (function () {
     function PaginationModule() {
     }
-    PaginationModule = __decorate([
-        core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
-            exports: [],
-            declarations: [pagination_demo_1.PaginationDemo, pagination_1.PaginationDirective],
-            providers: [],
-        }), 
-        __metadata('design:paramtypes', [])
-    ], PaginationModule);
     return PaginationModule;
 }());
+PaginationModule = __decorate([
+    core_1.NgModule({
+        imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
+        exports: [],
+        declarations: [pagination_demo_1.PaginationDemo, pagination_1.PaginationDirective],
+        providers: [],
+    }),
+    __metadata("design:paramtypes", [])
+], PaginationModule);
 exports.PaginationModule = PaginationModule;
 //# sourceMappingURL=pagination.module.js.map

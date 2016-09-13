@@ -8,23 +8,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var dialog_1 = require('./dialog');
-var dialog_demo_1 = require('./dialog.demo');
+var core_1 = require("@angular/core");
+var platform_browser_1 = require("@angular/platform-browser");
+var dialog_1 = require("./dialog");
+var dialog_demo_1 = require("./dialog.demo");
 var DialogModule = (function () {
     function DialogModule() {
     }
-    DialogModule = __decorate([
-        core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
-            // exports: [ DialogDemo ],
-            declarations: [dialog_demo_1.DialogDemo, dialog_1.DialogDirective],
-            providers: [],
-        }), 
-        __metadata('design:paramtypes', [])
-    ], DialogModule);
     return DialogModule;
 }());
+DialogModule = __decorate([
+    core_1.NgModule({
+        imports: [platform_browser_1.BrowserModule],
+        // exports: [ DialogDemo ],
+        declarations: [dialog_demo_1.DialogDemo, dialog_1.DialogDirective],
+        providers: [],
+    }),
+    __metadata("design:paramtypes", [])
+], DialogModule);
 exports.DialogModule = DialogModule;
 //# sourceMappingURL=dialog.module.js.map

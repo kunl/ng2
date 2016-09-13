@@ -8,28 +8,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
+var core_1 = require("@angular/core");
 var TabComponent = (function () {
     function TabComponent() {
         this.active = false;
     }
-    __decorate([
-        core_1.Input('tabTitle'), 
-        __metadata('design:type', String)
-    ], TabComponent.prototype, "title", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
-    ], TabComponent.prototype, "active", void 0);
-    TabComponent = __decorate([
-        core_1.Component({
-            selector: 'tab',
-            template: "\n        <div [hidden]=\"!active\">\n            <ng-content></ng-content>\n        </div>\n    "
-        }), 
-        __metadata('design:paramtypes', [])
-    ], TabComponent);
     return TabComponent;
 }());
+__decorate([
+    core_1.Input('tabTitle'),
+    __metadata("design:type", String)
+], TabComponent.prototype, "title", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], TabComponent.prototype, "active", void 0);
+TabComponent = __decorate([
+    core_1.Component({
+        selector: 'tab',
+        template: "\n        <div [hidden]=\"!active\">\n            <ng-content></ng-content>\n        </div>\n    "
+    }),
+    __metadata("design:paramtypes", [])
+], TabComponent);
 exports.TabComponent = TabComponent;
 var TabsComponent = (function () {
     function TabsComponent() {
@@ -47,19 +47,19 @@ var TabsComponent = (function () {
         // 显示当前
         tab.active = true;
     };
-    __decorate([
-        core_1.ContentChildren(TabComponent), 
-        __metadata('design:type', core_1.QueryList)
-    ], TabsComponent.prototype, "tabs", void 0);
-    TabsComponent = __decorate([
-        core_1.Component({
-            selector: 'tabs',
-            template: "\n       <div class=\"btn-group btn-group-sm\">\n        <button class=\"btn btn-secondary\" *ngFor='let tab of tabs' (click)=\"selectTab(tab)\" [class.active]=\"tab.active\">\n            {{tab.title}}\n        </button>\n       </div>\n       <div class=\"card\">\n            <div  class=\"card-block\">\n                <ng-content></ng-content>\n            </div>\n       </div>\n    "
-        }), 
-        __metadata('design:paramtypes', [])
-    ], TabsComponent);
     return TabsComponent;
 }());
+__decorate([
+    core_1.ContentChildren(TabComponent),
+    __metadata("design:type", core_1.QueryList)
+], TabsComponent.prototype, "tabs", void 0);
+TabsComponent = __decorate([
+    core_1.Component({
+        selector: 'tabs',
+        template: "\n       <div class=\"btn-group btn-group-sm\">\n        <button class=\"btn btn-secondary\" *ngFor='let tab of tabs' (click)=\"selectTab(tab)\" [class.active]=\"tab.active\">\n            {{tab.title}}\n        </button>\n       </div>\n       <div class=\"card\">\n            <div  class=\"card-block\">\n                <ng-content></ng-content>\n            </div>\n       </div>\n    "
+    }),
+    __metadata("design:paramtypes", [])
+], TabsComponent);
 exports.TabsComponent = TabsComponent;
 exports.TABS_DIRECTIVES = [TabsComponent, TabComponent];
 //# sourceMappingURL=tabs.component.js.map

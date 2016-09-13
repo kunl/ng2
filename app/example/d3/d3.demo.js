@@ -8,8 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var d3 = require('d3');
+var core_1 = require("@angular/core");
+var d3 = require("d3");
 var D3DemoComponent = (function () {
     function D3DemoComponent(_elRef) {
         this._elRef = _elRef;
@@ -22,27 +22,27 @@ var D3DemoComponent = (function () {
             .html('d3 生成')
             .style("background-color", "#1be2a6");
     };
-    D3DemoComponent = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'd3-demo',
-            template: ''
-        }), 
-        __metadata('design:paramtypes', [core_1.ElementRef])
-    ], D3DemoComponent);
     return D3DemoComponent;
 }());
+D3DemoComponent = __decorate([
+    core_1.Component({
+        moduleId: module.id,
+        selector: 'd3-demo',
+        template: ''
+    }),
+    __metadata("design:paramtypes", [core_1.ElementRef])
+], D3DemoComponent);
 exports.D3DemoComponent = D3DemoComponent;
 var D3Module = (function () {
     function D3Module() {
     }
-    D3Module = __decorate([
-        core_1.NgModule({
-            declarations: [D3DemoComponent]
-        }), 
-        __metadata('design:paramtypes', [])
-    ], D3Module);
     return D3Module;
 }());
+D3Module = __decorate([
+    core_1.NgModule({
+        declarations: [D3DemoComponent]
+    }),
+    __metadata("design:paramtypes", [])
+], D3Module);
 exports.D3Module = D3Module;
 //# sourceMappingURL=d3.demo.js.map

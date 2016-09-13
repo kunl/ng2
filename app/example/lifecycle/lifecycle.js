@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
+var core_1 = require("@angular/core");
 var LifecycleComponent = (function () {
     function LifecycleComponent() {
         this.num = 0;
@@ -41,15 +41,15 @@ var LifecycleComponent = (function () {
     LifecycleComponent.prototype._log = function (msg) {
         console.log(this.num++ + " -- " + msg);
     };
-    LifecycleComponent = __decorate([
-        core_1.Component({
-            selector: 'lifecycle',
-            changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-            template: "\n        <input type=\"text\" [(ngModel)]=\"text\">\n    \n    "
-        }), 
-        __metadata('design:paramtypes', [])
-    ], LifecycleComponent);
     return LifecycleComponent;
 }());
+LifecycleComponent = __decorate([
+    core_1.Component({
+        selector: 'lifecycle',
+        changeDetection: core_1.ChangeDetectionStrategy.OnPush,
+        template: "\n        <input type=\"text\" [(ngModel)]=\"text\">\n    \n    "
+    }),
+    __metadata("design:paramtypes", [])
+], LifecycleComponent);
 exports.LifecycleComponent = LifecycleComponent;
 //# sourceMappingURL=lifecycle.js.map

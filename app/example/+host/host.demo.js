@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
+var core_1 = require("@angular/core");
 var HostService = (function () {
     function HostService() {
         this.num = 0;
@@ -20,12 +20,12 @@ var HostService = (function () {
         console.log(n);
         this.num += n;
     };
-    HostService = __decorate([
-        core_1.Injectable(), 
-        __metadata('design:paramtypes', [])
-    ], HostService);
     return HostService;
 }());
+HostService = __decorate([
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [])
+], HostService);
 exports.HostService = HostService;
 var com1 = (function () {
     function com1(hs) {
@@ -38,19 +38,19 @@ var com1 = (function () {
         enumerable: true,
         configurable: true
     });
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', String)
-    ], com1.prototype, "name", void 0);
-    com1 = __decorate([
-        core_1.Component({
-            selector: 'com1',
-            template: "\n        {{number}}, {{name}}\n    "
-        }), 
-        __metadata('design:paramtypes', [HostService])
-    ], com1);
     return com1;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], com1.prototype, "name", void 0);
+com1 = __decorate([
+    core_1.Component({
+        selector: 'com1',
+        template: "\n        {{number}}, {{name}}\n    "
+    }),
+    __metadata("design:paramtypes", [HostService])
+], com1);
 exports.com1 = com1;
 var HostDemo = (function () {
     function HostDemo(data) {
@@ -70,14 +70,14 @@ var HostDemo = (function () {
         // 调用 service 设置num
         this.data.setNum(1);
     };
-    HostDemo = __decorate([
-        core_1.Component({
-            selector: 'host',
-            template: "\n        <com1 [name]='currname'></com1> <br>\n        \u5F53\u524D\u6570\u5B57{{number}}\n        <button class=\"btn btn-sm\" (click)='changeNum()'>\u53D8\u4E00\u4E0B</button>\n        <br>\n        <p>\u4E0D\u540C\u7EC4\u4EF6\u4E4B\u95F4\u901A\u8FC7 service \u8FDB\u884C\u6570\u636E\u4EA4\u4E92</p>\n        <a href=\"https://github.com/kunl/ng2/blob/gh-pages/app/example/host/host.demo.ts\" target=\"_blank\">https://github.com/kunl/ng2/blob/gh-pages/app/example/host/host.demo.ts</a>\n  \n    "
-        }), 
-        __metadata('design:paramtypes', [HostService])
-    ], HostDemo);
     return HostDemo;
 }());
+HostDemo = __decorate([
+    core_1.Component({
+        selector: 'host',
+        template: "\n        <com1 [name]='currname'></com1> <br>\n        \u5F53\u524D\u6570\u5B57{{number}}\n        <button class=\"btn btn-sm\" (click)='changeNum()'>\u53D8\u4E00\u4E0B</button>\n        <br>\n        <p>\u4E0D\u540C\u7EC4\u4EF6\u4E4B\u95F4\u901A\u8FC7 service \u8FDB\u884C\u6570\u636E\u4EA4\u4E92</p>\n        <a href=\"https://github.com/kunl/ng2/blob/gh-pages/app/example/host/host.demo.ts\" target=\"_blank\">https://github.com/kunl/ng2/blob/gh-pages/app/example/host/host.demo.ts</a>\n  \n    "
+    }),
+    __metadata("design:paramtypes", [HostService])
+], HostDemo);
 exports.HostDemo = HostDemo;
 //# sourceMappingURL=host.demo.js.map

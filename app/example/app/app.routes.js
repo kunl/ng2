@@ -1,17 +1,17 @@
 "use strict";
-var router_1 = require('@angular/router');
-var home_component_1 = require('../../component/home/home.component');
-var tabs_demo_1 = require('../+tabs/tabs.demo');
-var color_demo_1 = require('../+colors/color.demo');
-var attrs_demo_1 = require('../+attr/attrs.demo');
-var host_demo_1 = require('../+host/host.demo');
-var parent_1 = require('../dynamic-component/parent');
-var viewchild_demo_1 = require('../+view-child/viewchild.demo');
+var router_1 = require("@angular/router");
+var home_component_1 = require("../../component/home/home.component");
+var tabs_demo_1 = require("../+tabs/tabs.demo");
+var color_demo_1 = require("../+colors/color.demo");
+var attrs_demo_1 = require("../+attr/attrs.demo");
+var host_demo_1 = require("../+host/host.demo");
+var parent_1 = require("../dynamic-component/parent");
+var viewchild_demo_1 = require("../+view-child/viewchild.demo");
 // import {HttpRouters} from '../+http/http.routes';
 // import { HttpDemoModule } from '../+http/http.module';
-var pagination_demo_1 = require('../pagination/pagination.demo');
-var dialog_demo_1 = require('../+dialog/dialog.demo');
-var d3_demo_1 = require('../d3/d3.demo');
+var pagination_demo_1 = require("../pagination/pagination.demo");
+var dialog_demo_1 = require("../+dialog/dialog.demo");
+var d3_demo_1 = require("../d3/d3.demo");
 var appRoutes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home', component: home_component_1.HomeComponent },

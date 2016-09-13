@@ -8,22 +8,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var color_demo_1 = require('./color.demo');
-var color_1 = require('../../component/colors/color');
+var core_1 = require("@angular/core");
+var color_demo_1 = require("./color.demo");
+var color_1 = require("../../component/colors/color");
 var ColorModule = (function () {
     function ColorModule() {
     }
-    ColorModule = __decorate([
-        core_1.NgModule({
-            imports: [],
-            exports: [],
-            declarations: [color_demo_1.ColorDemo, color_1.ColorDirective],
-            providers: [],
-        }), 
-        __metadata('design:paramtypes', [])
-    ], ColorModule);
     return ColorModule;
 }());
+ColorModule = __decorate([
+    core_1.NgModule({
+        imports: [],
+        exports: [],
+        declarations: [color_demo_1.ColorDemo, color_1.ColorDirective],
+        providers: [],
+    }),
+    __metadata("design:paramtypes", [])
+], ColorModule);
 exports.ColorModule = ColorModule;
 //# sourceMappingURL=color.module.js.map

@@ -8,8 +8,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var http_service_1 = require('./http.service');
+var core_1 = require("@angular/core");
+var http_service_1 = require("./http.service");
+// @Routes([
+//     { path: '/user/:id', component: UserComponent }
+// ])
 var HttpDemo = (function () {
     function HttpDemo(http_service) {
         var _this = this;
@@ -23,17 +26,17 @@ var HttpDemo = (function () {
         var _this = this;
         this.http_service.del(it.id).subscribe(function (data) { _this.users = _this.users.filter(function (item) { return item != it; }); }, function (err) { return alert(err); });
     };
-    HttpDemo = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'http',
-            providers: [http_service_1.HttpService],
-            templateUrl: 'http.demo.html',
-            styleUrls: ['http.demo.css']
-        }), 
-        __metadata('design:paramtypes', [http_service_1.HttpService])
-    ], HttpDemo);
     return HttpDemo;
 }());
+HttpDemo = __decorate([
+    core_1.Component({
+        moduleId: module.id,
+        selector: 'http',
+        providers: [http_service_1.HttpService],
+        templateUrl: 'http.demo.html',
+        styleUrls: ['http.demo.css']
+    }),
+    __metadata("design:paramtypes", [http_service_1.HttpService])
+], HttpDemo);
 exports.HttpDemo = HttpDemo;
 //# sourceMappingURL=http.demo.js.map

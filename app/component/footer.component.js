@@ -8,22 +8,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
+var core_1 = require("@angular/core");
 var Footer = (function () {
     function Footer() {
     }
-    Footer = __decorate([
-        core_1.Component({
-            selector: 'footer',
-            styles: [
-                "\n        .footer {\n            background: #fff;\n            border-top: 1px solid #ddd;\n            text-align: center\n        }\n        "
-            ],
-            template: "\n        <nav class=\"navbar navbar-fixed-bottom navbar-dark footer\">\n            <a href=\"https://github.com/kunl/ng2\">github \u4E0A\u6709\u6E90\u7801\uFF0C\u6216\u8005 F12 sources \u9762\u677F\u4E5F\u53EF\u4EE5\u770B\u5230</a>\n        </nav>\n    "
-        }), 
-        __metadata('design:paramtypes', [])
-    ], Footer);
     return Footer;
 }());
+Footer = __decorate([
+    core_1.Component({
+        selector: 'footer',
+        styles: [
+            "\n        .footer {\n            background: #fff;\n            border-top: 1px solid #ddd;\n            text-align: center\n        }\n        "
+        ],
+        template: "\n        <nav class=\"navbar navbar-fixed-bottom navbar-dark footer\">\n            <a href=\"https://github.com/kunl/ng2\">github \u4E0A\u6709\u6E90\u7801\uFF0C\u6216\u8005 F12 sources \u9762\u677F\u4E5F\u53EF\u4EE5\u770B\u5230</a>\n        </nav>\n    "
+    }),
+    __metadata("design:paramtypes", [])
+], Footer);
 exports.Footer = Footer;
 var a = '\
 aa\

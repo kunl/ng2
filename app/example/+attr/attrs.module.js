@@ -8,22 +8,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var attrs_demo_1 = require('./attrs.demo');
-var disabled_1 = require('./disabled');
+var core_1 = require("@angular/core");
+var attrs_demo_1 = require("./attrs.demo");
+var disabled_1 = require("./disabled");
 var AttrsDemoModule = (function () {
     function AttrsDemoModule() {
     }
-    AttrsDemoModule = __decorate([
-        core_1.NgModule({
-            imports: [],
-            exports: [],
-            declarations: [attrs_demo_1.AttrsDemoComponent, disabled_1.CusonmComponent, disabled_1.DisabledComponent],
-            providers: [],
-        }), 
-        __metadata('design:paramtypes', [])
-    ], AttrsDemoModule);
     return AttrsDemoModule;
 }());
+AttrsDemoModule = __decorate([
+    core_1.NgModule({
+        imports: [],
+        exports: [],
+        declarations: [attrs_demo_1.AttrsDemoComponent, disabled_1.CusonmComponent, disabled_1.DisabledComponent],
+        providers: [],
+    }),
+    __metadata("design:paramtypes", [])
+], AttrsDemoModule);
 exports.AttrsDemoModule = AttrsDemoModule;
 //# sourceMappingURL=attrs.module.js.map

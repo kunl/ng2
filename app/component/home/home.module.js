@@ -8,19 +8,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var home_component_1 = require('./home.component');
+var core_1 = require("@angular/core");
+var home_component_1 = require("./home.component");
 var HomeModule = (function () {
     function HomeModule() {
     }
-    HomeModule = __decorate([
-        core_1.NgModule({
-            exports: [home_component_1.HomeComponent],
-            declarations: [home_component_1.HomeComponent]
-        }), 
-        __metadata('design:paramtypes', [])
-    ], HomeModule);
     return HomeModule;
 }());
+HomeModule = __decorate([
+    core_1.NgModule({
+        exports: [home_component_1.HomeComponent],
+        declarations: [home_component_1.HomeComponent]
+    }),
+    __metadata("design:paramtypes", [])
+], HomeModule);
 exports.HomeModule = HomeModule;
 //# sourceMappingURL=home.module.js.map

@@ -8,16 +8,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
+var core_1 = require("@angular/core");
 var LabelItem = (function () {
     function LabelItem() {
     }
-    LabelItem = __decorate([
-        core_1.Directive({ selector: 'label' }), 
-        __metadata('design:paramtypes', [])
-    ], LabelItem);
     return LabelItem;
 }());
+LabelItem = __decorate([
+    core_1.Directive({ selector: 'label' }),
+    __metadata("design:paramtypes", [])
+], LabelItem);
 exports.LabelItem = LabelItem;
 var ViewChildComponentDemo = (function () {
     function ViewChildComponentDemo(_el, _render) {
@@ -46,19 +46,19 @@ var ViewChildComponentDemo = (function () {
         // 设置默认值
         this._render.setElementProperty(email, 'value', 'test@xxx.com');
     };
-    __decorate([
-        core_1.ViewChild('myemail'), 
-        __metadata('design:type', core_1.ElementRef)
-    ], ViewChildComponentDemo.prototype, "emailRef", void 0);
-    ViewChildComponentDemo = __decorate([
-        core_1.Component({
-            selector: 'view-child',
-            styles: ['.focused{border-color: red}'],
-            template: "\n        <div class=\"form-group row\">\n            <label for=\"input-email\" class=\"col-sm-1 form-control-label\">\u90AE\u7BB1</label>\n            <div class=\"col-sm-5\">\n            <input #myemail type=\"email\" class=\"form-control\" id=\"input-email\" placeholder=\"Email\">\n            </div>\n        </div>\n        <div class=\"form-group row\">\n            <label for=\"input-username\" class=\"col-sm-1 form-control-label\">\u7528\u6237\u540D</label>\n            <div class=\"col-sm-5\">\n            <input type=\"text\" class=\"form-control\" id=\"input-username\" placeholder=\"Password\">\n            </div>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-sm-5\">\n                <div class=\"card\">{{it}}</div>\n            </div>\n        </div>\n    \n    ",
-        }), 
-        __metadata('design:paramtypes', [core_1.ElementRef, core_1.Renderer])
-    ], ViewChildComponentDemo);
     return ViewChildComponentDemo;
 }());
+__decorate([
+    core_1.ViewChild('myemail'),
+    __metadata("design:type", core_1.ElementRef)
+], ViewChildComponentDemo.prototype, "emailRef", void 0);
+ViewChildComponentDemo = __decorate([
+    core_1.Component({
+        selector: 'view-child',
+        styles: ['.focused{border-color: red}'],
+        template: "\n        <div class=\"form-group row\">\n            <label for=\"input-email\" class=\"col-sm-1 form-control-label\">\u90AE\u7BB1</label>\n            <div class=\"col-sm-5\">\n            <input #myemail type=\"email\" class=\"form-control\" id=\"input-email\" placeholder=\"Email\">\n            </div>\n        </div>\n        <div class=\"form-group row\">\n            <label for=\"input-username\" class=\"col-sm-1 form-control-label\">\u7528\u6237\u540D</label>\n            <div class=\"col-sm-5\">\n            <input type=\"text\" class=\"form-control\" id=\"input-username\" placeholder=\"Password\">\n            </div>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-sm-5\">\n                <div class=\"card\">{{it}}</div>\n            </div>\n        </div>\n    \n    ",
+    }),
+    __metadata("design:paramtypes", [core_1.ElementRef, core_1.Renderer])
+], ViewChildComponentDemo);
 exports.ViewChildComponentDemo = ViewChildComponentDemo;
 //# sourceMappingURL=viewchild.demo.js.map
