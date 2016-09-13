@@ -33,6 +33,7 @@ var viewchild_demo_1 = require("../+view-child/viewchild.demo");
 var pagination_module_1 = require("../pagination/pagination.module");
 var dialog_module_1 = require("../+dialog/dialog.module");
 var d3_demo_1 = require("../d3/d3.demo");
+var echarts_demo_1 = require("../echarts/echarts.demo");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -47,7 +48,8 @@ AppModule = __decorate([
             host_module_1.HostModule,
             pagination_module_1.PaginationModule,
             dialog_module_1.DialogModule,
-            d3_demo_1.D3Module
+            d3_demo_1.D3Module,
+            echarts_demo_1.EchartsDemoModule
         ],
         declarations: [
             app_component_1.AppComponent,

@@ -38,6 +38,7 @@ import {ViewChildComponentDemo} from '../+view-child/viewchild.demo';
 import { PaginationModule } from '../pagination/pagination.module';
 import { DialogModule } from '../+dialog/dialog.module';
 import { D3Module } from '../d3/d3.demo';
+import { EchartsDemoModule } from '../echarts/echarts.demo';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { D3Module } from '../d3/d3.demo';
         HostModule,
         PaginationModule,
         DialogModule,
-        D3Module
+        D3Module,
+        EchartsDemoModule
     ],
     declarations: [
         AppComponent,

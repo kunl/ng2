@@ -12,6 +12,7 @@ var viewchild_demo_1 = require("../+view-child/viewchild.demo");
 var pagination_demo_1 = require("../pagination/pagination.demo");
 var dialog_demo_1 = require("../+dialog/dialog.demo");
 var d3_demo_1 = require("../d3/d3.demo");
+var echarts_demo_1 = require("../echarts/echarts.demo");
 var appRoutes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home', component: home_component_1.HomeComponent },
@@ -26,6 +27,7 @@ var appRoutes = [
     { path: 'pagination', component: pagination_demo_1.PaginationDemo },
     { path: 'dialog', component: dialog_demo_1.DialogDemo },
     { path: 'd3', component: d3_demo_1.D3DemoComponent },
+    { path: 'echarts', component: echarts_demo_1.EchartsDemoComponent },
 ];
 var routing = router_1.RouterModule.forRoot(appRoutes, { useHash: true });
 exports.routing = routing;

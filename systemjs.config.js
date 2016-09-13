@@ -4,7 +4,8 @@
         'app': 'app',
         '@angular': 'node_modules/@angular',
         'rxjs': 'node_modules/rxjs',
-        'd3': 'node_modules/d3'
+        'd3': 'node_modules/d3',
+        'echarts': 'node_modules/echarts'
     };
 
     var packages = {
@@ -17,6 +18,10 @@
         },
         'd3': {
             main: 'build/d3.js',
+            defaultExtension: 'js'
+        },
+        'echarts': {
+            main: 'dist/echarts.min.js',
             defaultExtension: 'js'
         }
     };
