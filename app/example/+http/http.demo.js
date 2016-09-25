@@ -10,9 +10,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var http_service_1 = require("./http.service");
-// @Routes([
-//     { path: '/user/:id', component: UserComponent }
-// ])
 var HttpDemo = (function () {
     function HttpDemo(http_service) {
         var _this = this;
