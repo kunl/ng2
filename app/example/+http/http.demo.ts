@@ -15,10 +15,6 @@ import { User } from '../../service/model';
 })
 
 
-// @Routes([
-//     { path: '/user/:id', component: UserComponent }
-// ])
-
 export class HttpDemo implements OnInit {
     private users: User[] = [];
     
