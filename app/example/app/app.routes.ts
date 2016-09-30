@@ -18,6 +18,7 @@ import {PaginationDemo} from '../pagination/pagination.demo';
 import {DialogDemo} from '../+dialog/dialog.demo';
 import {D3DemoComponent} from '../d3/d3.demo';
 import {EchartsDemoComponent} from '../echarts/echarts.demo';
+import {FormsDemoComponent} from '../forms/forms.component';
 
 
 const appRoutes: Routes = [
@@ -36,6 +37,7 @@ const appRoutes: Routes = [
     { path: 'dialog', component: DialogDemo },
     { path: 'd3', component: D3DemoComponent },
     { path: 'echarts', component: EchartsDemoComponent },
+    { path: 'forms', component: FormsDemoComponent },
 ];
 
 let routing = RouterModule.forRoot(appRoutes, { useHash: true }) 

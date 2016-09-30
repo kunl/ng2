@@ -40,6 +40,7 @@ import { PaginationModule } from '../pagination/pagination.module';
 import { DialogModule } from '../+dialog/dialog.module';
 import { D3Module } from '../d3/d3.demo';
 import { EchartsDemoModule } from '../echarts/echarts.demo';
+import { FormsDemoModule } from '../forms/forms';
 
 
 
@@ -57,7 +58,7 @@ import { EchartsDemoModule } from '../echarts/echarts.demo';
         DialogModule,
         D3Module,
         EchartsDemoModule,
-
+        FormsDemoModule
     ],
     declarations: [
         AppComponent,
