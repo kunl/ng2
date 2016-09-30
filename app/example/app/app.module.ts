@@ -32,6 +32,7 @@ import {LifecycleComponent} from '../lifecycle/lifecycle';
 import { ColorModule } from '../+colors/color.module';
 import { AttrsDemoModule } from '../+attr/attrs.module';
 import { HostModule } from '../+host/host.module';
+import { HttpDemoModule } from '../+http/http.module';
 import {DynamicComponentDemo} from '../dynamic-component/parent';
 import {ViewChildComponentDemo} from '../+view-child/viewchild.demo';
 
@@ -41,6 +42,7 @@ import { D3Module } from '../d3/d3.demo';
 import { EchartsDemoModule } from '../echarts/echarts.demo';
 
 
+
 @NgModule({
     imports: [BrowserModule, routing, HttpModule, FormsModule, 
     
@@ -48,10 +50,14 @@ import { EchartsDemoModule } from '../echarts/echarts.demo';
         AttrsDemoModule,
         ColorModule,
         HostModule,
+
+        // HttpDemoModule,
+        
         PaginationModule,
         DialogModule,
         D3Module,
-        EchartsDemoModule
+        EchartsDemoModule,
+
     ],
     declarations: [
         AppComponent,

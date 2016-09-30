@@ -14,16 +14,14 @@ import {DynamicComponentDemo} from '../dynamic-component/parent';
 import {ViewChildComponentDemo} from '../+view-child/viewchild.demo';
 
 
-// import {HttpRouters} from '../+http/http.routes';
-// import { HttpDemoModule } from '../+http/http.module';
-
 import {PaginationDemo} from '../pagination/pagination.demo';
 import {DialogDemo} from '../+dialog/dialog.demo';
 import {D3DemoComponent} from '../d3/d3.demo';
 import {EchartsDemoComponent} from '../echarts/echarts.demo';
 
+
 const appRoutes: Routes = [
-    { path: '',  redirectTo: '/home', pathMatch: 'full' },
+    { path: '',  redirectTo: 'home', pathMatch: 'full' },
     { path: 'home',  component: HomeComponent },
     { path: 'tabs', component: TabsDemoComponent },
     { path: 'attrs', component: AttrsDemoComponent },
@@ -33,8 +31,7 @@ const appRoutes: Routes = [
     { path: 'viewchild', component: ViewChildComponentDemo },
 
     { path: 'http', loadChildren: 'app/example/+http/http.module#HttpDemoModule'},
-    // ...HttpRouters,
-    
+
     { path: 'pagination', component: PaginationDemo },
     { path: 'dialog', component: DialogDemo },
     { path: 'd3', component: D3DemoComponent },

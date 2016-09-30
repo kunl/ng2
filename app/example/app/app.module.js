@@ -46,10 +46,11 @@ AppModule = __decorate([
             attrs_module_1.AttrsDemoModule,
             color_module_1.ColorModule,
             host_module_1.HostModule,
+            // HttpDemoModule,
             pagination_module_1.PaginationModule,
             dialog_module_1.DialogModule,
             d3_demo_1.D3Module,
-            echarts_demo_1.EchartsDemoModule
+            echarts_demo_1.EchartsDemoModule,
         ],
         declarations: [
             app_component_1.AppComponent,

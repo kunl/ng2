@@ -7,7 +7,8 @@ exports.HttpRouters = [
         path: '',
         component: http_demo_1.HttpDemo,
         children: [
-            { path: '', component: http_demo_1.HttpDemo },
+            { path: '', redirectTo: 'list', pathMatch: 'full' },
+            { path: 'list', component: http_demo_1.HttpDemo },
             { path: ':id', component: user_component_1.UserComponent }
         ]
     },
