@@ -18,7 +18,7 @@ import {PaginationDemo} from '../pagination/pagination.demo';
 import {DialogDemo} from '../+dialog/dialog.demo';
 import {D3DemoComponent} from '../d3/d3.demo';
 import {EchartsDemoComponent} from '../echarts/echarts.demo';
-import {FormsDemoComponent} from '../forms/forms.component';
+import {FormsDemoComponent} from '../forms/forms-demo';
 
 
 const appRoutes: Routes = [

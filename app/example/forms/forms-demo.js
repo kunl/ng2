@@ -9,24 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var platform_browser_1 = require("@angular/platform-browser");
-var forms_1 = require("@angular/forms");
-var forms_demo_1 = require("./forms-demo");
-var forms_component_1 = require("./forms.component");
-var forms_reactive_component_1 = require("./forms-reactive.component");
-var FormsDemoModule = (function () {
-    function FormsDemoModule() {
+var FormsDemoComponent = (function () {
+    function FormsDemoComponent() {
     }
-    return FormsDemoModule;
+    FormsDemoComponent.prototype.ngOnInit = function () { };
+    return FormsDemoComponent;
 }());
-FormsDemoModule = __decorate([
-    core_1.NgModule({
-        imports: [forms_1.FormsModule, forms_1.ReactiveFormsModule, platform_browser_1.BrowserModule],
-        declarations: [forms_component_1.FormsComponent, forms_reactive_component_1.FormsReactiveComponent, forms_demo_1.FormsDemoComponent],
-        exports: [forms_demo_1.FormsDemoComponent],
-        providers: [],
+FormsDemoComponent = __decorate([
+    core_1.Component({
+        moduleId: module.id,
+        selector: 'forms-demo',
+        template: "\n    <forms></forms>\n\n    <hr>\n\n    <reactive-forms></reactive-forms>\n    \n    "
     }),
     __metadata("design:paramtypes", [])
-], FormsDemoModule);
-exports.FormsDemoModule = FormsDemoModule;
-//# sourceMappingURL=forms.js.map
+], FormsDemoComponent);
+exports.FormsDemoComponent = FormsDemoComponent;
+//# sourceMappingURL=forms-demo.js.map
