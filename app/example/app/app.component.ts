@@ -35,6 +35,8 @@ let routers  = [
 
 export class AppComponent{
     
+     //return `${params.seriesName} : ${vardata[params.dataIndex]} <br/> <a id="detail" onclick="get(${vardata})">点击查看详情</a>` 
+
     routers = routers;
     
     constructor(injector: Injector){

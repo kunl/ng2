@@ -62,6 +62,10 @@ export class EchartsDemoComponent implements OnInit {
         },2000);
 
         myChart.setOption(option);
+
+        myChart.on('click', (params: any) => {
+            console.log(params)
+        })
     }
 
 }

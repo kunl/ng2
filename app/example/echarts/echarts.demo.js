@@ -55,6 +55,9 @@ var EchartsDemoComponent = (function () {
             myChart.setOption(options_1.option, true);
         }, 2000);
         myChart.setOption(options_1.option);
+        myChart.on('click', function (params) {
+            console.log(params);
+        });
     };
     return EchartsDemoComponent;
 }());

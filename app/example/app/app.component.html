@@ -1,20 +1,44 @@
-<style>
-    .sidebar {
-        width: 120px;
-        float: left;
-    }
-</style>
-<div class="row">
-    <p class="header-title">Angular2 demo of kunl</p>
+<div class="mdl-layout">
+	<header class=" header">
+		<div class="header-content">
+			<span class="header-title">Kunl's Angular demo</span>
+			<nav class="navigation">
+				<a  href="#">Nav link 1</a>
+				<a  href="#">Nav link 2</a>
+				<a  href="#">Nav link 3</a>
+			</nav>
+		</div>
+	</header>
+
+
+	<main class="layout-content">
+
+		<div class="mdl-grid">
+			<div class="mdl-cell mdl-cell--2-col">
+				<nav class="list-group sidebar mdl-shadow--2dp">
+					<ul class="mdl-list ">
+						<li *ngFor="let it of routers">
+							<span class="mdl-list__item-primary-content">
+                            <a class="list-group-item" [routerLink]='[it.path]' routerLinkActive="active">{{it.nick}}</a>
+                        </span>
+						</li>
+					</ul>
+				</nav>
+
+			</div>
+
+			<div class="mdl-cell mdl-cell--10-col">
+				<p class="header-title">Angular2 demo of kunl</p>
+
+                <div class="content">
+                    <router-outlet></router-outlet>
+                </div>
+
+                <footer></footer>
+			</div>
+		</div>
+
+		
+	</main>
+
 </div>
-<nav class="list-group sidebar">
-    <a class="list-group-item" [routerLink]='[it.path]' *ngFor="let it of routers"  routerLinkActive="active">{{it.nick}}</a>
-</nav>
-<div class="container-fluid" style="margin-left: 119px">
-    <div class="row">
-        <div class="content">
-            <router-outlet></router-outlet>
-        </div>
-    </div>
-</div>
-<footer></footer>

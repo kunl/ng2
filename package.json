@@ -1,34 +1,31 @@
 {
   "name": "ng2",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "keywords": [],
   "author": "",
   "scripts": {
     "tsc": "tsc",
-    "tsc:w": "tsc -w",
-    "start": "tsc && concurrently \"tsc -w\" \"hs\" "
+    "tsc:w": "tsc -w"
   },
   "main": "main.js",
   "license": "ISC",
   "dependencies": {
-    "@angular/common": "2.1.0-rc.0",
-    "@angular/compiler": "2.1.0-rc.0",
-    "@angular/core": "2.1.0-rc.0",
-    "@angular/forms": "2.1.0-rc.0",
-    "@angular/http": "2.1.0-rc.0",
-    "@angular/platform-browser": "2.1.0-rc.0",
-    "@angular/platform-browser-dynamic": "2.1.0-rc.0",
-    "@angular/router": "3.1.0-rc.0",
+    "@angular/common": "2.1.0",
+    "@angular/compiler": "2.1.0",
+    "@angular/core": "2.1.0",
+    "@angular/forms": "2.1.0",
+    "@angular/http": "2.1.0",
+    "@angular/platform-browser": "2.1.0",
+    "@angular/platform-browser-dynamic": "2.1.0",
+    "@angular/router": "3.1.0",
     "core-js": "^2.4.1",
-    "rxjs": "5.0.0-beta.12",
-    "zone.js": "^0.6.25",
+    "d3": "^4.2.7",
+    "echarts": "^3.2.3",
     "reflect-metadata": "^0.1.8",
+    "rxjs": "^5.0.0-rc.1",
     "systemjs": "0.19.39",
-
-    "bootstrap": "^4.0.0-alpha.4",
-    "d3": "^4.2.6",
-    "echarts": "^3.2.3"
+    "zone.js": "^0.6.25"
   },
   "devDependencies": {
     "@types/core-js": "^0.9.34",
