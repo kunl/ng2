@@ -3,6 +3,7 @@ import { Http, Response } from '@angular/http';
 
 import { Observable } from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/toPromise';
 
 import { User } from '../../service/model';
 
@@ -17,10 +18,13 @@ export class HttpService {
     constructor(private http: Http) { 
         
     }
-    
 
     getUsers(): Observable<User[]>{
         return this.http.get( this.users).map(res => res.json());
+    }
+    
+    getUserPromise(): Promise<User[]>{
+        return this.http.get( this.users).toPromise().then(response => response.json().data as User[])
     }
     
     getUser(id:string): Observable<User>{
