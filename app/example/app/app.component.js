@@ -26,6 +26,7 @@ var routers = [
 ];
 var AppComponent = (function () {
     function AppComponent(injector) {
+        //return `${params.seriesName} : ${vardata[params.dataIndex]} <br/> <a id="detail" onclick="get(${vardata})">点击查看详情</a>` 
         this.routers = routers;
         var user = injector.get('User');
         console.log(user);
