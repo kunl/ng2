@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
 require("rxjs/add/operator/map");
+require("rxjs/add/operator/toPromise");
 var HttpService = (function () {
     function HttpService(http) {
         this.http = http;
@@ -19,6 +20,9 @@ var HttpService = (function () {
     }
     HttpService.prototype.getUsers = function () {
         return this.http.get(this.users).map(function (res) { return res.json(); });
+    };
+    HttpService.prototype.getUserPromise = function () {
+        return this.http.get(this.users).toPromise().then(function (response) { return response.json().data; });
     };
     HttpService.prototype.getUser = function (id) {
         return this.http.get(this.users + ("/" + id)).map(function (res) { return res.json(); });

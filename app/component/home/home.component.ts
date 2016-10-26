@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
         this.el.nativeElement.appendChild(button)
     }
 
-    say(e){
+    say(e:MouseEvent){
         console.log(3333, e)
     }
 
