@@ -1,3 +1,6 @@
 node_modules/
 **/**.map
 **.log
+typings/
+build/**.js.map
+.idea
