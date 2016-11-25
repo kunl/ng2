@@ -15,7 +15,6 @@ import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 
 
-
 import {TabDemoModule} from '../+tabs/module';
 import {HomeModule} from '../../component/home/home.module';
 
@@ -42,7 +41,7 @@ import { D3Module } from '../d3/d3.demo';
 import { EchartsDemoModule } from '../echarts/echarts.demo';
 import { FormsDemoModule } from '../forms/forms';
 
-
+import { PipeModule } from '../../pipes/pipe.module';
 
 @NgModule({
     imports: [BrowserModule, routing, HttpModule, FormsModule, 
@@ -58,7 +57,9 @@ import { FormsDemoModule } from '../forms/forms';
         DialogModule,
         D3Module,
         EchartsDemoModule,
-        FormsDemoModule
+        FormsDemoModule,
+
+        PipeModule
     ],
     declarations: [
         AppComponent,

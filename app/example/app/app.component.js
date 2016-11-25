@@ -26,7 +26,6 @@ var routers = [
 ];
 var AppComponent = (function () {
     function AppComponent(injector) {
-        //return `${params.seriesName} : ${vardata[params.dataIndex]} <br/> <a id="detail" onclick="get(${vardata})">点击查看详情</a>` 
         this.routers = routers;
         var user = injector.get('User');
         console.log(user);
@@ -39,9 +38,6 @@ AppComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
         selector: 'example-app',
-        styles: [
-            "\n        .header-title {padding: 0 20px}\n        .router-link-active{border-right: 4px solid #00dcc1}\n        .content {padding: 0 20px; min-height: 70vh}\n        nav li {cursor: pointer}\n        "
-        ],
         templateUrl: 'app.component.html'
     }),
     __metadata("design:paramtypes", [core_1.Injector])

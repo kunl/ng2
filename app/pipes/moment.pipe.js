@@ -9,25 +9,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var common_1 = require("@angular/common");
-var forms_1 = require("@angular/forms");
-var http_routes_1 = require("./http.routes");
-var http_demo_1 = require("./http.demo");
-var user_component_1 = require("./user.component");
-var img_pipe_1 = require("./img.pipe");
-var pipe_module_1 = require("../../pipes/pipe.module");
-var HttpDemoModule = (function () {
-    function HttpDemoModule() {
+// import * as moment from 'moment';
+var MomentPipe = (function () {
+    function MomentPipe() {
     }
-    return HttpDemoModule;
+    MomentPipe.prototype.transform = function (value, args) {
+        // let time = moment(value, args);
+        // console.log(time)
+        console.log(args);
+    };
+    return MomentPipe;
 }());
-HttpDemoModule = __decorate([
-    core_1.NgModule({
-        imports: [http_routes_1.routing, common_1.CommonModule, forms_1.FormsModule, pipe_module_1.PipeModule],
-        exports: [http_demo_1.HttpDemo, user_component_1.UserComponent],
-        declarations: [http_demo_1.HttpDemo, user_component_1.UserComponent, img_pipe_1.ImgPipe]
+MomentPipe = __decorate([
+    core_1.Pipe({
+        name: 'moment_pipe'
     }),
     __metadata("design:paramtypes", [])
-], HttpDemoModule);
-exports.HttpDemoModule = HttpDemoModule;
-//# sourceMappingURL=http.module.js.map
+], MomentPipe);
+exports.MomentPipe = MomentPipe;
+//# sourceMappingURL=moment.pipe.js.map

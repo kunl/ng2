@@ -20,14 +20,6 @@ let routers  = [
 @Component({
     moduleId: module.id,
     selector: 'example-app',
-    styles: [
-        `
-        .header-title {padding: 0 20px}
-        .router-link-active{border-right: 4px solid #00dcc1}
-        .content {padding: 0 20px; min-height: 70vh}
-        nav li {cursor: pointer}
-        `
-    ],
     templateUrl: 'app.component.html' 
 })
 
@@ -35,7 +27,6 @@ let routers  = [
 
 export class AppComponent{
     
-     //return `${params.seriesName} : ${vardata[params.dataIndex]} <br/> <a id="detail" onclick="get(${vardata})">点击查看详情</a>` 
 
     routers = routers;
     

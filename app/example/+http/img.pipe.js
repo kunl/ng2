@@ -9,25 +9,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var common_1 = require("@angular/common");
-var forms_1 = require("@angular/forms");
-var http_routes_1 = require("./http.routes");
-var http_demo_1 = require("./http.demo");
-var user_component_1 = require("./user.component");
-var img_pipe_1 = require("./img.pipe");
-var pipe_module_1 = require("../../pipes/pipe.module");
-var HttpDemoModule = (function () {
-    function HttpDemoModule() {
+var ImgPipe = (function () {
+    function ImgPipe() {
     }
-    return HttpDemoModule;
+    ImgPipe.prototype.transform = function (value, args) {
+        var no_img_url = 'http://tva4.sinaimg.cn/crop.8.26.613.613.180/6efef90djw8eo4z1ul47zj20hs0hsjsc.jpg';
+        if (value) {
+            return value.match('^http*') ? value : no_img_url;
+        }
+        else {
+            return no_img_url;
+        }
+    };
+    return ImgPipe;
 }());
-HttpDemoModule = __decorate([
-    core_1.NgModule({
-        imports: [http_routes_1.routing, common_1.CommonModule, forms_1.FormsModule, pipe_module_1.PipeModule],
-        exports: [http_demo_1.HttpDemo, user_component_1.UserComponent],
-        declarations: [http_demo_1.HttpDemo, user_component_1.UserComponent, img_pipe_1.ImgPipe]
+ImgPipe = __decorate([
+    core_1.Pipe({
+        name: 'img_pipe'
     }),
     __metadata("design:paramtypes", [])
-], HttpDemoModule);
-exports.HttpDemoModule = HttpDemoModule;
-//# sourceMappingURL=http.module.js.map
+], ImgPipe);
+exports.ImgPipe = ImgPipe;
+//# sourceMappingURL=img.pipe.js.map

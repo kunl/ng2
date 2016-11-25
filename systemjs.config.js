@@ -5,6 +5,7 @@
         '@angular': 'node_modules/@angular',
         'rxjs': 'node_modules/rxjs',
         'd3': 'node_modules/d3',
+        'moment': 'node_modules/moment',
         'echarts': 'node_modules/echarts'
     };
 
@@ -18,6 +19,9 @@
         },
         'd3': {
             main: 'build/d3.js',
+            defaultExtension: 'js'
+        },
+        'moment': {
             defaultExtension: 'js'
         },
         'echarts': {

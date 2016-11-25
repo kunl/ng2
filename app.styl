@@ -1,4 +1,8 @@
 top_height = 70px
+side_menu_width = 200px
+
+border_color = #ffd5e2
+title_color = #353535
 font_color = #ff4081
 font_family = "Helvetica","Arial",sans-serif
 
@@ -6,55 +10,61 @@ font_family = "Helvetica","Arial",sans-serif
     box-sizing: border-box
 body
     font-family: font_family
-
+body, ul, h1, h2, h3, h4
+    margin: 0   
+    padding: 0 
+li
+    list-style: none
 a
     color: font_color
 
 .layout-content
     padding-top top_height
 .header
-    position: fixed
     height: top_height
     width: 100%
-    border-bottom: 1px solid #efefef
+    border-bottom: 1px solid border_color
+    background:  #f8f8f8
+    .header-title
+        line-height: 2
+        text-indent: side_menu_width
+        display: inline-block
+        color: title_color
+    nav
+        margin: 1em
+        float: right
 
-nav.sidebar 
+
+.sidebar 
     position: fixed
     top: top_height
     left: 0
     bottom: 0
-    width: 200px
+    width: side_menu_width
     padding-left: 30px
+    border-right: 1px solid border_color
+    background: #fff
 
-.content 
-    min-height: 80vh
+.side-list
+    padding: 10px 0 10px 20px
+
+    li
+        padding: 10px 0
 
 
 
+.wrap 
+    min-height: 90vh
+    margin-left: side_menu_width + 10
 
-.mdl-list__item {
-    box-sizing: border-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-.mdl-list__item 
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: .04em;
-    line-height: 1;
-    min-height: 48px;
-    flex-wrap: nowrap;
-    padding: 16px;
-    cursor: default;
-    color: rgba(0,0,0,.87);
-    overflow: hidden;
+.content
+    padding: 20px
+
+
 
 .footer 
     background: #fff
     border-top: 1px solid #ddd
     text-align: center
-
+    a
+        text-decoration: none

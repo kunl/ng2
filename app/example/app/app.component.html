@@ -1,44 +1,28 @@
-<div class="mdl-layout">
-	<header class=" header">
-		<div class="header-content">
-			<span class="header-title">Kunl's Angular demo</span>
-			<nav class="navigation">
-				<a  href="#">Nav link 1</a>
-				<a  href="#">Nav link 2</a>
-				<a  href="#">Nav link 3</a>
-			</nav>
-		</div>
-	</header>
+<header class="header">
+	<div class="header-content">
+		<h1 class="header-title">Kunl's Angular demo</h1>
+		<nav class="navigation">
+			<a  href="https://github.com/kunl/ng2" title="github">GitHub</a>
+			<a  href="https://kunl.in" title="blog">Blog</a>
+			<a  href="https://twitter.com/le720" title="忆年">twitter</a>
+		</nav>
+	</div>
+</header>
 
+<div class="wrap">
 
-	<main class="layout-content">
+	<nav class="sidebar">
+		<ul class="side-list list-group">
+			<li *ngFor="let it of routers" class="list-group-item">
+				<a  [routerLink]='[it.path]' routerLinkActive="active">{{it.nick}}</a>
+			</li>
+		</ul>
+	</nav>
 
-		<div class="mdl-grid">
-			<div class="mdl-cell mdl-cell--2-col">
-				<nav class="list-group sidebar mdl-shadow--2dp">
-					<ul class="mdl-list ">
-						<li *ngFor="let it of routers">
-							<span class="mdl-list__item-primary-content">
-                            <a class="list-group-item" [routerLink]='[it.path]' routerLinkActive="active">{{it.nick}}</a>
-                        </span>
-						</li>
-					</ul>
-				</nav>
-
-			</div>
-
-			<div class="mdl-cell mdl-cell--10-col">
-				<p class="header-title">Angular2 demo of kunl</p>
-
-                <div class="content">
-                    <router-outlet></router-outlet>
-                </div>
-
-                <footer></footer>
-			</div>
-		</div>
-
-		
-	</main>
-
+	<div class="content">
+		<router-outlet></router-outlet>
+	</div>
+	
 </div>
+
+<footer></footer>
