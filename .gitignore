@@ -3,4 +3,8 @@ node_modules/
 **.log
 typings/
 build/**.js.map
+<<<<<<< HEAD
 .idea
+=======
+.idea
+>>>>>>> 860bbd0a86be83e52b4561a4f48647ca7eabeff7
