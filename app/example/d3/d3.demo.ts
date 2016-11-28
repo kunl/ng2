@@ -3,7 +3,6 @@ import { Component, OnInit, AfterViewInit, ElementRef, Renderer, NgModule } from
 import * as d3 from 'd3';
 
 @Component({
-    moduleId: module.id,
     selector: 'd3-demo',
     template: ''
 })

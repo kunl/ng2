@@ -25,16 +25,14 @@ import { AppComponent } from './app.component';
 import  {HomeComponent } from '../../component/home/home.component';
 import {Footer} from '../../component/footer.component';
 
-import {TabsDemoComponent} from '../+tabs/tabs.demo';
 import {LifecycleComponent} from '../lifecycle/lifecycle';
 
 import { ColorModule } from '../+colors/color.module';
 import { AttrsDemoModule } from '../+attr/attrs.module';
 import { HostModule } from '../+host/host.module';
-import { HttpDemoModule } from '../+http/http.module';
+// import { HttpDemoModule } from '../+http/http.module';
 import {DynamicComponentDemo} from '../dynamic-component/parent';
 import {ViewChildComponentDemo} from '../+view-child/viewchild.demo';
-
 import { PaginationModule } from '../pagination/pagination.module';
 import { DialogModule } from '../+dialog/dialog.module';
 import { D3Module } from '../d3/d3.demo';
@@ -44,7 +42,11 @@ import { FormsDemoModule } from '../forms/forms';
 import { PipeModule } from '../../pipes/pipe.module';
 
 @NgModule({
-    imports: [BrowserModule, routing, HttpModule, FormsModule, 
+    imports: [
+        BrowserModule,
+        HttpModule,
+        FormsModule,
+        routing,
     
         TabDemoModule,
         AttrsDemoModule,
@@ -58,7 +60,6 @@ import { PipeModule } from '../../pipes/pipe.module';
         D3Module,
         EchartsDemoModule,
         FormsDemoModule,
-
         PipeModule
     ],
     declarations: [

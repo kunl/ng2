@@ -7,7 +7,6 @@ import { UserComponent } from './user.component';
 import { User } from '../../service/model';
 
 @Component({
-    moduleId: module.id,
     selector: 'http',
     providers: [ HttpService],
     templateUrl: 'http.demo.html',

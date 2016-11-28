@@ -5,9 +5,9 @@
   "keywords": [],
   "author": "",
   "scripts": {
-    "tsc": "tsc",
-    "tsc:w": "tsc -w",
-    "start": "tsc && concurrently \"tsc -w\" \"hs -o http://localhost:8080/dev.html\" "
+    "dev": "./node_modules/.bin/webpack-dev-server",
+    "build": "./node_modules/.bin/webpack",
+    "start": ""
   },
   "main": "main.js",
   "license": "ISC",
@@ -25,7 +25,6 @@
     "d3": "^4.4.0",
     "echarts": "^3.3.2",
     "moment": "^2.17.0",
-    "reflect-metadata": "^0.1.8",
     "rxjs": "5.0.0-rc.4",
     "systemjs": "^0.19.41",
     "zone.js": "^0.7.2"
@@ -35,7 +34,17 @@
     "@types/d3": "^4.3.0",
     "@types/echarts": "0.0.5",
     "@types/node": "^6.0.51",
-    "concurrently": "^3.1.0"
+    "angular2-router-loader": "^0.3.4",
+    "angular2-template-loader": "^0.6.0",
+    "awesome-typescript-loader": "^3.0.0-beta.9",
+    "concurrently": "^3.1.0",
+    "css-loader": "^0.26.0",
+    "raw-loader": "^0.5.1",
+    "to-string-loader": "^1.1.5",
+    "typescript": "^2.0.10",
+    "webpack": "^2.1.0-beta.27",
+    "webpack-dev-server": "^2.1.0-beta.12",
+    "webpack-merge": "^0.20.0"
   },
   "repository": {
     "type": "git",

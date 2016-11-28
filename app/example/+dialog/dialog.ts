@@ -1,7 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-    moduleId: module.id,
     selector: 'my-dialog',
     template: `
     <section *ngIf="show">

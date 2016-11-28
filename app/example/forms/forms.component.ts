@@ -15,7 +15,6 @@ import {
 
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
-    moduleId: module.id,
     selector: 'forms',
     template: `
     <div class="ui raised segment">

@@ -1,7 +1,6 @@
 import { Component, OnInit, EventEmitter, Output, OnChanges, SimpleChange } from '@angular/core';
 
 @Component({
-    moduleId: module.id,
     selector: 'pagination-demo',
     template: `
         <pagination [(page)]="mypage" [total]="mytotal" [pagesize]="mysize"></pagination>

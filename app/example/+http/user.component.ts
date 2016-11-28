@@ -6,7 +6,6 @@ import { User } from '../../service/model';
 
 
 @Component({
-    moduleId: module.id,
     selector: 'user',
     templateUrl: 'user.component.html'
 })

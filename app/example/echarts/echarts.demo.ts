@@ -4,7 +4,6 @@ import * as echarts from 'echarts';
 import { option } from './options';
 
 @Component({
-    moduleId: module.id,
     selector: 'echarts-demo',
     template: ''
 })

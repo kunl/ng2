@@ -1,9 +1,8 @@
 import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 
 @Component({
-    moduleId: module.id,
     styles: [`
-        // .current-page {color: #00dcc1}
+    
         .current-page {color: red}
         .pagination .page{
             display: inline-block;

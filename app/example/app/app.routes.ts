@@ -20,6 +20,7 @@ import {D3DemoComponent} from '../d3/d3.demo';
 import {EchartsDemoComponent} from '../echarts/echarts.demo';
 import {FormsDemoComponent} from '../forms/forms-demo';
 
+declare var System;
 
 const appRoutes: Routes = [
     { path: '',  redirectTo: 'home', pathMatch: 'full' },
@@ -31,7 +32,10 @@ const appRoutes: Routes = [
     { path: 'dynamic', component: DynamicComponentDemo },
     { path: 'viewchild', component: ViewChildComponentDemo },
 
-    { path: 'http', loadChildren: 'app/example/+http/http.module#HttpDemoModule'},
+    { path: 'http',   loadChildren: () => System.import('../+http/http.module').then(function(module) {
+            return module['HttpDemoModule'];
+        })
+    },
 
     { path: 'pagination', component: PaginationDemo },
     { path: 'dialog', component: DialogDemo },

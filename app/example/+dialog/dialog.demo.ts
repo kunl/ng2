@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 
 
 @Component({
-    moduleId: module.id,
     selector: 'dialog-demo',
     templateUrl: 'dialog.demo.html'
 })

@@ -18,7 +18,6 @@ let routers  = [
 ];
 
 @Component({
-    moduleId: module.id,
     selector: 'example-app',
     templateUrl: 'app.component.html' 
 })
