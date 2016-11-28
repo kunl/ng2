@@ -16,3 +16,5 @@
 	node bundle.js // 打包
 	node bundle.js --prod // 打包并压缩
 ```
+
+webpack build [https://github.com/kunl/ng2/tree/webpack]
