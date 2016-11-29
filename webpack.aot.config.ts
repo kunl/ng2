@@ -5,8 +5,8 @@ let AotPlugin = require('@ngtools/webpack');
 
 let webpackConfig = {
     entry: {
-        polyfills: './ngc/polyfills.browser',
-        app: './app/main.aot.ts'
+        polyfills: './src/polyfills.browser',
+        app: './src/main.aot.ts'
     },
 
 

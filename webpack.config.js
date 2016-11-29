@@ -5,8 +5,8 @@ let webpackMerge = require('webpack-merge');
 
 let webpackConfig = {
     entry: {
-        polyfills: './app/polyfills.browser',
-        app: './app/main.ts'
+        polyfills: './src/polyfills.browser',
+        app: './src/main.ts'
     },
 
 

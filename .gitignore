@@ -1,11 +1,14 @@
 node_modules/
-**/**.map
+src/**/**.js.map
+src/**/**.js
+src/**/**.metadata.json
 **.log
 typings/
 build/**.js.map
 .idea
 dist
 aot
-ngc
+ngc-compiled
+ngfactory
 
 **/*.ngfactory.ts
