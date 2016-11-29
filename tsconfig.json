@@ -7,5 +7,7 @@
         "experimentalDecorators": true,
         "allowSyntheticDefaultImports": true,
         "strictNullChecks": false
-    }
+    },
+    "compileOnSave": false,
+    "buildOnSave": false
 }

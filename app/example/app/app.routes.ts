@@ -24,8 +24,8 @@ declare var System;
 
 
 const appRoutes: Routes = [
-    { path: '',  redirectTo: 'home', pathMatch: 'full' },
-    { path: 'home',  component: HomeComponent },
+    { path: '',  redirectTo: 'tabs', pathMatch: 'full' },
+    // { path: 'home',  component: HomeComponent },
     { path: 'tabs', component: TabsDemoComponent },
     { path: 'attrs', component: AttrsDemoComponent },
     { path: 'host', component: HostDemo },

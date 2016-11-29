@@ -5,13 +5,15 @@ import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 
+import { HomeModule } from '../../component/home/home.module';
+import {Footer} from '../../component/footer.component';
 
 import {TabDemoModule} from '../+tabs/module';
 
 import {appRoutes} from './app.routes';
 
 import { AppComponent } from './app.component';
-import {Footer} from '../../component/footer.component';
+
 
 import {LifecycleComponent} from '../lifecycle/lifecycle';
 
@@ -42,6 +44,8 @@ export class UserDefault{
         FormsModule,
         RouterModule.forRoot(appRoutes, { useHash: true }) ,
     
+        
+        HomeModule,        
         TabDemoModule,
         AttrsDemoModule,
         ColorModule,
