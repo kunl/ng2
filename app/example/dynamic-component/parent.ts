@@ -8,7 +8,7 @@ import {User} from './user';
     <p> 
       <button class="btn" (click)="loaderAction()">弹出组件</button>
     </p>
-    <section *ngIf="user">
+    <div *ngIf="user">
     
         <div class="card">
         <div class="card-block">
@@ -24,7 +24,7 @@ import {User} from './user';
             </div>
         </div>
   
-    </section>
+    </div>
     
     `,
     providers: [Title]

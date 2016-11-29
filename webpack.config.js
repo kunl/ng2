@@ -1,5 +1,3 @@
-'use strtic';
-
 let webpack = require('webpack');
 let path = require('path');
 let webpackMerge = require('webpack-merge');
@@ -8,7 +6,7 @@ let webpackMerge = require('webpack-merge');
 let webpackConfig = {
     entry: {
         polyfills: './app/polyfills.browser',
-        app: './app/main.browser.ts'
+        app: './app/main.ts'
     },
 
 
@@ -21,11 +19,12 @@ let webpackConfig = {
         new webpack.ContextReplacementPlugin(
             /angular(\\|\/)src(\\|\/)linker/,
             path.resolve(__dirname, '')
-        )
+        ),
+        new webpack.optimize.UglifyJsPlugin()
     ],
 
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.ts$/,
                 loaders: [

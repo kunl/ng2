@@ -22,6 +22,7 @@ import {FormsDemoComponent} from '../forms/forms-demo';
 
 declare var System;
 
+
 const appRoutes: Routes = [
     { path: '',  redirectTo: 'home', pathMatch: 'full' },
     { path: 'home',  component: HomeComponent },
@@ -32,10 +33,7 @@ const appRoutes: Routes = [
     { path: 'dynamic', component: DynamicComponentDemo },
     { path: 'viewchild', component: ViewChildComponentDemo },
 
-    { path: 'http',   loadChildren: () => System.import('../+http/http.module').then(function(module) {
-            return module['HttpDemoModule'];
-        })
-    },
+    { path: 'http',   loadChildren: () => System.import('../+http/http.module').then(module => module['HttpDemoModule']) },
 
     { path: 'pagination', component: PaginationDemo },
     { path: 'dialog', component: DialogDemo },
@@ -44,5 +42,4 @@ const appRoutes: Routes = [
     { path: 'forms', component: FormsDemoComponent },
 ];
 
-let routing = RouterModule.forRoot(appRoutes, { useHash: true }) 
-export {routing} 
+export {appRoutes} 

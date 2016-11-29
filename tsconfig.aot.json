@@ -1,0 +1,37 @@
+{
+    "compilerOptions": {
+        "declaration": false,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "sourceMap": true,
+        "module": "es2015",
+        "moduleResolution": "node",
+        "outDir": "ngc",
+        "rootDir": "app",
+        "noEmitHelpers": true,
+        "target": "es5",
+        "typeRoots": [
+            "node_modules/@types"
+        ],
+        "lib": ["es2015", "dom"]
+    },
+    "include": [
+        "./app/**/*.module.ts",
+        "./app/*.d.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist"
+    ],
+    "angularCompilerOptions": {
+        "debug": false,
+        "genDir": "ngc",
+        "skipMetadataEmit": true
+    },
+    "compileOnSave": false,
+    "buildOnSave": false,
+    "files": [
+        "./app/polyfills.browser.ts"
+    ]
+
+}

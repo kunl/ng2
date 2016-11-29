@@ -12,8 +12,6 @@ export const HttpRouters = [
             { path: 'list', component: HttpDemo},
             { path: ':id', component: UserComponent }
         ]
-    },
+    }
     
 ];
-
-export const routing = RouterModule.forChild(HttpRouters)
