@@ -16,11 +16,6 @@ let webpackConfig = {
     },
 
     plugins: [
-        new webpack.ContextReplacementPlugin(
-            /angular(\\|\/)src(\\|\/)linker/,
-            path.resolve(__dirname, '')
-        ),
-        new webpack.optimize.UglifyJsPlugin()
     ],
 
     module: {

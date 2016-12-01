@@ -25,3 +25,12 @@ import 'core-js/es6/reflect';
 import 'core-js/es7/reflect';
 import 'zone.js/dist/zone';
 import 'zone.js/dist/long-stack-trace-zone';
+
+
+import 'rxjs/Observable'
+import 'rxjs/Subscription'
+import 'rxjs/Subject'
+import 'rxjs/BehaviorSubject'
+import 'rxjs/add/operator/map'
+import 'rxjs/add/operator/mergeMap'
+import 'rxjs/add/operator/distinctUntilChanged'

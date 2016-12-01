@@ -1,35 +1,48 @@
 import { NgModule } from '@angular/core';
-import { APP_BASE_HREF, LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-import { HttpModule } from '@angular/http';
-import { FormsModule } from '@angular/forms';
+// import { HttpModule } from '@angular/http';
+// import { FormsModule } from '@angular/forms';
 
+
+/**
+ * components
+ */
+import { CommonComponents } from './component/'
+
+
+
+/**
+ * modules
+ */
 import { HomeModule } from './component/home/home.module';
-import {Footer} from './component/footer.component';
 
-import {TabDemoModule} from './example/+tabs/module';
 
-import {appRoutes} from './app.routes';
+// import {TabDemoModule} from './example/+tabs/module';
+
 
 import { AppComponent } from './app.component';
 
 
-import {LifecycleComponent} from './example/lifecycle/lifecycle';
 
-import { ColorModule } from './example/+colors/color.module';
-import { AttrsDemoModule } from './example/+attr/attrs.module';
-import { HostModule } from './example/+host/host.module';
-import { DynamicModule } from './example/dynamic-component/dynamic.module';
-import { ViewChildComponentDemo, LabelItem } from './example/+view-child/viewchild.demo';
-import { PaginationModule } from './example/pagination/pagination.module';
-import { DialogModule } from './example/+dialog/dialog.module';
-import { D3Module } from './example/d3/d3.demo';
-import { EchartsDemoModule } from './example/echarts/echarts.demo';
-import { FormsDemoModule } from './example/forms/forms';
+// import { ColorModule } from './example/+colors/color.module';
+// import { AttrsDemoModule } from './example/+attr/attrs.module';
+// import { HostModule } from './example/+host/host.module';
+// import { DynamicModule } from './example/dynamic-component/dynamic.module';
+// import { ViewChildComponentDemo, LabelItem } from './example/+view-child/viewchild.demo';
+// import { PaginationModule } from './example/pagination/pagination.module';
+// import { DialogModule } from './example/+dialog/dialog.module';
+// import { D3Module } from './example/d3/d3.demo';
+// import { EchartsDemoModule } from './example/echarts/echarts.demo';
+// import { FormsDemoModule } from './example/forms/forms';
 
-import { PipeModule } from './pipes/pipe.module';
+// import { PipeModule } from './pipes/pipe.module';
 
+
+/**
+ *  router
+ */
+import {appRoutes} from './app.routes';
 
 export class UserDefault{
     name =  'xxx';
@@ -40,34 +53,34 @@ export class UserDefault{
 @NgModule({
     imports: [
         BrowserModule,
-        HttpModule,
-        FormsModule,
+        // HttpModule,
+        // FormsModule,
         RouterModule.forRoot(appRoutes, { useHash: true }) ,
     
         
         HomeModule,        
-        TabDemoModule,
-        AttrsDemoModule,
-        ColorModule,
-        HostModule,
-        DynamicModule,
+        // TabDemoModule,
+        // AttrsDemoModule,
+        // ColorModule,
+        // HostModule,
+        // DynamicModule,
 
         
-        PaginationModule,
-        DialogModule,
-        D3Module,
-        EchartsDemoModule,
-        FormsDemoModule,
-        PipeModule
+        // PaginationModule,
+        // DialogModule,
+        // D3Module,
+        // EchartsDemoModule,
+        // FormsDemoModule,
+        // PipeModule
     ],
     declarations: [
         AppComponent,
-        Footer, 
 
-        LabelItem,
-        ViewChildComponentDemo,
+        ...CommonComponents
 
-        LifecycleComponent
+        // LabelItem,
+        // ViewChildComponentDemo,
+
     ],
     bootstrap: [AppComponent],
     providers: [

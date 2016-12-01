@@ -1,4 +1,5 @@
-import { TabsDemoComponent } from './example/+tabs/tabs.demo';
+import { HomeComponent } from './component/home/home.component';
+import { TabDemoModule } from './example/+tabs/module';
 import { ColorDemo } from './example/+colors/color.demo';
 import { AttrsDemoComponent } from './example/+attr/attrs.demo';
 import { HostDemo } from './example/+host/host.demo';
@@ -11,19 +12,19 @@ import { EchartsDemoComponent } from './example/echarts/echarts.demo';
 import { FormsDemoComponent } from './example/forms/forms-demo';
 var appRoutes = [
     { path: '', redirectTo: 'tabs', pathMatch: 'full' },
-    // { path: 'home',  component: HomeComponent },
-    { path: 'tabs', component: TabsDemoComponent },
+    { path: 'home', component: HomeComponent },
+    { path: 'tabs', loadChildren: function () { return TabDemoModule; } },
     { path: 'attrs', component: AttrsDemoComponent },
     { path: 'host', component: HostDemo },
     { path: 'color', component: ColorDemo },
     { path: 'dynamic', component: DynamicComponentDemo },
     { path: 'viewchild', component: ViewChildComponentDemo },
-    { path: 'http', loadChildren: function () { return System.import('./example/+http/http.module').then(function (module) { return module['HttpDemoModule']; }); } },
     { path: 'pagination', component: PaginationDemo },
     { path: 'dialog', component: DialogDemo },
     { path: 'd3', component: D3DemoComponent },
     { path: 'echarts', component: EchartsDemoComponent },
     { path: 'forms', component: FormsDemoComponent },
+    { path: 'http', loadChildren: function () { return System.import('./example/+http/http.module').then(function (module) { return module['HttpDemoModule']; }); } }
 ];
 export { appRoutes };
 //# sourceMappingURL=app.routes.js.map

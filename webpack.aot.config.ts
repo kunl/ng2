@@ -6,21 +6,22 @@ let AotPlugin = require('@ngtools/webpack');
 let webpackConfig = {
     entry: {
         polyfills: './src/polyfills.browser',
-        app: './src/main.aot.ts'
+        app: './src/main.ts'
     },
 
 
     output: {
-        publicPath: '',
+        publicPath: 'aot/',
         path: path.resolve(__dirname, './aot')
     },
 
     plugins: [
-        // new AotPlugin.AotPlugin ({
-        //     tsConfigPath: './tsconfig.aot.json',
-        //     entryModule:  './app/example/app/app.module#AppModule'
-        // }),
-        // new webpack.optimize.UglifyJsPlugin()
+        new AotPlugin.AotPlugin ({
+            tsConfigPath: './tsconfig.json',
+            basePath: process.cwd(),
+            entryModule:  path.join(process.cwd(), 'src', 'app.module') +  '#AppModule'
+        }),
+        new webpack.optimize.UglifyJsPlugin()
     ],
 
     module: {
@@ -29,8 +30,7 @@ let webpackConfig = {
                 test: /\.ts$/,
                 loaders: [
                     '@ngtools/webpack',
-                    'angular2-template-loader',
-                    'angular2-router-loader?aot=true'
+                    'angular2-template-loader'
                 ]
             },
             {

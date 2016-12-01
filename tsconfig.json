@@ -7,7 +7,7 @@
     "experimentalDecorators": true,
     "sourceMap": true,
     "sourceRoot": "src",
-    
+    "noEmitHelpers": false,
     "allowSyntheticDefaultImports": true,
     "strictNullChecks": false,
     "typeRoots": [
@@ -16,8 +16,17 @@
     "lib": ["es6", "dom"]
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "ngfactory"
   ],
+  "include": [
+    "./src/**/*.module.ts",
+    "./src/*.d.ts"
+  ],
+  "angularCompilerOptions": {
+        "debug": false,
+        "skipMetadataEmit": true
+    },
   "compileOnSave": false,
   "buildOnSave": false
 }
