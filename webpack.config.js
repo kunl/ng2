@@ -1,64 +1,79 @@
-let webpack = require('webpack');
 let path = require('path');
+let webpack = require('webpack');
+let HtmlWebpackPlugin = require('html-webpack-plugin');
+let ExtractTextPlugin = require("extract-text-webpack-plugin");
 let webpackMerge = require('webpack-merge');
 
 
 let webpackConfig = {
     entry: {
-        polyfills: './src/polyfills.browser',
+        polyfills: './src/polyfills.ts',
+        vendor: './src/vendor.ts',
         app: './src/main.ts'
     },
-
-
     output: {
-        publicPath: '',
-        path: path.resolve(__dirname, './dist')
+        publicPath: 'aot/',
+        path: path.resolve(__dirname, './aot')
     },
-
     plugins: [
+        // new ExtractTextPlugin("./style.css"),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: ['app', 'vendor', 'polyfills']
+        }),
+        new HtmlWebpackPlugin({
+            template: 'index.html'
+        })
+        //  new webpack.optimize.UglifyJsPlugin()
     ],
 
     module: {
-        rules: [
-            {
-                test: /\.ts$/,
-                loaders: [
-                    'awesome-typescript-loader',
-                    'angular2-template-loader',
-                    'angular2-router-loader'
-                ]
-            },
-            {
-                test: /\.css$/,
-                loaders: ['to-string-loader', 'css-loader']
-            },
-            {
-                test: /\.html$/,
-                loader: 'raw-loader'
-            }
-        ]
+        rules: [{
+            test: /\.ts$/,
+            loaders: [
+                '@ngtools/webpack',
+                'angular2-router-loader'
+            ]
+        }, {
+            test: /\.css$/,
+            include: `${__dirname}/src`,
+            loader: ['css-loader', 'style-loader']
+        //         use: ExtractTextPlugin.extract({
+        //             fallbackLoader: "style-loader",
+        //             loader: 'css-loader'
+        //         })
+           }, {
+            test: /\.styl$/,
+            use: [
+                'stylus-loader',
+                'css-loader'
+            ],
+        }, {
+            test: /\.html$/,
+            loader: 'raw-loader'
+        }]
     }
 
 };
 
 let defaultConfig = {
-    devtool: 'source-map',
     output: {
         filename: '[name].bundle.js',
         sourceMapFilename: '[name].map',
         chunkFilename: '[id].chunk.js'
     },
     resolve: {
-        extensions: ['.ts', '.js'],
-        modules: [ path.resolve(__dirname, 'node_modules')]
+        extensions: ['.ts', '.js']
     },
     devServer: {
         contentBase: './',
-        port: 4002,
+        port: 3001,
         inline: true,
         stats: 'errors-only',
         historyApiFallback: true,
-        watchOptions: {aggregateTimeout: 100, poll: 500}
+        watchOptions: {
+            aggregateTimeout: 100,
+            poll: 500
+        }
     },
 
     node: {

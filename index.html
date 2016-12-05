@@ -1,20 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
+    <title>Angular webpack AOT</title>
     <meta charset="UTF-8">
-    <title>ng2 </title>
-  
-    <link rel="stylesheet" href="app.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="src/styles.css">
 </head>
-<body>
-    
-  <example-app>
-      loading
-  </example-app>
 
-  <script src="aot/polyfills.bundle.js"></script>
-  <script src="aot/app.bundle.js"></script>
-  
+<body>
+    <my-app>Loading AppComponent content here ...</my-app>
+    <script src="aot/polyfills.bundle.js"></script>
+    <script src="aot/vendor.bundle.js"></script>
+    <script src="aot/app.bundle.js"></script>
 </body>
+
 </html>

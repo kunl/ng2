@@ -1,32 +1,19 @@
 {
   "compilerOptions": {
+    "declaration": false,
     "target": "es5",
     "module": "commonjs",
     "moduleResolution": "node",
+    "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "sourceMap": true,
-    "sourceRoot": "src",
-    "noEmitHelpers": false,
-    "allowSyntheticDefaultImports": true,
-    "strictNullChecks": false,
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": ["es6", "dom"]
+    "lib": [ "es2015", "dom" ],
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noEmitHelpers": true
   },
   "exclude": [
-    "node_modules",
-    "ngfactory"
-  ],
-  "include": [
-    "./src/**/*.module.ts",
-    "./src/*.d.ts"
-  ],
-  "angularCompilerOptions": {
-        "debug": false,
-        "skipMetadataEmit": true
-    },
-  "compileOnSave": false,
-  "buildOnSave": false
+    "node_modules/*",
+    "**/*-aot.ts"
+  ]
 }

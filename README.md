@@ -1,18 +1,39 @@
-# angular2
-
-###angular2 常用组件示例
-
-[tabs 选项卡](http://kunl.github.io/ng2/#tabs)
-
-[dynamic component 动态加载组件-弹出框](http://kunl.in/ng2/#/dynamic)
-
-[弹出框](http://kunl.in/ng2/#/dialog)
+# Angular Webpack2 @ngtools/webpack AOT
 
 
-###打包
 
-项目下已经包含了 bundle.js 打包脚本
-``` javascript
-	node bundle.js // 打包
-	node bundle.js --prod // 打包并压缩
+## Create a new project
+
+Clone this repo into new project folder (e.g., `my-proj`).
+```bash
+git clone  https://github.com/kunl/Angular-webpack-AOT.git  my-proj
+cd my-proj
 ```
+
+## Install npm packages
+
+> See npm and nvm version notes above
+
+Install the npm packages described in the `package.json` and verify that it works:
+
+```bash
+npm install
+npm run dev
+```
+
+The `npm run dev` command first compiles the application and run webpack-dev-server, 
+Both the compiler and the server watch for file changes.
+
+Shut it down manually with `Ctrl-C`.
+
+You're ready to write your application.
+
+Open browser at http://localhost:9000.
+
+### npm scripts
+
+npm scripts defined in the `package.json`:
+
+* `npm build` - runs the ngc and webpack compiler to build the program.
+* `npm run dev` - runs the webpack-dev-server and watch all files
+
