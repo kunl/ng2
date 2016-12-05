@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "@angular/compiler-cli": "^2.2.4",
-    "@ngtools/webpack": "^1.1.6",
+    "@ngtools/webpack": "^1.1.8",
     "@types/d3": "^4.3.0",
     "@types/echarts": "0.0.5",
     "@types/node": "^6.0.51",
