@@ -25,6 +25,8 @@ import * as _ from 'lodash'
 declare var ENV: string;
 declare var HMR: boolean;
 declare var System: SystemJS;
+declare var d3: any;
+
 
 interface SystemJS {
   import: (path?: string) => Promise<any>;

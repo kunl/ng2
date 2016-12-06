@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "description": "Angular-webpack-AOT，width AOT, lazy loader",
   "scripts": {
-    "dev:aot": "./node_modules/.bin/webpack-dev-server --config  webpack.aot.ts",
+    "dev:aot": "./node_modules/.bin/webpack-dev-server --config  webpack.aot.ts --color --progress",
     "dev": "./node_modules/.bin/webpack-dev-server --config  webpack.config.js --color",
     "webpack:aot": "./node_modules/.bin/webpack --config webpack.aot.ts --colors",
-    "build": "npm run webpack:aot",
-    "ngc": "./node_modules/.bin/ngc -p ts-ngc.json"
+    "build": "npm run webpack:aot"
   },
   "keywords": [],
   "author": "",
@@ -24,13 +23,15 @@
     "@angular/router": "~3.2.4",
     "core-js": "^2.4.1",
     "d3": "^4.4.0",
+    "echarts": "^3.3.2",
     "reflect-metadata": "^0.1.8",
     "rxjs": "5.0.0-rc.4",
     "zone.js": "^0.7.2"
   },
   "devDependencies": {
-    "@ngtools/webpack": "^1.1.6",
+    "@ngtools/webpack": "^1.1.9",
     "@types/d3": "^4.3.0",
+    "@types/echarts": "0.0.5",
     "@types/node": "^6.0.46",
     "angular2-router-loader": "^0.3.4",
     "css-loader": "^0.26.0",
@@ -42,7 +43,7 @@
     "stylus": "^0.54.5",
     "stylus-loader": "^2.4.0",
     "typescript": "^2.0.10",
-    "webpack": "^2.1.0-beta.25",
+    "webpack": "^2.1.0-beta.27",
     "webpack-dev-server": "^2.1.0-beta.12",
     "webpack-merge": "^1.0.2",
     "yargs": "^6.4.0"

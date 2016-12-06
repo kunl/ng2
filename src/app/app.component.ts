@@ -13,8 +13,8 @@ let routers  = [
     // { path: '/http', nick: 'http' },
     // { path: '/pagination', nick: '分页' },
     // { path: '/dialog', nick: '模态框' },
-    // { path: '/d3', nick: 'D3' },
-    // { path: '/echarts', nick: 'Echarts' },
+    { path: '/d3', nick: 'D3' },
+    { path: '/echarts', nick: 'Echarts' },
     // { path: '/forms', nick: 'Forms' }
     { path: '/about', nick: 'About' }
 ];

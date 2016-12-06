@@ -1,12 +1,12 @@
 import { Component, OnInit,  ElementRef, NgModule } from '@angular/core';
-
-import * as d3 from 'd3';
+import { RouterModule } from '@angular/router';
+// import * as d3 from 'd3';
 
 @Component({
     selector: 'd3-demo',
     template: ''
 })
-export class D3DemoComponent implements OnInit {
+export class D3Component implements OnInit {
     constructor(private _elRef: ElementRef) { 
 
     }
@@ -24,8 +24,8 @@ export class D3DemoComponent implements OnInit {
 
 }
 
-
 @NgModule({
-    declarations: [D3DemoComponent]
+    imports: [RouterModule.forChild([{path: '', component: D3Component}])],
+    declarations: [D3Component]
 })
 export class D3Module {}

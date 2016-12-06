@@ -1,4 +1,5 @@
 import { Component, OnInit, AfterViewInit, ElementRef, Renderer, NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import * as echarts from 'echarts';
 import { option } from './options';
@@ -7,7 +8,7 @@ import { option } from './options';
     selector: 'echarts-demo',
     template: ''
 })
-export class EchartsDemoComponent implements OnInit {
+export class EchartsComponent implements OnInit {
     ele:any = null;
 
     constructor(private _elRef: ElementRef, private _rn: Renderer) { 
@@ -71,6 +72,7 @@ export class EchartsDemoComponent implements OnInit {
 
 
 @NgModule({
-    declarations: [EchartsDemoComponent]
+    imports: [RouterModule.forChild([{path: '', component: EchartsComponent}])],
+    declarations: [EchartsComponent]
 })
-export class EchartsDemoModule {}
+export class EchartsModule {}

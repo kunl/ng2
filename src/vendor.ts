@@ -9,7 +9,6 @@ import '@angular/router';
 
 
 
-// import 'd3';
 
 // RxJS
 import {Observable} from 'rxjs/Rx';

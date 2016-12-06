@@ -1,7 +1,7 @@
 let webpack = require('webpack');
 let path = require('path');
 let webpackMerge = require('webpack-merge');
-let AotPlugin = require('@ngtools/webpack');
+let ngtools = require('@ngtools/webpack');
 
 let webpackConfig = {
     entry: {
@@ -9,7 +9,9 @@ let webpackConfig = {
         vendor: './src/vendor.ts',
         app: './src/main.ts'
     },
-
+    externals: {
+        'd3': 'd3'
+    },
 
     output: {
         publicPath: 'aot/',
@@ -17,15 +19,15 @@ let webpackConfig = {
     },
 
     plugins: [
-        new AotPlugin.AotPlugin({
-            tsConfigPath: './ts-aot.json',
-            // entryModule:  'src/app/app.module#AppModule'
-            entryModule: path.join(process.cwd(), 'src', 'app', 'app.module') + '#AppModule'
+        new ngtools.AotPlugin({
+            tsConfigPath: 'tsconfig.json',
+            skipMetadataEmit: true,
+            entryModule:  'src/app/app.module#AppModule'
         }),
         new webpack.optimize.CommonsChunkPlugin({
             name: ['app', 'vendor', 'polyfills']
         }),
-        new webpack.optimize.UglifyJsPlugin()
+        // new webpack.optimize.UglifyJsPlugin()
     ],
 
     module: {
