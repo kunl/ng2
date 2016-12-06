@@ -10,13 +10,17 @@ import { DetailComponent } from './components/home/detail/detail.component';
 
 
 export const rootRouterConfig: Routes = [
-    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    { path: '', redirectTo: 'contact', pathMatch: 'full' },
+    { path: 'contact', component: contactComponent },
+
     { path: 'home', loadChildren: './components/home/home.module#HomeModule' },
     { path: 'about', loadChildren: './components/about/about.module#AboutModule'  },
-    { path: 'contact', component: contactComponent },
     { path: 'news', loadChildren: './components/news/news.module#NewsModule' },
+    
 
+    { path: 'colors', loadChildren: './components/colors/colors.module#ColorsModule' },
     { path: 'tabs', loadChildren: './components/tabs/tabs.module#TabsModule' },
+    { path: 'http', loadChildren: './components/http/http.module#Http_Module' },
     { path: 'd3', loadChildren: './components/d3/d3.module#D3Module' },
     { path: 'echarts', loadChildren: './components/echarts/echarts.module#EchartsModule' },
 ];

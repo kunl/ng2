@@ -14,5 +14,6 @@ import '@angular/router';
 import {Observable} from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/mergeMap';
+import 'rxjs/add/operator/toPromise';
 
 //import './styles.css'
