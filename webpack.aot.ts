@@ -1,6 +1,7 @@
 let webpack = require('webpack');
 let path = require('path');
 let webpackMerge = require('webpack-merge');
+let CompressionPlugin = require("compression-webpack-plugin");
 let ngtools = require('@ngtools/webpack');
 
 let webpackConfig = {
@@ -21,12 +22,20 @@ let webpackConfig = {
     plugins: [
         new ngtools.AotPlugin({
             tsConfigPath: 'tsconfig.json',
-            skipMetadataEmit: true,
+            // skipMetadataEmit: true,
             entryModule:  'src/app/app.module#AppModule'
         }),
         new webpack.optimize.CommonsChunkPlugin({
             name: ['app', 'vendor', 'polyfills']
         }),
+        new CompressionPlugin({
+            asset: "[path].gz[query]",
+            algorithm: "gzip",
+            test: /\.js$|\.html$/,
+            threshold: 10240,
+            minRatio: 0.3
+        }),
+        new webpack.optimize.UglifyJsPlugin()
         // new webpack.optimize.UglifyJsPlugin()
     ],
 

@@ -20,9 +20,9 @@ let webpackConfig = {
         new webpack.optimize.CommonsChunkPlugin({
             name: ['app', 'vendor', 'polyfills']
         }),
-        new HtmlWebpackPlugin({
-            template: 'index.html'
-        })
+        // new HtmlWebpackPlugin({
+        //     template: 'index.html'
+        // })
         //  new webpack.optimize.UglifyJsPlugin()
     ],
 
@@ -30,17 +30,18 @@ let webpackConfig = {
         rules: [{
             test: /\.ts$/,
             loaders: [
-                '@ngtools/webpack',
-                'angular2-router-loader'
+                'awesome-typescript-loader',
+                'angular2-router-loader',
+                'angular2-template-loader'
             ]
         }, {
-            test: /\.css$/,
-            include: `${__dirname}/src`,
-            loader: ['css-loader', 'style-loader']
-        //         use: ExtractTextPlugin.extract({
-        //             fallbackLoader: "style-loader",
-        //             loader: 'css-loader'
-        //         })
+        //     test: /\.css$/,
+        //     include: `${__dirname}/src`,
+        //     loader: ['css-loader', 'style-loader']
+        // //         use: ExtractTextPlugin.extract({
+        // //             fallbackLoader: "style-loader",
+        // //             loader: 'css-loader'
+        // //         })
            }, {
             test: /\.styl$/,
             use: [
