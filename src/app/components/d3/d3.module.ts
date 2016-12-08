@@ -19,6 +19,7 @@ export class D3Component implements OnInit {
         append('div')
         .html('d3 生成')
         .style("background-color", "#1be2a6")
+        .style('padding', '1rem')
       
     }
 

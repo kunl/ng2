@@ -9,7 +9,7 @@ let webpackConfig = {
     entry: {
         polyfills: './src/polyfills.ts',
         vendor: './src/vendor.ts',
-        app: './src/main.ts'
+        app: './src/main.hmr.ts'
     },
     output: {
         publicPath: 'aot/',
@@ -30,6 +30,7 @@ let webpackConfig = {
         rules: [{
             test: /\.ts$/,
             loaders: [
+                '@angularclass/hmr-loader',
                 'awesome-typescript-loader',
                 'angular2-router-loader',
                 'angular2-template-loader'
