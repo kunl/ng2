@@ -4,6 +4,8 @@ import { Component, OnInit } from '@angular/core';
     selector: 'contact',
     template: `
         <h2>contact page</h2>
+
+        <dialog-demo></dialog-demo>
     `
 })
 export class contactComponent implements OnInit {

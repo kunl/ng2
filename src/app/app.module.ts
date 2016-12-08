@@ -9,11 +9,14 @@ import { FooterComponent } from './components/footer/footer.component';
 
 import { contactComponent } from './components/contact/contact.component';
 
+import { DialogModule } from './components/dialog/dialog.module';
+
 
 import { rootRouterConfig } from './app.router'
 @NgModule({
   imports: [
     BrowserModule,
+    DialogModule,
     RouterModule.forRoot(rootRouterConfig, { useHash: true }),
   ],
   declarations: [
@@ -21,6 +24,7 @@ import { rootRouterConfig } from './app.router'
     HeaderComponent,
     FooterComponent,
     contactComponent
+
     ],
   bootstrap: [AppComponent]
 })

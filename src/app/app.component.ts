@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 
 
 let routers  = [
-    { path: '/home', nick: '首页' },
+    { path: '/home', nick: 'home' },
     { path: '/tabs', nick: 'tabs' },
     // { path: '/attrs', nick: '属性 Directive' },
     // { path: '/host', nick: 'host' },
