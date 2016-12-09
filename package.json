@@ -4,7 +4,7 @@
   "description": "Angular-webpack-AOT，width AOT, lazy loader",
   "scripts": {
     "dev:aot": "./node_modules/.bin/webpack-dev-server --config  webpack.aot.ts --color --progress",
-    "dev": "./node_modules/.bin/webpack-dev-server --config  webpack.config.js --color",
+    "dev": "./node_modules/.bin/webpack-dev-server --config  webpack.config.js --color --open",
     "webpack:aot": "./node_modules/.bin/webpack --config webpack.aot.ts --colors",
     "build": "npm run webpack:aot"
   },

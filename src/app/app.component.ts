@@ -14,6 +14,7 @@ let routers  = [
     // { path: '/pagination', nick: '分页' },
     // { path: '/dialog', nick: '模态框' },
     { path: '/d3', nick: 'D3' },
+    { path: '/map', nick: 'map' },
     { path: '/echarts', nick: 'Echarts' },
     // { path: '/forms', nick: 'Forms' }
     { path: '/about', nick: 'About' }

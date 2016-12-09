@@ -1,12 +1,14 @@
-# Angular Webpack2 @ngtools/webpack AOT
+# Angular Webpack demo
 
+1. Dynamic create NgModule
+1. BaiduMap(百度地图)
 
 
 ## Create a new project
 
 Clone this repo into new project folder (e.g., `my-proj`).
 ```bash
-git clone  https://github.com/kunl/Angular-webpack-AOT.git  my-proj
+git clone  https://github.com/kunl/ng2.git  my-proj
 cd my-proj
 ```
 
@@ -28,7 +30,6 @@ Shut it down manually with `Ctrl-C`.
 
 You're ready to write your application.
 
-Open browser at http://localhost:9000.
 
 ### npm scripts
 

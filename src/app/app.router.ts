@@ -22,5 +22,6 @@ export const rootRouterConfig: Routes = [
     { path: 'tabs', loadChildren: './components/tabs/tabs.module#TabsModule' },
     { path: 'http', loadChildren: './components/http/http.module#Http_Module' },
     { path: 'd3', loadChildren: './components/d3/d3.module#D3Module' },
+    { path: 'map', loadChildren: './components/map/baidu_map.module#BaiduMapModule' },
     { path: 'echarts', loadChildren: './components/echarts/echarts.module#EchartsModule' },
 ];
