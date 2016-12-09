@@ -1,10 +1,15 @@
-node_modules/
-**/**.map
-**.log
-typings/
-build/**.js.map
-<<<<<<< HEAD
 .idea
-=======
-.idea
->>>>>>> 860bbd0a86be83e52b4561a4f48647ca7eabeff7
+node_modules
+jspm_packages
+npm-debug.*
+link-checker-results.txt
+*.js.map
+*.mesatata.json
+e2e/**/*.js
+e2e/**/*.js.map
+_test-output
+_temp
+aot
+ngc
+dist
+yarn.lock
