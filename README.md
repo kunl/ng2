@@ -1,7 +1,10 @@
 # Angular Webpack demo
 
-1. Dynamic create NgModule
-1. BaiduMap(百度地图)
+1. Dynamic create NgModule(动态创建模块)
+2. BaiduMap(百度地图)
+3. Lazyload router(懒加载路由)
+4. children router(多级路由)
+5. http demo(http 请求)
 
 
 ## Create a new project
@@ -37,14 +40,3 @@ npm scripts defined in the `package.json`:
 
 * `npm build` - runs the ngc and webpack compiler to build the program.
 * `npm run dev` - runs the webpack-dev-server and watch all files
-
-<<<<<<< HEAD
-项目下已经包含了 bundle.js 打包脚本
-``` javascript
-	node bundle.js // 打包
-	node bundle.js --prod // 打包并压缩
-```
-
-webpack build [https://github.com/kunl/ng2/tree/webpack]
-=======
->>>>>>> webpack

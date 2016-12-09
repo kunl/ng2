@@ -36,7 +36,6 @@ let webpackConfig = {
             minRatio: 0.3
         }),
         new webpack.optimize.UglifyJsPlugin()
-        // new webpack.optimize.UglifyJsPlugin()
     ],
 
     module: {
