@@ -54,12 +54,17 @@ let routers  = [
                     <li *ngFor="let it of routers" class="list-group-item">
                         <a  [routerLink]='[it.path]' routerLinkActive="active">{{it.nick}}</a>
                     </li>
+                    <li>      
+                        <ad></ad>
+                    </li>
                 </ul>
             </nav>
 
             <div class="content">    
                 <router-outlet></router-outlet>
             </div>
+
+      
             
         </div>
 

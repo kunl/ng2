@@ -11,6 +11,8 @@ import { contactComponent } from './components/contact/contact.component';
 
 import { DialogModule } from './components/dialog/dialog.module';
 
+import { AdModule } from './dynamic-ad/ad.module'
+
 
 
 import { LoadScriptService } from './service/loadScript.service'
@@ -20,6 +22,7 @@ import { rootRouterConfig } from './app.router'
   imports: [
     BrowserModule,
     DialogModule,
+    AdModule,
     RouterModule.forRoot(rootRouterConfig, { useHash: true }),
   ],
   declarations: [
