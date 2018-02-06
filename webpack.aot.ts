@@ -4,6 +4,7 @@ let webpackMerge = require('webpack-merge');
 // let CompressionPlugin = require("compression-webpack-plugin");
 let ngtools = require('@ngtools/webpack');
 
+
 let webpackConfig = {
     entry: {
         polyfills: './src/polyfills.ts',
@@ -20,7 +21,7 @@ let webpackConfig = {
     },
 
     plugins: [
-        new ngtools.AotPlugin({
+        new ngtools.AngularCompilerPlugin({
             tsConfigPath: 'tsconfig.json',
             // skipMetadataEmit: true,
             entryModule:  'src/app/app.module#AppModule'
@@ -41,7 +42,7 @@ let webpackConfig = {
     module: {
         rules: [
             {
-                test: /\.ts$/,
+                test: /(?:\.ngfactory\.js|\.ngstyle\.js|\.ts)$/,
                 loaders: [
                     '@ngtools/webpack'
                 ]

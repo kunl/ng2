@@ -20,7 +20,7 @@ import { HttpService } from './http.service';
 })
 
 export class HttpComponent implements OnInit {
-    private users: User[] = [];
+    users: User[] = [];
     
     
     constructor(private http_service: HttpService) { 

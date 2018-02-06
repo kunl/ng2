@@ -11,7 +11,7 @@ export { User }
 })
 export class UserComponent implements OnInit {
     private id: string = '10';
-    private user: User = {
+    user: User = {
         name: '',
         age: 0,
         imageUrl: '',

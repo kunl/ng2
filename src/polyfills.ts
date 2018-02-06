@@ -29,4 +29,4 @@ import 'zone.js/dist/long-stack-trace-zone';
 
 require('./styles.css')
 // import 'bootstrap/dist/css/bootstrap.min.css';
-import  './styles.styl';
+// import  './styles.styl';
