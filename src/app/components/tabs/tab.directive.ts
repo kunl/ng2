@@ -19,7 +19,7 @@ export class TabDirective {
 @Component({
     selector: 'tabs',
     template: `
-       <div class="btn-group btn-group-sm">
+       <div class="tab btn-group-sm">
         <button class="btn btn-secondary" *ngFor='let tab of tabs' (click)="selectTab(tab)" [class.active]="tab.active">
             {{tab.title}}
         </button>
