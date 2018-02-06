@@ -25,42 +25,24 @@ let routers  = [
     selector: 'my-app',
     styles: [
         `
-        a{
-            text-decoration: none;
-            margin-right: 20px;
-            padding: 5px 10px;
-            border-bottom: 1px solid transparent;
-        }
-
-        a.active {
-            border-color: pink
-        }
-
         .content {
             box-sizing: border-box;
             margin: 20px auto;
             width: 70vw;
             padding: 30px
         }
+
+
         `
     ],
     template: `
         <Header></Header>
 
         <div class="wrap">
-            
-            <nav class="sidebar">
-                <ul class="side-list list-group">
-                    <li *ngFor="let it of routers" class="list-group-item">
-                        <a  [routerLink]='[it.path]' routerLinkActive="active">{{it.nick}}</a>
-                    </li>
-                </ul>
-            </nav>
-
+            <side-bar [sidebar]='routers'></side-bar>
             <div class="content">    
                 <router-outlet></router-outlet>
             </div>
-            
         </div>
 
         <Footer></Footer>  

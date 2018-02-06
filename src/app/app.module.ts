@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 
 
 import { AppComponent } from './app.component';
+import { SideBarComponent } from './components/sidebar/sidebat.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 
@@ -24,10 +25,10 @@ import { rootRouterConfig } from './app.router'
   ],
   declarations: [
     AppComponent,
+    SideBarComponent,
     HeaderComponent,
     FooterComponent,
     contactComponent
-
   ],
   providers: [LoadScriptService, BaiduMaptService],
   bootstrap: [AppComponent]
