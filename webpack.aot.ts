@@ -26,9 +26,9 @@ let webpackConfig = {
             // skipMetadataEmit: true,
             entryModule:  'src/app/app.module#AppModule'
         }),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: ['app', 'vendor', 'polyfills']
-        }),
+        // new webpack.optimize.CommonsChunkPlugin({
+        //     name: ['app', 'vendor', 'polyfills']
+        // }),
         // new CompressionPlugin({
         //     asset: "[path].gz[query]",
         //     algorithm: "gzip",

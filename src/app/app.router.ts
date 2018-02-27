@@ -24,4 +24,6 @@ export const rootRouterConfig: Routes = [
     { path: 'd3', loadChildren: './components/d3/d3.module#D3Module' },
     { path: 'map', loadChildren: './components/map/baidu_map.module#BaiduMapModule' },
     { path: 'echarts', loadChildren: './components/echarts/echarts.module#EchartsModule' },
+    { path: 'ngcontent', loadChildren: './components/ngcontent/ngcontent.module#NgcontentModule'},
+    { path: 'range', loadChildren: './components/range/range.module#RangeModule'}
 ];

@@ -1,3 +1,5 @@
+迁移到 https://kunl-angular-demos.stackblitz.io/
+本项目不再更新，可以继续在 issues 讨论
 # Angular Webpack demo
 
 1. Dynamic create NgModule(动态创建模块)
